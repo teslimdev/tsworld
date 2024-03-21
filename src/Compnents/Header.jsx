@@ -22,7 +22,7 @@ const Header = () => {
     <div>
       <div className="  z-[80] w-full ">
         <nav className="     ">
-          <div id="navmain" className={`py-2 w-full  fixed     z-10  `}>
+          <div id="navmain" className={`py-2 w-full  fixed    bg-white z-10  `}>
             <div className={` sl:max-w-[1200px] px-6 sl:px-0  m-auto   `}>
               <div className={` flex justify-between    items-center  `}>
                 <div className={` `}>
@@ -53,7 +53,7 @@ const Header = () => {
                         onClick={isOpen}
                       />
                     ) : (
-                      <div id="ul" className="  right-0 h-full  bg-black opacity-80 fixed">
+                      <div id="ul" className="  right-0 h-full  bg-black opacity-90 fixed">
                         <div className="  pt-6  pb-3 shadow-lg">
                           <div className=" flex items-center justify-between px-6">
                             <div className=" "></div>

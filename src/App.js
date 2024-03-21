@@ -4,9 +4,6 @@ import Header from "./Compnents/Header";
 function App() {
   return (
     <div className="App">
-    <div>
-      <Header/>
-    </div>
        <Routes>
         <Route path="/" element={<Home />}/>
        </Routes>

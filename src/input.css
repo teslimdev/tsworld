@@ -14,3 +14,9 @@ div#ul{
         transition: right 1s;
         transition-duration: 2s;
 }
+
+input[type="search"]::-webkit-search-cancel-button {
+   font-size: 40px;
+color: black !important;
+cursor: pointer;
+}
