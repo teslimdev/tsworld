@@ -1,0 +1,121 @@
+[
+  {
+     "imageSrc": "power4.png",
+    "title": "100k/Mah System",
+    "features": ["one", "300watt inverter", "Smart charger"],
+    "price": "#180,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#100,000"
+  },
+   {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#300,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#150,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#130,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#250,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#220,000"
+  },{
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#205,000"
+  },{
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#204,000"
+  },{
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#256,000"
+  },{
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#290,000"
+  },{
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#90,000"
+  },{
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#110,000"
+  },{
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#700,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#350,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#260,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#170,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#290,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#110,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#280,000"
+  },
+  {
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#305,000"
+  }
+]

@@ -33,7 +33,7 @@ const Header = () => {
                 <div className="relative  pt-1 ml hidden lg:flex ">
                 <form action=" " className=" flex gap-2 ">
                   <input type="search"
-                  className=" border   border-black w-[400px] rounded  placeholder:text-xl  placeholder:text-black pl-10   pr-3  py-1 outline-none"
+                  className=" border  border-[#14381f]  w-[400px] rounded  placeholder:text-xl  placeholder:text-[#14381f] pl-10   pr-3  py-1 outline-none"
                    placeholder="search"
                    
                    />
@@ -43,18 +43,18 @@ const Header = () => {
               </div>
                 <div className=" flex items-center gap-6">
                   <div  className=" flex items-center gap-6  xl:gap-16">
-                  <p className=" flex items-center gap-2"> <IoPersonOutline  className=" text-2xl font-light "/> <span className=" hidden lg:flex">Account</span></p>
-                   <p className=" flex items-center gap-2"> <IoCartOutline  className=" text-2xl font-light "/><span className=" hidden lg:flex">Cart</span></p>
+                  <p className=" flex items-center gap-2"> <IoPersonOutline  className=" text-2xl font-light text-[#14381f] "/> <span className=" hidden lg:flex">Account</span></p>
+                   <p className=" flex items-center gap-2"> <IoCartOutline  className=" text-2xl font-light text-[#14381f] "/><span className=" hidden lg:flex">Cart</span></p>
                   </div>
                   <div className=" lg:hidden">
                     {!nav ? (
                       <FaBars
-                        className={`text-black text-2xl `}
+                        className={`text-[#14381f] text-2xl `}
                         onClick={isOpen}
                       />
                     ) : (
-                      <div id="ul" className="  right-0 h-full  bg-black opacity-90 fixed">
-                        <div className="  pt-6  pb-3 shadow-lg">
+                      <div id="ul" className="  right-0 h-full  bg-[#14381f]  fixed">
+                        <div className="  pt-6  pb-3 ">
                           <div className=" flex items-center justify-between px-6">
                             <div className=" "></div>
                             <div className=" text-end" onClick={closeNav}>
@@ -69,7 +69,7 @@ const Header = () => {
                                 href="/"
                                 className={`  ${
                                   location.pathname === "/"
-                                    ? "text-[#8A6201] font-semibold"
+                                    ? "text-white font-semibold"
                                     : ""
                                 }`}
                               >
@@ -84,8 +84,8 @@ const Header = () => {
                                 href="/About"
                                 className={` ${
                                   location.pathname === "/About"
-                                    ? "text-[#8A6201] font-semibold"
-                                    : ""
+                                    ? "text-white font-semibold"
+                                    : " "
                                 }`}
                               >
                                 {" "}
@@ -99,7 +99,7 @@ const Header = () => {
                                 href="/Services"
                                 className={` ${
                                   location.pathname === "/Services"
-                                    ? "text-[#8A6201] font-semibold"
+                                    ? "text-white font-semibold"
                                     : ""
                                 }`}
                               >
@@ -113,7 +113,7 @@ const Header = () => {
                                 href="/Projects"
                                 className={` ${
                                   location.pathname === "/Projects"
-                                    ? "text-[#8A6201] font-semibold"
+                                    ? "text-white font-semibold"
                                     : ""
                                 }`}
                               >
@@ -128,8 +128,8 @@ const Header = () => {
                                 href="/Products"
                                 className={` ${
                                   location.pathname === "/Products"
-                                    ? "text-[#8A6201] font-semibold"
-                                    : ""
+                                    ? "text-[#14381f] font-semibold"
+                                    : "text-[#14381f]"
                                 }`}
                               >
                                 {" "}
@@ -143,8 +143,8 @@ const Header = () => {
                                 href="/News"
                                 className={` ${
                                   location.pathname === "/News"
-                                    ? "text-[#8A6201] font-semibold"
-                                    : ""
+                                    ? "text-[#14381f] font-semibold"
+                                    : "text-[#14381f]"
                                 }`}
                               >
                                 {" "}
@@ -158,8 +158,8 @@ const Header = () => {
                                 href="/Contacts"
                                 className={` ${
                                   location.pathname === "/Contacts"
-                                    ? "text-[#8A6201] font-semibold"
-                                    : ""
+                                    ? "text-[#14381f] font-semibold"
+                                    : "text-[#14381f]"
                                 }`}
                               >
                                 {" "}
