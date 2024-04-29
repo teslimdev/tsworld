@@ -1,35 +1,41 @@
 [
   {
+     "id": "lithium",
      "imageSrc": "power4.png",
     "title": "100k/Mah System",
     "features": ["one", "300watt inverter", "Smart charger"],
     "price": "#180,000"
   },
   {
+     "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#100,000"
   },
    {
+     "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#300,000"
   },
   {
+     "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#150,000"
   },
   {
+     "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#130,000"
   },
   {
+     "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
