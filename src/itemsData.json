@@ -115,7 +115,7 @@
   {
     "imageSrc": "power4.png",
     "title": "Another Title",
-    "features": ["feature one", "feature two", "feature three"],
+    "features": ["feature ten", "feature six", "feature two"],
     "price": "#305,000"
   }
 ]
