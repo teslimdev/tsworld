@@ -1,124 +1,160 @@
 [
   {
-     "id": "lithium",
-     "imageSrc": "power4.png",
+    "id": "lithium",
+    "imageSrc": "power4.png",
     "title": "100k/Mah System",
     "features": ["one", "300watt inverter", "Smart charger"],
     "price": "#180,000"
   },
   {
-     "id": "lithium",
+    "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#100,000"
   },
-   {
-     "id": "lithium",
+  {
+    "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#300,000"
   },
   {
-     "id": "lithium",
+    "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#150,000"
   },
   {
-     "id": "lithium",
+    "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#130,000"
   },
   {
-     "id": "lithium",
+    "id": "lithium",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#250,000"
   },
   {
+    "id": "solarpanels",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#220,000"
-  },{
+  },
+  {
+    "id": "solarpanels",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#205,000"
-  },{
+  },
+  {
+    "id": "solarpanels",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#204,000"
-  },{
+  },
+  {
+    "id": "solarpanels",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#256,000"
-  },{
+  },
+  {
+    "id": "solarpanels",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#290,000"
-  },{
+  },
+  {
+    "id": "inverter",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#90,000"
-  },{
+  },
+  {
+    "id": "inverter",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#110,000"
-  },{
+  },
+  {
+    "id": "inverter",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#700,000"
   },
   {
+    "id": "inverter",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#350,000"
   },
   {
+    "id": "inverter",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#260,000"
   },
   {
+    "id": "inverter",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#170,000"
   },
   {
+    "id": "acid",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#290,000"
   },
   {
+    "id": "acid",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#110,000"
   },
   {
+    "id": "acid",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature seven", "feature nine", "feature eight"],
     "price": "#280,000"
   },
   {
+    "id": "acid",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature ten", "feature six", "feature two"],
+    "price": "#305,000"
+  },
+  {
+    "id": "acid",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature ten", "feature six", "feature two"],
+    "price": "#305,000"
+  },
+  {
+    "id": "acid",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature ten", "feature six", "feature two"],
