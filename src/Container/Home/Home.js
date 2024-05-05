@@ -1,13 +1,12 @@
-import pic1 from "../../../src/Assets/logo.png";
 import Header from "../../Compnents/Header";
 import React, { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import { Pagination, A11y, Autoplay, Navigation } from "swiper/modules";
+import { Pagination, A11y, Autoplay, } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, EffectCoverflow, EffectCards } from "swiper/modules";
+import { EffectFade, EffectCoverflow,  } from "swiper/modules";
 import { Slide } from "../../Compnents";
 import power from "../../../src/Assets/power.jpg";
 import power2 from "../../../src/Assets/power2.png";
@@ -35,27 +34,24 @@ const images = {
 
 const Home = () => {
   const [items, setItems] = useState([]);
+  const [recentlyClickedItems, setRecentlyClickedItems] = useState(
+    JSON.parse(localStorage.getItem("recentlyClickedItems")) || []
+  );
 
   useEffect(() => {
-    // Shuffle the items to get random order
     const shuffledItems = shuffleArray(itemsData);
-    // Select only the first 10 items
     const slicedItems = shuffledItems.slice(0, 12);
     setItems(slicedItems);
   }, []);
 
-  // Function to shuffle array items
   const shuffleArray = (array) => {
     let currentIndex = array.length,
       randomIndex;
 
-    // While there remain elements to shuffle...
     while (currentIndex !== 0) {
-      // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
 
-      // And swap it with the current element.
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex],
         array[currentIndex],
@@ -64,37 +60,23 @@ const Home = () => {
 
     return array;
   };
-  const [lithiumItems, setLithiumItems] = useState([]);
 
-  useEffect(() => {
-    
-    const filteredItems = itemsData.filter((item) => item.id === "lithium");
-    setLithiumItems(filteredItems);
-  }, []);
+  const handleItemClick = (item) => {
+    const updatedRecentlyClickedItems = [
+      item,
+      ...recentlyClickedItems.filter((i) => i.id !== item.id),
+    ];
+    setRecentlyClickedItems(updatedRecentlyClickedItems);
+    localStorage.setItem(
+      "recentlyClickedItems",
+      JSON.stringify(updatedRecentlyClickedItems)
+    );
+  };
 
-  const [solarItems, setSolarItems] = useState([]);
-
-  useEffect(() => {
    
-    const filteredItems = itemsData.filter((item) => item.id === "solarpanels");
-    setSolarItems(filteredItems);
-  }, []);
-
-const [inverterItems, setInverterItems] = useState([]);
-
-  useEffect(() => {
-   
-    const filteredItems = itemsData.filter((item) => item.id === "inverter");
-    setInverterItems(filteredItems);
-  }, []);
- const [acidItems, setAcidItems] = useState([]);
-
-  useEffect(() => {
-   
-    const filteredItems = itemsData.filter((item) => item.id === "acid");
-    setAcidItems(filteredItems);
-  }, []);
+ 
   return (
+   
     <div className="bg-[#f2f2f2]">
       <Header />
       <div className="pt-[7.3rem] lg:pt-[4.3rem]">
@@ -142,294 +124,106 @@ const [inverterItems, setInverterItems] = useState([]);
       <div className="bg-[#f2f2f2] ">
         <h2 className="py-3 px-6">Good Deals!!!</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 m-auto px-6 gap-3 md:gap-4 lg:gap-6 lg:max-w-[1200px] item">
-          {items.map((item, index) => (
-            <Link to="/Description" key={index}>
-              {" "}
-              {/* Link to the description page */}
-              <div className="shadow-2xl h-[12rem] grid grid-cols-2">
-                <img
-                  src={images[item.imageSrc]}
-                  alt=""
-                  className="h-[192px] w-full"
-                />
-                <div className="rounded-e-lg bg-[#14381f] text-white px-3 py-3">
-                  <h3 className="text-[.9rem] pb-2">{item.title}</h3>
-                  <ul className="list-disc pl-4">
-                    {item.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                  <p className="pt-5">{item.price}</p>
+        {items.map((item, index) => (
+            <div
+            onClick={() => handleItemClick(item)}
+            >
+                <Link to={{
+        pathname: `/description`,
+        state: { item },
+      }}
+      
+      key={index} >
+                <div className="shadow-2xl h-[12rem] grid grid-cols-2">
+                  <img src={images[item.imageSrc]} alt="" className="h-[192px] w-full" />
+                  <div className="rounded-e-lg bg-[#14381f] text-white px-3 py-3">
+                    <h3 className="text-[.9rem] pb-2">{item.title}</h3>
+                    <ul className="list-disc pl-4">
+                      {item.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                    <p className="pt-5">{item.price}</p>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
+            ))}
+        </div>
+      </div>
+
+     
+
+      <div className="py-10">
+        <div className="bg-[#14381f]">
+          <h2 className="px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase">
+            recently viewed
+          </h2>
+        </div>
+      <div className=" px-6 lg:px-0 lg:max-w-[1200px] m-auto  pt-7">
+          <Swiper
+          modules={[Pagination, A11y, EffectFade, Autoplay, EffectCoverflow]}
+          effect="f"
+          loop={true}
+          speed={1200}
+          autoplay={{
+            delay: 4000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            waitForTransition: true,
+          }}
+           breakpoints={{
+              // When window width is >= 768px
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              300:{
+                spaceBetween:20,
+              },
+              1024:{
+                slidesPerView:3,
+                spaceBetween: 20,
+              }
+          
+            }}
+          slidesPerView={1}
+          pagination={{
+            el: ".swiper-pagination",
+            clickable: true,
+          }}
+          scrollbar={{ draggable: true }}
+          className="  "
+        >
+           {recentlyClickedItems.map((item, index) => (
+            <SwiperSlide key={index}>
+              <Link to={{ pathname: "/description", state: { item } }}>
+                <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
+                  <img
+                    src={images[item.imageSrc]}
+                    alt=""
+                    className="h-[192px] w-fit"
+                  />
+                  <div className="rounded-e-lg bg-[#14381f] text-white px-3 py-3">
+                    <h3 className="text-[.9rem] pb-2">{item.title}</h3>
+                    <ul className="list-disc pl-4">
+                      {item.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                    <p className="pt-5">{item.price}</p>
+                  </div>
+                </div>
+              </Link>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
-
-      <div className=" py-10 ">
-        <div className="  bg-[#14381f] ">
-          <h2 className="  px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase ">
-            {" "}
-            lithium Battries
-          </h2>
-        </div>
-        <div className="lithium max-w-[1200px] m-auto pt-6 px-6">
-          <Swiper
-            modules={[Pagination, A11y, EffectFade, Autoplay, EffectCoverflow]}
-            effect="f"
-            loop={true}
-            speed={1200}
-            autoplay={{
-              delay: 4000,
-              stopOnLastSlide: false,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-              waitForTransition: true,
-            }}
-            breakpoints={{
-              // When window width is >= 768px
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024:{
-                slidesPerView:3,
-                spaceBetween: 20,
-              }
-          
-            }}
-            a11y={{
-              prevSlide: "true",
-              nextSlide: "true",
-            }}
-            slidesPerView={1}
-            pagination={{
-              el: ".swiper-pagination",
-              clickable: true,
-            }}
-            scrollbar={{ draggable: true }}
-          >
-            {lithiumItems.map((item, index) => (
-        <SwiperSlide key={index} className="shadow-2xl w-[24rem] flex-shrink-0">
-          <Link to={`/Description`}>
-            <div className="grid grid-cols-2">
-              <img src={power4} alt="" className="w-full h-[192px]" />
-              <div className="bg-[#14381f] text-white py-3 px-4">
-                <h3 className="text-[.9rem] pb-2">{item.title}</h3>
-                <ul className="list-disc pl-4">
-                  {item.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-                <p className="pt-2">{item.price}</p>
-              </div>
-            </div>
-          </Link>
-        </SwiperSlide>
-      ))}
-          </Swiper>
-        </div>
-      </div>
-       <div className="  ">
-        <div className="  bg-[#14381f] ">
-          <h2 className="  px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase ">
-            {" "}
-            Solar panels
-          </h2>
-        </div>
-        <div className="lithium max-w-[1200px] m-auto pt-6 px-6">
-          <Swiper
-            modules={[Pagination, A11y, EffectFade, Autoplay, EffectCoverflow]}
-            effect="f"
-            loop={true}
-            speed={1200}
-            autoplay={{
-              delay: 4500,
-              stopOnLastSlide: false,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-              waitForTransition: true,
-            }}
-            breakpoints={{
-              // When window width is >= 768px
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024:{
-                slidesPerView:3,
-                spaceBetween: 20,
-              }
-          
-            }}
-            a11y={{
-              prevSlide: "true",
-              nextSlide: "true",
-            }}
-            slidesPerView={1}
-            pagination={{
-              el: ".swiper-pagination",
-              clickable: true,
-            }}
-            scrollbar={{ draggable: true }}
-          >
-            {solarItems.map((item, index) => (
-        <SwiperSlide key={index} className="shadow-2xl w-[24rem] flex-shrink-0">
-          <Link to={`/Description`}>
-            <div className="grid grid-cols-2">
-              <img src={power4} alt="" className="w-full h-[192px]" />
-              <div className="bg-[#14381f] text-white py-3 px-4">
-                <h3 className="text-[.9rem] pb-2">{item.title}</h3>
-                <ul className="list-disc pl-4">
-                  {item.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-                <p className="pt-2">{item.price}</p>
-              </div>
-            </div>
-          </Link>
-        </SwiperSlide>
-      ))}
-          </Swiper>
-        </div>
-      </div>
-
-       <div className=" py-10 ">
-        <div className="  bg-[#14381f] ">
-          <h2 className="  px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase ">
-            {" "}
-            Inverters
-          </h2>
-        </div>
-        <div className="lithium max-w-[1200px] m-auto pt-6 px-6">
-          <Swiper
-            modules={[Pagination, A11y, EffectFade, Autoplay, EffectCoverflow]}
-            effect="f"
-            loop={true}
-            speed={1200}
-            autoplay={{
-              delay: 5000,
-              stopOnLastSlide: false,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-              waitForTransition: true,
-            }}
-            breakpoints={{
-              // When window width is >= 768px
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024:{
-                slidesPerView:3,
-                spaceBetween: 20,
-              }
-          
-            }}
-            a11y={{
-              prevSlide: "true",
-              nextSlide: "true",
-            }}
-            slidesPerView={1}
-            pagination={{
-              el: ".swiper-pagination",
-              clickable: true,
-            }}
-            scrollbar={{ draggable: true }}
-          >
-            {inverterItems.map((item, index) => (
-        <SwiperSlide key={index} className="shadow-2xl w-[24rem] flex-shrink-0">
-          <Link to={`/Description`}>
-            <div className="grid grid-cols-2">
-              <img src={power4} alt="" className="w-full h-[192px]" />
-              <div className="bg-[#14381f] text-white py-3 px-4">
-                <h3 className="text-[.9rem] pb-2">{item.title}</h3>
-                <ul className="list-disc pl-4">
-                  {item.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-                <p className="pt-2">{item.price}</p>
-              </div>
-            </div>
-          </Link>
-        </SwiperSlide>
-      ))}
-          </Swiper>
-        </div>
-      </div>
-       <div className=" pb-10 ">
-        <div className="  bg-[#14381f] ">
-          <h2 className="  px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase ">
-            {" "}
-            acidic battries
-          </h2>
-        </div>
-        <div className="lithium max-w-[1200px] m-auto pt-6 px-6">
-          <Swiper
-            modules={[Pagination, A11y, EffectFade, Autoplay, EffectCoverflow]}
-            effect="f"
-            loop={true}
-            speed={1200}
-            autoplay={{
-              delay: 5500,
-              stopOnLastSlide: false,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-              waitForTransition: true,
-            }}
-            breakpoints={{
-              // When window width is >= 768px
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024:{
-                slidesPerView:3,
-                spaceBetween: 20,
-              }
-          
-            }}
-            a11y={{
-              prevSlide: "true",
-              nextSlide: "true",
-            }}
-            slidesPerView={1}
-            pagination={{
-              el: ".swiper-pagination",
-              clickable: true,
-            }}
-            scrollbar={{ draggable: true }}
-          >
-            {acidItems.map((item, index) => (
-        <SwiperSlide key={index} className="shadow-2xl w-[24rem] flex-shrink-0">
-          <Link to={`/Description`}>
-            <div className="grid grid-cols-2">
-              <img src={power4} alt="" className="w-full h-[192px]" />
-              <div className="bg-[#14381f] text-white py-3 px-4">
-                <h3 className="text-[.9rem] pb-2">{item.title}</h3>
-                <ul className="list-disc pl-4">
-                  {item.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-                <p className="pt-2">{item.price}</p>
-              </div>
-            </div>
-          </Link>
-        </SwiperSlide>
-      ))}
-          </Swiper>
-        </div>
-      </div>
-
-      <div className=" py-10">
-        
       </div>
     </div>
+     
   );
-};
+}
 
 export default Home;
