@@ -1,6 +1,7 @@
 [
   {
     "id": "lithium",
+    "itemId": "lithium1",
     "imageSrc": "power4.png",
     "title": "100k/Mah System",
     "features": ["one", "300watt inverter", "Smart charger"],
@@ -8,6 +9,7 @@
   },
   {
     "id": "lithium",
+    "itemId": "lithium2",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
@@ -15,6 +17,7 @@
   },
   {
     "id": "lithium",
+    "itemId": "lithium3",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
@@ -22,6 +25,7 @@
   },
   {
     "id": "lithium",
+    "itemId": "lithium4",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
@@ -29,6 +33,7 @@
   },
   {
     "id": "lithium",
+    "itemId": "lithium5",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
@@ -36,6 +41,7 @@
   },
   {
     "id": "lithium",
+    "itemId": "lithium6",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],

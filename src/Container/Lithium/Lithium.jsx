@@ -16,17 +16,23 @@ const Lithium = () => {
   }, []);
   
 
-   const handleItemClick = (item) => {
-  const updatedRecentlyClickedItems = [
-    ...recentlyClickedItems.filter((i) => i.id !== item.id),
-    item,
-  ];
-  setRecentlyClickedItems(updatedRecentlyClickedItems);
-  localStorage.setItem(
-    "recentlyClickedItems",
-    JSON.stringify(updatedRecentlyClickedItems)
+ const handleItemClick = (item) => {
+  // Check if the item with the same itemId already exists in recentlyClickedItems
+  const itemExists = recentlyClickedItems.some(
+    (i) => i.itemId === item.itemId
   );
+
+  // If the item doesn't exist, add it to the array
+  if (!itemExists) {
+    const updatedRecentlyClickedItems = [...recentlyClickedItems, item];
+    setRecentlyClickedItems(updatedRecentlyClickedItems);
+    localStorage.setItem(
+      "recentlyClickedItems",
+      JSON.stringify(updatedRecentlyClickedItems)
+    );
+  }
 };
+
   return (
     <div>
        <div className="">
