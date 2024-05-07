@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState,  } from "react";
 import pic1 from "../../src/Assets/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
@@ -69,12 +69,12 @@ const Header = () => {
                                 href="/"
                                 className={`  ${
                                   location.pathname === "/"
-                                    ? "text-white font-semibold"
-                                    : ""
+                                    ? "text-white text-[0.9rem] font-semibold"
+                                    : "text-[0.9rem]"
                                 }`}
                               >
                                 {" "}
-                                <li className="  border-b py-1 border-[#222222]">
+                                <li className="  border-b py-1 border-white">
                                   HOME
                                 </li>
                               </a>
@@ -84,27 +84,27 @@ const Header = () => {
                                 href="/About"
                                 className={` ${
                                   location.pathname === "/About"
-                                    ? "text-white font-semibold"
-                                    : " "
+                                    ? "text-white font-semibold text-[0.9rem]"
+                                    : " text-[0.9rem]"
                                 }`}
                               >
                                 {" "}
-                                <li className="  border-b py-1 border-[#222222]">
-                                  ABOUT
+                                <li className="  border-b py-1 border-white">
+                                  INVERTERS
                                 </li>
                               </a>
                             </div>
                             <div>
                               <a
-                                href="/Services"
+                                href="/Lithium"
                                 className={` ${
-                                  location.pathname === "/Services"
-                                    ? "text-white font-semibold"
-                                    : ""
+                                  location.pathname === "/Lithium"
+                                    ? "text-white font-semibold text-[0.9rem]"
+                                    : " text-[0.9rem]"
                                 }`}
                               >
-                                <li className="  border-b py-1 border-[#222222]">
-                                  SERVICES
+                                <li className="  border-b py-1 border-white">
+                                  LITHIUM BATTRIES
                                 </li>
                               </a>
                             </div>
@@ -113,13 +113,13 @@ const Header = () => {
                                 href="/Projects"
                                 className={` ${
                                   location.pathname === "/Projects"
-                                    ? "text-white font-semibold"
-                                    : ""
+                                    ? "text-white font-semibold text-[0.9rem]"
+                                    : "text-[0.9rem]"
                                 }`}
                               >
                                 {" "}
-                                <li className="  border-b py-1 border-[#222222]">
-                                  PROJECTS
+                                <li className="  border-b py-1 border-white">
+                                  ACID BATTERIES
                                 </li>
                               </a>
                             </div>
@@ -128,13 +128,13 @@ const Header = () => {
                                 href="/Products"
                                 className={` ${
                                   location.pathname === "/Products"
-                                    ? "text-[#14381f] font-semibold"
-                                    : "text-[#14381f]"
+                                    ? "text-white font-semibold text-[0.9rem]"
+                                    : "text-[0.9rem]"
                                 }`}
                               >
                                 {" "}
-                                <li className="  border-b py-1 border-[#222222]">
-                                  PRODUCTS
+                                <li className="  border-b py-1 border-white">
+                                  TUBULAR BATTERIES
                                 </li>
                               </a>
                             </div>
@@ -143,13 +143,28 @@ const Header = () => {
                                 href="/News"
                                 className={` ${
                                   location.pathname === "/News"
-                                    ? "text-[#14381f] font-semibold"
-                                    : "text-[#14381f]"
+                                    ? "text-white font-semibold text-[0.9rem]"
+                                    : " text-[0.9rem]"
                                 }`}
                               >
                                 {" "}
-                                <li className="  border-b py-1 border-[#222222]">
-                                  NEWS
+                                <li className="  border-b py-1 border-white">
+                                  ALL PRODUCTS
+                                </li>
+                              </a>
+                            </div>
+                             <div>
+                              <a
+                                href="/Contacts"
+                                className={` ${
+                                  location.pathname === "/Contacts"
+                                    ? "  text-white  font-semibold text-[0.9rem]"
+                                    : "text-[0.9rem]"
+                                }`}
+                              >
+                                {" "}
+                                <li className="  border-b py-1 border-white">
+                                  ABOUT US
                                 </li>
                               </a>
                             </div>
@@ -158,13 +173,13 @@ const Header = () => {
                                 href="/Contacts"
                                 className={` ${
                                   location.pathname === "/Contacts"
-                                    ? "text-[#14381f] font-semibold"
-                                    : "text-[#14381f]"
+                                    ? "  text-white  font-semibold text-[0.9rem]"
+                                    : "text-[0.9rem]"
                                 }`}
                               >
                                 {" "}
-                                <li className="  border-b py-1 border-[#222222]">
-                                  CONTACTS
+                                <li className="  border-b py-1 border-white">
+                                  CONTACT US
                                 </li>
                               </a>
                             </div>
