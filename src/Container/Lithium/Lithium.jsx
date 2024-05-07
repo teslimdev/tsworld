@@ -14,18 +14,19 @@ const Lithium = () => {
     const filteredItems = itemsData.filter((item) => item.id === "lithium");
     setLithiumItems(filteredItems);
   }, []);
+  
 
    const handleItemClick = (item) => {
-    const updatedRecentlyClickedItems = [
-      item,
-      ...recentlyClickedItems.filter((i) => i.id !== item.id),
-    ];
-    setRecentlyClickedItems(updatedRecentlyClickedItems);
-    localStorage.setItem(
-      "recentlyClickedItems",
-      JSON.stringify(updatedRecentlyClickedItems)
-    );
-  };
+  const updatedRecentlyClickedItems = [
+    ...recentlyClickedItems.filter((i) => i.id !== item.id),
+    item,
+  ];
+  setRecentlyClickedItems(updatedRecentlyClickedItems);
+  localStorage.setItem(
+    "recentlyClickedItems",
+    JSON.stringify(updatedRecentlyClickedItems)
+  );
+};
   return (
     <div>
        <div className="">
