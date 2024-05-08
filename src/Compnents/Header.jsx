@@ -81,9 +81,9 @@ const Header = () => {
                             </div>
                             <div>
                               <a
-                                href="/About"
+                                href="/Inverter"
                                 className={` ${
-                                  location.pathname === "/About"
+                                  location.pathname === "/Inverter"
                                     ? "text-white font-semibold text-[0.9rem]"
                                     : " text-[0.9rem]"
                                 }`}
@@ -110,9 +110,9 @@ const Header = () => {
                             </div>
                             <div>
                               <a
-                                href="/Projects"
+                                href="/Acid"
                                 className={` ${
-                                  location.pathname === "/Projects"
+                                  location.pathname === "/Acid"
                                     ? "text-white font-semibold text-[0.9rem]"
                                     : "text-[0.9rem]"
                                 }`}
@@ -123,11 +123,26 @@ const Header = () => {
                                 </li>
                               </a>
                             </div>
+                             <div>
+                              <a
+                                href="/Solar"
+                                className={` ${
+                                  location.pathname === "/Solar"
+                                    ? "text-white font-semibold text-[0.9rem]"
+                                    : "text-[0.9rem]"
+                                }`}
+                              >
+                                {" "}
+                                <li className="  border-b py-1 border-white">
+                                  SOLAR PANELS
+                                </li>
+                              </a>
+                            </div>
                             <div>
                               <a
-                                href="/Products"
+                                href="/Tubular"
                                 className={` ${
-                                  location.pathname === "/Products"
+                                  location.pathname === "/Tubular"
                                     ? "text-white font-semibold text-[0.9rem]"
                                     : "text-[0.9rem]"
                                 }`}

@@ -48,70 +48,48 @@
     "price": "#250,000"
   },
   {
-    "id": "solarpanels",
+    "id": "solar",
+    "itemId": "solar1",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#220,000"
   },
   {
-    "id": "solarpanels",
+    "id": "solar",
+    "itemId": "solar2",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#205,000"
   },
   {
-    "id": "solarpanels",
+    "id": "solar",
+    "itemId": "solar3",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#204,000"
   },
   {
-    "id": "solarpanels",
+    "id": "solar",
+    "itemId": "solar4",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#256,000"
   },
   {
-    "id": "solarpanels",
+    "id": "solar",
+    "itemId": "solar5",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
     "price": "#290,000"
   },
-  {
-    "id": "inverter",
-    "imageSrc": "power4.png",
-    "title": "Another Title",
-    "features": ["feature one", "feature two", "feature three"],
-    "price": "#90,000"
-  },
-  {
-    "id": "inverter",
-    "imageSrc": "power4.png",
-    "title": "Another Title",
-    "features": ["feature one", "feature two", "feature three"],
-    "price": "#110,000"
-  },
-  {
-    "id": "inverter",
-    "imageSrc": "power4.png",
-    "title": "Another Title",
-    "features": ["feature one", "feature two", "feature three"],
-    "price": "#700,000"
-  },
-  {
-    "id": "inverter",
-    "imageSrc": "power4.png",
-    "title": "Another Title",
-    "features": ["feature one", "feature two", "feature three"],
-    "price": "#350,000"
-  },
-  {
-    "id": "inverter",
+   {
+    "id": "solar",
+    "itemId": "solar4",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
@@ -119,6 +97,47 @@
   },
   {
     "id": "inverter",
+     "itemId": "inverter1",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#90,000"
+  },
+  {
+    "id": "inverter",
+     "itemId": "inverter2",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#110,000"
+  },
+  {
+    "id": "inverter",
+     "itemId": "inverter3",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#700,000"
+  },
+  {
+    "id": "inverter",
+     "itemId": "inverter4",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#350,000"
+  },
+  {
+    "id": "inverter",
+     "itemId": "inverter5",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature one", "feature two", "feature three"],
+    "price": "#260,000"
+  },
+  {
+    "id": "inverter",
+     "itemId": "inverter6",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
@@ -126,6 +145,7 @@
   },
   {
     "id": "acid",
+    "itemId": "acid1",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
@@ -133,6 +153,7 @@
   },
   {
     "id": "acid",
+    "itemId": "acid2",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],
@@ -140,6 +161,7 @@
   },
   {
     "id": "acid",
+    "itemId": "acid3",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature seven", "feature nine", "feature eight"],
@@ -147,6 +169,7 @@
   },
   {
     "id": "acid",
+    "itemId": "acid4",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature ten", "feature six", "feature two"],
@@ -154,6 +177,7 @@
   },
   {
     "id": "acid",
+    "itemId": "acid5",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature ten", "feature six", "feature two"],
@@ -161,6 +185,55 @@
   },
   {
     "id": "acid",
+    "itemId": "acid6",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature ten", "feature six", "feature two"],
+    "price": "#305,000"
+  },
+    {
+   "id": "tubular",
+     "itemId": "tubular1",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature ten", "feature six", "feature two"],
+    "price": "#305,000"
+  },
+    {
+     "id": "tubular",
+     "itemId": "tubular2",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature ten", "feature six", "feature two"],
+    "price": "#305,000"
+  },
+    {
+    "id": "tubular",
+   "itemId": "tubular3",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature ten", "feature six", "feature two"],
+    "price": "#305,000"
+  },
+    {
+     "id": "tubular",
+  "itemId": "tubular4",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature ten", "feature six", "feature two"],
+    "price": "#305,000"
+  },
+  {
+     "id": "tubular",
+  "itemId": "tubular5",
+    "imageSrc": "power4.png",
+    "title": "Another Title",
+    "features": ["feature ten", "feature six", "feature two"],
+    "price": "#305,000"
+  },
+    {
+    "id": "tubular",
+    "itemId": "tubular6",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature ten", "feature six", "feature two"],
