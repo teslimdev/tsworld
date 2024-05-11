@@ -41,7 +41,7 @@ const Footer = () => {
                     Help Center
                   </li>
                 </Link>
-                <Link to="/">
+                <Link to="/Contacts">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Contact Us
                   </li>
