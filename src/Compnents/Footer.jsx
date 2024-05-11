@@ -31,46 +31,46 @@ const Footer = () => {
             </div>
             <div className=" basis-[70%]">
               <ul className="    flex flex-wrap justify-center  gap-y-4 md:grid grid-cols-3   md:max-w-[700px]  lg:max-w-[1000px] ">
-                <Link to="/">
+                <a href="/">
                   <li className=" flex-auto w-full  md:w-full   px-4   text-[0.8rem]">
                     chat with us
                   </li>
-                </Link>
-                <Link to="/">
+                </a>
+                <a href="/">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Help Center
                   </li>
-                </Link>
-                <Link to="/Contacts">
+                </a>
+                <a href="/Contacts">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Contact Us
                   </li>
-                </Link>
-                <Link to="/">
+                </a>
+                <a href="/">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Terms & Conditions
                   </li>
-                </Link>
-                <Link to="/">
+                </a>
+                <a href="/">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Privacy Notice
                   </li>
-                </Link>
-                <Link to="/">
+                </a>
+                <a href="/">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Cookie Notice
                   </li>
-                </Link>
-                <Link to="/">
+                </a>
+                <a href="/">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Request For Upgrade
                   </li>
-                </Link>
-                <Link to="/">
+                </a>
+                <a href="/">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Request For Repair
                   </li>
-                </Link>
+                </a>
               </ul>
             </div>
           </div>
