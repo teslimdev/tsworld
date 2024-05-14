@@ -31,12 +31,7 @@ const Footer = () => {
             </div>
             <div className=" basis-[70%]">
               <ul className="    flex flex-wrap justify-center  gap-y-4 md:grid grid-cols-3   md:max-w-[700px]  lg:max-w-[1000px] ">
-                <a href="/">
-                  <li className=" flex-auto w-full  md:w-full   px-4   text-[0.8rem]">
-                    chat with us
-                  </li>
-                </a>
-                <a href="/">
+                <a href="/Help">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Help Center
                   </li>

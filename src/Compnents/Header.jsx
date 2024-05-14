@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 import React, { useState,  } from "react";
 import pic1 from "../../src/Assets/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";

@@ -7,6 +7,7 @@ import Acid from "./Container/Acid/Acid";
 import Tubular from "./Container/Tubular/Tubular";
 import Products from "./Container/Products/Products";
 import Contacts from "./Container/Contacts/Contacts";
+import Help from "./Container/Help/Help";
 import { Footer } from "./Compnents";
 import { Description } from "./Container";
 // import Header from "./Compnents/Header";
@@ -24,6 +25,8 @@ function App() {
              <Route path="/Tubular" element={<Tubular />}/>
               <Route path="/Products" element={<Products />}/>
                <Route path="/Contacts" element={<Contacts />}/>
+                <Route path="/Help" element={<Help />}/>
+               
        </Routes>
        <Footer/>
     </div>

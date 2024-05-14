@@ -88,17 +88,7 @@ const Contacts = () => {
                 atque? Vitae, expedita?
               </p>
               <div className="  md:flex justify-center gap-20">
-                <div className=" text-center md:text-start pt-6 hidden md:block">
-                  <a href="https://wa.link/jzu6e1" className=" relative ">
-                    <button className=" bg-[#222222] text-white py-2 px-6 rounded-md w-fit ">
-                      Chat with Us
-                    </button>
-                    <div className=" absolute w-10 h-10 top-[-10px] bg-[#444444]   flex justify-center items-center rounded-full left-[-20px] ">
-                      <IoChatboxEllipses className="     text-white   " />
-                    </div>
-                  </a>
-                </div>
-                <div className=" text-center md:text-start pt-6">
+              <div className=" text-center md:text-start pt-6 ">
                   <a href="tel:+2348184370911" className=" relative">
                     <button className=" bg-[#222222] text-white py-2 px-6 rounded-md w-fit ">
                       Call Us
@@ -108,6 +98,17 @@ const Contacts = () => {
                     </div>
                   </a>
                 </div>
+                <div className=" text-center md:text-start pt-6  ">
+                  <a href="https://wa.link/jzu6e1" className=" relative ">
+                    <button className=" bg-[#222222] text-white py-2 px-6 rounded-md w-fit ">
+                      Chat with Us
+                    </button>
+                    <div className=" absolute w-10 h-10 top-[-10px] bg-[#444444]   flex justify-center items-center rounded-full left-[-20px] ">
+                      <IoChatboxEllipses className="     text-white   " />
+                    </div>
+                  </a>
+                </div>
+                
               </div>
               <p className=" text-[0.9rem] md:order-1 pt-6 hidden md:block">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
