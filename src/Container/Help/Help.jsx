@@ -232,11 +232,11 @@ const Help = () => {
           answer: "Answer to question 2 for Place an Order.",
         },
         {
-          question: "Question 2",
+          question: "Question 3",
           answer: "Answer to question 2 for Track Order Status.",
         },
         {
-          question: "Question 2",
+          question: "Question 4",
           answer: "Answer to question 2 for Track Order Status.",
         },
       ],
@@ -244,7 +244,7 @@ const Help = () => {
     "Track Order Status": {
       questions: [
         {
-          question: "Question 3",
+          question: "Question 1",
           answer: "Answer to question 1 for Track Order Status.",
         },
         {
@@ -252,11 +252,11 @@ const Help = () => {
           answer: "Answer to question 2 for Track Order Status.",
         },
         {
-          question: "Question 2",
+          question: "Question 3",
           answer: "Answer to question 2 for Track Order Status.",
         },
         {
-          question: "Question 2",
+          question: "Question 4",
           answer: "Answer to question 2 for Track Order Status.",
         },
       ],
@@ -264,7 +264,7 @@ const Help = () => {
      "Track Order ": {
       questions: [
         {
-          question: "Question 3",
+          question: "Question 1",
           answer: "Answer to question 1 for Track Order Status.",
         },
         {
@@ -272,11 +272,11 @@ const Help = () => {
           answer: "Answer to question 2 for Track Order Status.",
         },
         {
-          question: "Question 2",
+          question: "Question 3",
           answer: "Answer to question 2 for Track Order Status.",
         },
         {
-          question: "Question 2",
+          question: "Question 4",
           answer: "Answer to question 2 for Track Order Status.",
         },
       ],
@@ -284,7 +284,7 @@ const Help = () => {
      "Track  Status": {
       questions: [
         {
-          question: "Question 3",
+          question: "Question 1",
           answer: "Answer to question 1 for Track Order Status.",
         },
         {
@@ -292,11 +292,11 @@ const Help = () => {
           answer: "Answer to question 2 for Track Order Status.",
         },
         {
-          question: "Question 2",
+          question: "Question 3",
           answer: "Answer to question 2 for Track Order Status.",
         },
         {
-          question: "Question 2",
+          question: "Question 4",
           answer: "Answer to question 2 for Track Order Status.",
         },
       ],
@@ -304,7 +304,7 @@ const Help = () => {
      " Order Status": {
       questions: [
         {
-          question: "Question 3",
+          question: "Question 1",
           answer: "Answer to question 1 for Track Order Status.",
         },
         {
@@ -312,11 +312,11 @@ const Help = () => {
           answer: "Answer to question 2 for Track Order Status.",
         },
         {
-          question: "Question 2",
+          question: "Question 3",
           answer: "Answer to question 2 for Track Order Status.",
         },
         {
-          question: "Question 2",
+          question: "Question 4",
           answer: "Answer to question 2 for Track Order Status.",
         },
       ],
