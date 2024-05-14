@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useState ,useMemo } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { PiShoppingBagOpenFill } from "react-icons/pi";
-import { MdKeyboardArrowRight, MdAdd, MdRemove } from "react-icons/md";
+import { MdKeyboardArrowRight, MdOutlineKeyboardArrowLeft , MdAdd, MdRemove } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoChatboxEllipses } from "react-icons/io5";
 const Help = () => {
   const [selectedGuide, setSelectedGuide] = useState(null);
   const [selectedFAQ, setSelectedFAQ] = useState(null);
   const [expandedQuestion, setExpandedQuestion] = useState(null);
   const [showAllListItems, setShowAllListItems] = useState(true); // State to toggle list items on small screens
   const [showBackButton, setShowBackButton] = useState(false);
-
-  const listItemData = {
+  const [selectedMediumGuide, setSelectedMediumGuide] = useState(null);
+ const listItemData = useMemo(() => ({
     "Place an Order": {
       steps: [
         {
@@ -212,14 +214,8 @@ const Help = () => {
       ],
     },
     // Add more list items as needed
-  };
-  //     const listItemInfo = {
-  //     "Place an Order": "This guide explains how to place an order.",
-  //     "Track Order Status": "This guide helps you track the status of your order.",
-  //     "Returns and Refunds": "This guide provides information on returns and refunds.",
-  //     "Shipping Information": "This guide covers shipping information and delivery times.",
-  //     "Payment Methods": "This guide explains the payment methods available.",
-  //   };
+  }), []);
+
   const faqData = {
     delivery: {
       questions: [
@@ -261,7 +257,7 @@ const Help = () => {
         },
       ],
     },
-     "Track Order ": {
+    "Track Order ": {
       questions: [
         {
           question: "Question 1",
@@ -281,7 +277,7 @@ const Help = () => {
         },
       ],
     },
-     "Track  Status": {
+    "Track  Status": {
       questions: [
         {
           question: "Question 1",
@@ -301,7 +297,7 @@ const Help = () => {
         },
       ],
     },
-     " Order Status": {
+    " Order Status": {
       questions: [
         {
           question: "Question 1",
@@ -334,9 +330,8 @@ const Help = () => {
 
   const handleFAQClick = (itemName) => {
     setSelectedFAQ(itemName);
-    setSelectedGuide(null);
+    setSelectedMediumGuide(null); // Reset selectedMediumGuide when an FAQ item is clicked
     setExpandedQuestion(null);
-    setShowAllListItems(false); // Hide all list items on small screens when an FAQ item is clicked
     setShowBackButton(true); // Show the back button
   };
 
@@ -354,38 +349,56 @@ const Help = () => {
     setShowBackButton(false); // Hide the back button when all list items are displayed
     setShowAllListItems(true); // Show all list items on small screens when button is clicked
   };
-  
+  const handleMediumGuideClick = (itemName) => {
+    setSelectedMediumGuide(itemName); // Update the selected medium guide
+    setSelectedFAQ(null);
+    setExpandedQuestion(null);
+    setShowBackButton(true); // Show the back button
+  };
+
+  // Set the first guide item as the default selected medium guide
+  React.useEffect(() => {
+  const firstGuide = Object.keys(listItemData)[0];
+  setSelectedMediumGuide(firstGuide);
+}, [listItemData]);
   return (
     <div>
       <div>
-        <div className="bg-[#14381f] fixed w-full z-20">
-          <div className="flex items-center justify-between max-w-[1200px] m-auto px-4 py-2">
-            <p className="text-white text-3xl">
+        <div className="bg-gray-200 fixed w-full z-20">
+          <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
+            <p className="text-black text-3xl">
               <Link to="/">
                 <IoIosArrowRoundBack />
               </Link>
             </p>
-            <h2 className="text-white text-[1.1rem] uppercase">Help center</h2>
+            <h2 className="text-black text-[1.1rem] uppercase">Help center</h2>
             <div></div>{" "}
             {/* This empty div creates space for the center alignment */}
           </div>
         </div>
       </div>
 
- <div className="py-16 md:hidden">
+      <div className="py-16 md:hidden small">
         <div className="max-w-[400px] m-auto md:m-0 px-3">
           {showBackButton && (
-                <div className="mt-4">
-                  <button onClick={toggleListItems} className="bg-gray-200 text-gray-800 py-2 px-4 rounded-md">
-                    Back To All Topics
-                  </button>
-                </div>
-              )}
+            <div className="mt-2 ">
+              <button
+                onClick={toggleListItems}
+                className=" flex items-center   "
+              >
+              <MdOutlineKeyboardArrowLeft  className=" text-[1.5rem] "/>  Back To All Topics
+              </button>
+            </div>
+          )}
           {!selectedGuide && !selectedFAQ && (
             <>
               <div>
                 <h2 className="pb-3">Guides</h2>
-                <ul className={`border pt-2 space-y-3 ${showAllListItems ? '' : 'hidden'} md:flex flex-col`}>
+                <ul
+                  className={`border pt-2 space-y-3 ${
+                    showAllListItems ? "" : "hidden"
+                  } md:flex flex-col`}
+                >
                   {Object.keys(listItemData).map((item, index) => (
                     <li
                       key={index}
@@ -404,7 +417,11 @@ const Help = () => {
 
               <div className="pt-8">
                 <h2 className="pb-3">Frequently Asked Questions</h2>
-                <ul className={`border pt-2 space-y-3 ${showAllListItems ? '' : 'hidden'} md:flex flex-col`}>
+                <ul
+                  className={`border pt-2 space-y-3 ${
+                    showAllListItems ? "" : "hidden"
+                  } md:flex flex-col`}
+                >
                   {Object.keys(faqData).map((item, index) => (
                     <li
                       key={index}
@@ -469,105 +486,139 @@ const Help = () => {
                   </div>
                 ))}
               </div>
-             
             </div>
           )}
         </div>
       </div>
 
-          <div className="py-16 hidden md:block">
-        <div className=" px-3 max-w-[1200px] m-auto">
-         <div className=" grid grid-cols-2 ">
-             <div className=" max-w-[400px]">
-            <div>
-            <h2 className="pb-3">Guides</h2>
-            <ul className="border pt-2 space-y-3">
-              {Object.keys(listItemData).map((item, index) => (
-                <li
-                  key={index}
-                  className="flex items-center justify-between border-b pb-3 px-3"
-                  onClick={() => handleGuideClick(item)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <p className="flex items-center gap-2">
-                    <PiShoppingBagOpenFill /> {item}
-                  </p>
-                  <MdKeyboardArrowRight />
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="pt-8">
-            <h2 className="pb-3">Frequently Asked Questions</h2>
-            <ul className="border pt-2 space-y-3">
-              {Object.keys(faqData).map((item, index) => (
-                <li
-                  key={index}
-                  className="flex items-center justify-between border-b pb-3 px-3"
-                  onClick={() => handleFAQClick(item)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <p className="flex items-center gap-2">
-                    <PiShoppingBagOpenFill /> {item}
-                  </p>
-                  <MdKeyboardArrowRight />
-                </li>
-              ))}
-            </ul>
-          </div>
-          </div>
-
-          <div>
-            {selectedGuide && (
-            <div className="pt-8">
-              <h2 className="font-bold">{selectedGuide}</h2>
+      <div className="py-16 hidden md:block medium">
+        <div className="px-3 max-w-[730px] lg:max-w-[1000px] sl:max-w-[1200px] m-auto ">
+          <div className="flex gap-7">
+            <div className="max-w-[300px] w-full   lg:max-w-[400px]">
+              {/* Guides */}
               <div>
-                {listItemData[selectedGuide].steps.map((step, index) => (
-                  <div key={index} className="pt-6">
-                    <h3 className="font-semibold">{step.title}</h3>
-                    <ul className="list-disc px-6 space-y-2 pt-2">
-                      {step.details.map((detail, idx) => (
-                        <li key={idx} className="text-[0.9rem]">
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                <h2 className="pb-3">Guides</h2>
+                <ul className="border pt-2 space-y-3">
+                  {Object.keys(listItemData).map((item, index) => (
+                    <li
+                      key={index}
+                      className={`flex items-center justify-between border-b pb-3 px-3 ${
+                        selectedMediumGuide === item ? "font-bold" : ""
+                      }`}
+                      onClick={() => handleMediumGuideClick(item)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <p className="flex items-center gap-2">
+                        <PiShoppingBagOpenFill /> {item}
+                      </p>
+                      <MdKeyboardArrowRight />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="pt-8">
+                <h2 className="pb-3">Frequently Asked Questions</h2>
+                <ul className="border pt-2 space-y-3">
+                  {Object.keys(faqData).map((item, index) => (
+                    <li
+                      key={index}
+                      className={`flex items-center justify-between border-b pb-3 px-3 ${
+                        selectedFAQ === item ? "font-bold" : ""
+                      }`}
+                      onClick={() => handleFAQClick(item)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <p className="flex items-center gap-2">
+                        <PiShoppingBagOpenFill /> {item}
+                      </p>
+                      <MdKeyboardArrowRight />
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          )}
-          {selectedFAQ && (
-            <div className="pt-8">
-              <h2 className="font-bold pb-3">{selectedFAQ}</h2>
-              <div className="border">
-                {faqData[selectedFAQ].questions.map((faq, index) => (
-                  <div
-                    key={index}
-                    className={`pt-4 pb-4 px-3 border-b border-gray-300 ${
-                      expandedQuestion === faq.question ? "bg-gray-100" : ""
-                    }`}
-                    onClick={() => toggleQuestion(faq.question)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <div className="flex justify-between items-center">
-                      <h3 className="font-semibold">{faq.question}</h3>
-                      {expandedQuestion === faq.question ? (
-                        <MdRemove />
-                      ) : (
-                        <MdAdd />
-                      )}
-                    </div>
-                    {expandedQuestion === faq.question && (
-                      <p className="text-[0.9rem] pt-2">{faq.answer}</p>
+            {/* Selected Gui de Content */}
+            <div className="  w-full ">
+              {selectedMediumGuide && (
+                <div className="pt-8">
+                  <h2 className="font-bold pb-3">{selectedMediumGuide}</h2>
+                  <div className=" border px-6 pb-6">
+                    {listItemData[selectedMediumGuide].steps.map(
+                      (step, index) => (
+                        <div key={index} className="pt-6">
+                          <h3 className="font-semibold">{step.title}</h3>
+                          <ul className="list-disc px-6 space-y-2 pt-2">
+                            {step.details.map((detail, idx) => (
+                              <li key={idx} className="text-[0.9rem]">
+                                {detail}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )
                     )}
                   </div>
-                ))}
-              </div>
+                </div>
+              )}
+              {selectedFAQ && (
+                <div className="pt-8">
+                  <h2 className="font-bold pb-3">{selectedFAQ}</h2>
+                  <div className="border">
+                    {faqData[selectedFAQ].questions.map((faq, index) => (
+                      <div
+                        key={index}
+                        className={`pt-4 pb-4 px-3 border-b border-gray-300 ${
+                          expandedQuestion === faq.question ? "bg-gray-100" : ""
+                        }`}
+                        onClick={() => toggleQuestion(faq.question)}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <div className="flex justify-between items-center">
+                          <h3 className="font-semibold">{faq.question}</h3>
+                          {expandedQuestion === faq.question ? (
+                            <MdRemove />
+                          ) : (
+                            <MdAdd />
+                          )}
+                        </div>
+                        {expandedQuestion === faq.question && (
+                          <p className="text-[0.9rem] pt-2">{faq.answer}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          )}
           </div>
-         </div>
+        </div>
+      </div>
+
+      <div>
+        <div className=" px-3 max-w-[400px] md:max-w-[700px] sl:max-w-[1200px] m-auto">
+            <h3 className=" pb-4 font-bold lg:text-[1.2rem]">Get In Touch</h3>
+            <div className=" pb-10">
+                <ul className=" border border-gray-300 bg-gray-100 ">
+                   <a href="https://wa.link/jzu6e1">
+                     <li className=" flex items-center px-5 text-[0.9rem] gap-8 border-b border-gray-300 md:py-4  pb-3">
+                      <IoChatboxEllipses className="  text-[3rem] md:text-[2rem]"/>
+                    <div>
+                        <p className=" font-bold  py-2">Chat</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam quis, consectetur aliquid ducimus totam?</p>
+                    </div>
+                    </li>
+                   </a>
+                   <a href="tel:+2348184370911">
+                     <li className=" flex items-center px-5 text-[0.9rem] gap-8  md:py-4 pb-3">
+                      <FaPhoneAlt className="  text-[3rem] md:text-[2rem]"/>
+                    <div>
+                        <p className=" font-bold  py-2">Call</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam quis, consectetur aliquid ducimus totam?</p>
+                    </div>
+                    </li>
+                   </a>
+                </ul>
+            </div>
         </div>
       </div>
     </div>
