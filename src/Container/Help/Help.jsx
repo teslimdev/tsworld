@@ -231,6 +231,14 @@ const Help = () => {
           question: "Question 2",
           answer: "Answer to question 2 for Place an Order.",
         },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
       ],
     },
     "Track Order Status": {
@@ -238,6 +246,74 @@ const Help = () => {
         {
           question: "Question 3",
           answer: "Answer to question 1 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+      ],
+    },
+     "Track Order ": {
+      questions: [
+        {
+          question: "Question 3",
+          answer: "Answer to question 1 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+      ],
+    },
+     "Track  Status": {
+      questions: [
+        {
+          question: "Question 3",
+          answer: "Answer to question 1 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+      ],
+    },
+     " Order Status": {
+      questions: [
+        {
+          question: "Question 3",
+          answer: "Answer to question 1 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
+        },
+        {
+          question: "Question 2",
+          answer: "Answer to question 2 for Track Order Status.",
         },
         {
           question: "Question 2",
@@ -278,6 +354,7 @@ const Help = () => {
     setShowBackButton(false); // Hide the back button when all list items are displayed
     setShowAllListItems(true); // Show all list items on small screens when button is clicked
   };
+  
   return (
     <div>
       <div>
@@ -363,13 +440,6 @@ const Help = () => {
                   </div>
                 ))}
               </div>
-              {showBackButton && (
-                <div className="mt-4">
-                  <button onClick={toggleListItems} className="bg-gray-200 text-gray-800 py-2 px-4 rounded-md">
-                    Hide List Items
-                  </button>
-                </div>
-              )}
             </div>
           )}
           {selectedFAQ && (
@@ -404,6 +474,7 @@ const Help = () => {
           )}
         </div>
       </div>
+
           <div className="py-16 hidden md:block">
         <div className=" px-3 max-w-[1200px] m-auto">
          <div className=" grid grid-cols-2 ">
