@@ -35,7 +35,7 @@ const Header = () => {
                   <form action="" className="flex gap-2">
                     <input
                       type="search"
-                      className="bg-gray-700 w-[400px] rounded placeholder:text-xl placeholder:text-white pl-10 pr-3 py-1 outline-none"
+                      className="bg-gray-200 w-[400px] rounded placeholder:text-xl placeholder:text-white pl-10 pr-3 py-1 outline-none"
                       placeholder="search"
                     />
                     <CiSearch className="absolute top-3 text-xl left-3" />
