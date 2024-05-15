@@ -378,7 +378,7 @@ const Help = () => {
         </div>
       </div>
 
-      <div className="py-16 md:hidden small">
+      <div className="py-16 md:hidden small  bg-gray-300">
         <div className="max-w-[400px] m-auto md:m-0 px-3">
           {showBackButton && (
             <div className="mt-2 ">
@@ -395,7 +395,7 @@ const Help = () => {
               <div>
                 <h2 className="pb-3">Guides</h2>
                 <ul
-                  className={`border pt-2 space-y-3 ${
+                  className={`border pt-2 space-y-3  bg-gray-100 ${
                     showAllListItems ? "" : "hidden"
                   } md:flex flex-col`}
                 >
@@ -418,7 +418,7 @@ const Help = () => {
               <div className="pt-8">
                 <h2 className="pb-3">Frequently Asked Questions</h2>
                 <ul
-                  className={`border pt-2 space-y-3 ${
+                  className={`border pt-2 space-y-3 bg-gray-100 ${
                     showAllListItems ? "" : "hidden"
                   } md:flex flex-col`}
                 >
@@ -442,8 +442,8 @@ const Help = () => {
 
           {selectedGuide && (
             <div className="pt-8">
-              <h2 className="font-bold">{selectedGuide}</h2>
-              <div>
+              <h2 className="font-bold pb-4">{selectedGuide}</h2>
+              <div className=" bg-gray-100 px-2 pb-6">
                 {listItemData[selectedGuide].steps.map((step, index) => (
                   <div key={index} className="pt-6">
                     <h3 className="font-semibold">{step.title}</h3>
@@ -462,12 +462,12 @@ const Help = () => {
           {selectedFAQ && (
             <div className="pt-8">
               <h2 className="font-bold pb-3">{selectedFAQ}</h2>
-              <div className="border">
+              <div className="border bg-gray-100">
                 {faqData[selectedFAQ].questions.map((faq, index) => (
                   <div
                     key={index}
                     className={`pt-4 pb-4 px-3 border-b border-gray-300 ${
-                      expandedQuestion === faq.question ? "bg-gray-100" : ""
+                      expandedQuestion === faq.question ? "bg-gray-200" : ""
                     }`}
                     onClick={() => toggleQuestion(faq.question)}
                     style={{ cursor: "pointer" }}
@@ -491,14 +491,14 @@ const Help = () => {
         </div>
       </div>
 
-      <div className="py-16 hidden md:block medium">
+      <div className="py-16 hidden md:block medium bg-gray-300">
         <div className="px-3 max-w-[730px] lg:max-w-[1000px] sl:max-w-[1200px] m-auto ">
           <div className="flex gap-7">
             <div className="max-w-[300px] w-full   lg:max-w-[400px]">
               {/* Guides */}
               <div>
                 <h2 className="pb-3">Guides</h2>
-                <ul className="border pt-2 space-y-3">
+                <ul className="border pt-2 space-y-3 bg-gray-100">
                   {Object.keys(listItemData).map((item, index) => (
                     <li
                       key={index}
@@ -518,7 +518,7 @@ const Help = () => {
               </div>
               <div className="pt-8">
                 <h2 className="pb-3">Frequently Asked Questions</h2>
-                <ul className="border pt-2 space-y-3">
+                <ul className="border pt-2 space-y-3 bg-gray-100" >
                   {Object.keys(faqData).map((item, index) => (
                     <li
                       key={index}
@@ -542,7 +542,7 @@ const Help = () => {
               {selectedMediumGuide && (
                 <div className="pt-8">
                   <h2 className="font-bold pb-3">{selectedMediumGuide}</h2>
-                  <div className=" border px-6 pb-6">
+                  <div className=" border px-6 pb-6 bg-gray-100">
                     {listItemData[selectedMediumGuide].steps.map(
                       (step, index) => (
                         <div key={index} className="pt-6">
@@ -563,12 +563,12 @@ const Help = () => {
               {selectedFAQ && (
                 <div className="pt-8">
                   <h2 className="font-bold pb-3">{selectedFAQ}</h2>
-                  <div className="border">
+                  <div className="border bg-gray-100">
                     {faqData[selectedFAQ].questions.map((faq, index) => (
                       <div
                         key={index}
                         className={`pt-4 pb-4 px-3 border-b border-gray-300 ${
-                          expandedQuestion === faq.question ? "bg-gray-100" : ""
+                          expandedQuestion === faq.question ? "bg-gray-200" : ""
                         }`}
                         onClick={() => toggleQuestion(faq.question)}
                         style={{ cursor: "pointer" }}
@@ -594,7 +594,7 @@ const Help = () => {
         </div>
       </div>
 
-      <div>
+      <div className=" bg-gray-300">
         <div className=" px-3 max-w-[400px] md:max-w-[700px] sl:max-w-[1200px] m-auto">
             <h3 className=" pb-4 font-bold lg:text-[1.2rem]">Get In Touch</h3>
             <div className=" pb-10">
