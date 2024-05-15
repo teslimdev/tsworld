@@ -61,7 +61,7 @@ const Footer = () => {
                     Request For Upgrade
                   </li>
                 </a>
-                <a href="/">
+                <a href="/Repair">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Request For Repair
                   </li>

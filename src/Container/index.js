@@ -9,3 +9,4 @@ export { default as Products} from "./Products/Products";
 export { default as Contacts} from "./Contacts/Contacts";
 export { default as Help} from "./Help/Help";
 export { default as Upgrade} from "./Upgrade/Upgrade";
+export { default as Repair} from "./Repair/Repair";

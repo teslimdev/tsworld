@@ -11,6 +11,7 @@ import Help from "./Container/Help/Help";
 import { Footer } from "./Compnents";
 import { Description } from "./Container";
 import Upgrade from "./Container/Upgrade/Upgrade";
+import Repair from "./Container/Repair/Repair";
 // import Header from "./Compnents/Header";
 // import { Slide } from "./Compnents";
 function App() {
@@ -28,6 +29,7 @@ function App() {
                <Route path="/Contacts" element={<Contacts />}/>
                 <Route path="/Help" element={<Help />}/>
                 <Route path="/Upgrade" element={<Upgrade />}/>
+                <Route path="/Repair" element={<Repair/>}/>
                
        </Routes>
        <Footer/>
