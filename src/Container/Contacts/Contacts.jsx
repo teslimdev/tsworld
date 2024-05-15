@@ -90,20 +90,20 @@ const Contacts = () => {
               <div className="  md:flex justify-center gap-20">
               <div className=" text-center md:text-start pt-6 ">
                   <a href="tel:+2348184370911" className=" relative">
-                    <button className=" bg-[#222222] text-white py-2 px-6 rounded-md w-fit ">
+                    <button className=" bg-gray-700  text-white py-2 px-6 rounded-md w-fit ">
                       Call Us
                     </button>
-                    <div className=" absolute w-10 h-10 top-[-10px] bg-[#444444]   flex justify-center items-center rounded-full left-[-20px] ">
+                    <div className=" absolute w-10 h-10 top-[-10px] bg-gray-500   flex justify-center items-center rounded-full left-[-20px] ">
                       <FaPhoneAlt className="     text-white   " />
                     </div>
                   </a>
                 </div>
                 <div className=" text-center md:text-start pt-6  ">
                   <a href="https://wa.link/jzu6e1" className=" relative ">
-                    <button className=" bg-[#222222] text-white py-2 px-6 rounded-md w-fit ">
+                    <button className=" bg-gray-700  text-white py-2 px-6 rounded-md w-fit ">
                       Chat with Us
                     </button>
-                    <div className=" absolute w-10 h-10 top-[-10px] bg-[#444444]   flex justify-center items-center rounded-full left-[-20px] ">
+                    <div className=" absolute w-10 h-10 top-[-10px] bg-gray-500  flex justify-center items-center rounded-full left-[-20px] ">
                       <IoChatboxEllipses className="     text-white   " />
                     </div>
                   </a>
@@ -128,7 +128,7 @@ const Contacts = () => {
           </h2>
 
           <div>
-            <div className=" max-w-[700px] bg-[#14381f]  border  m-auto  py-2 gap-6 ">
+            <div className=" max-w-[700px] bg-gray-700  border  m-auto  py-2 gap-6 ">
               <h3 className=" text-white md:text-center  pl-4 text-[1.1rem] ">
                 How to track your order
               </h3>
@@ -180,7 +180,7 @@ const Contacts = () => {
           </div>
 
           <div className=" pt-8">
-            <div className=" max-w-[700px] bg-[#14381f]  border  m-auto  py-2 gap-6 ">
+            <div className=" max-w-[700px] bg-gray-700  border  m-auto  py-2 gap-6 ">
               <h3 className=" text-white md:text-center  pl-4 text-[1.1rem] ">
                 How to track your order
               </h3>
@@ -232,7 +232,7 @@ const Contacts = () => {
           </div>
 
           <div className=" pt-8">
-            <div className=" max-w-[700px] bg-[#14381f]  border  m-auto  py-2 gap-6 ">
+            <div className=" max-w-[700px] bg-gray-700  border  m-auto  py-2 gap-6 ">
               <h3 className=" text-white md:text-center  pl-4 text-[1.1rem] ">
                 How to track your order
               </h3>
@@ -287,7 +287,7 @@ const Contacts = () => {
 
       <div>
      <div className=" py-6">
-          <div className="bg-[#14381f]">
+          <div className="bg-gray-700">
           <h2 className="px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] ">
             You May Also Like
           </h2>
@@ -341,7 +341,7 @@ const Contacts = () => {
                         alt=""
                         className="h-[192px] w-fit"
                       />
-                      <div className="rounded-e-lg bg-[#14381f] text-white px-3 py-3">
+                      <div className="rounded-e-lg bg-gray-500  px-3 py-3">
                         <h3 className="text-[.9rem] pb-2">{item.title}</h3>
                         <ul className="list-disc pl-4">
                           {item.features.map((feature, index) => (
