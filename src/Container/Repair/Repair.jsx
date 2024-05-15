@@ -7,7 +7,7 @@ const Repair = () => {
   const [fileButtonText, setFileButtonText] = useState("Browse File");
   const [filePreview, setFilePreview] = useState(null);
   const [fileSelected, setFileSelected] = useState(false);
-
+ const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const adjustTextareaHeight = () => {
     const textarea = otherDetailsRef.current;
     if (textarea) {
@@ -16,40 +16,52 @@ const Repair = () => {
     }
   };
 
-const handleFileChange = (event) => {
-  const file = event.target.files[0];
-  if (file && file.size > 20 * 1024 * 1024) {
-    alert("File size should not exceed 20MB.");
-    event.target.value = ""; // Clear the file input
-  } else {
-    setFileButtonText(file.name);
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (file.type.startsWith("image")) {
-        setFilePreview(reader.result);
-      } else if (file.type.startsWith("video")) {
-        setFilePreview(URL.createObjectURL(file));
-      }
-    };
-    reader.readAsDataURL(file);
-    setFileSelected(true);
-  }
-};
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file && file.size > 20 * 1024 * 1024) {
+      alert("File size should not exceed 20MB.");
+      event.target.value = ""; // Clear the file input
+    } else {
+      setFileButtonText(file.name);
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (file.type.startsWith("image")) {
+          setFilePreview(reader.result);
+        } else if (file.type.startsWith("video")) {
+          setFilePreview(URL.createObjectURL(file));
+        }
+      };
+      reader.readAsDataURL(file);
+      setFileSelected(true);
+    }
+  };
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  console.log("Form submitted!");
-  if (!fileSelected) {
-    alert("Please select a file.");
-    return;
-  }
-  console.log("File selected:", fileSelected);
-  // Additional form submission logic here...
-};
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Form submitted!");
+    if (!fileSelected) {
+      alert("Please select a file.");
+      return;
+    }
+    console.log("File selected:", fileSelected);
+    // Additional form submission logic here...
+
+    // Reset form after submission
+    event.target.reset();
+    setFileButtonText("Browse File");
+    setFilePreview(null);
+    setFileSelected(false);
+
+    // Show success message
+    setShowSuccessMessage(true);
+    // Hide success message after 3 seconds
+    setTimeout(() => setShowSuccessMessage(false), 10000);
+  };
 
   useEffect(() => {
     adjustTextareaHeight(); // Adjust height initially
   }, []);
+  
 
   return (
     <div>
@@ -138,17 +150,17 @@ const handleSubmit = (event) => {
                 required // Making file input required
               />
             {filePreview && (
-  <div className="border border-gray-300 rounded-lg overflow-hidden" style={{ maxHeight: "350px" }}>
-    {filePreview.startsWith("data:image") ? (
-      <img src={filePreview} alt="Preview" className="block w-full" style={{ maxHeight: "100%", width: "auto" }} />
-    ) : (
-      <video key={filePreview} controls className="block w-full" style={{ maxHeight: "100%", width: "auto" }}>
-        <source src={filePreview} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    )}
-  </div>
-)}
+              <div className="border border-gray-300 rounded-lg overflow-hidden" style={{ maxHeight: "350px" }}>
+                {filePreview.startsWith("data:image") ? (
+                  <img src={filePreview} alt="Preview" className="block w-full" style={{ maxHeight: "100%", width: "auto" }} />
+                ) : (
+                  <video key={filePreview} controls className="block w-full" style={{ maxHeight: "100%", width: "auto" }}>
+                    <source src={filePreview} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+              </div>
+            )}
             </div>
             <p className="py-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus assumenda ad illo saepe officia facere totam animi tenetur consectetur! Fugit quis culpa dolorum hic quos at illum, aspernatur dicta vel.</p>
             <input type="checkbox" required />
@@ -160,6 +172,16 @@ const handleSubmit = (event) => {
           </form>
         </div>
       </div>
+       <div className=" px-6">
+        {showSuccessMessage && (
+      <div className="fixed top-0 left-0 w-full px-6 h-full flex items-center justify-center">
+        <div className="bg-gray-600 text-white shadow-md rounded p-6">
+          <h2 className="text-lg font-semibold mb-4">Request Sent Successfully!</h2>
+          <p className=" pt-4 text-[1rem]">Your repair request has been submitted successfully.</p>
+        </div>
+      </div>
+    )}
+       </div>
     </div>
   );
 };
