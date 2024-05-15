@@ -55,7 +55,7 @@ const Repair = () => {
     // Show success message
     setShowSuccessMessage(true);
     // Hide success message after 3 seconds
-    setTimeout(() => setShowSuccessMessage(false), 10000);
+    setTimeout(() => setShowSuccessMessage(false), 5000);
   };
 
   useEffect(() => {
