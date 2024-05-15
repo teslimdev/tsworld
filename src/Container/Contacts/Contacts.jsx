@@ -73,8 +73,8 @@ const Contacts = () => {
         </div>
       </div>
 
-      <div className=" pt-10 md:pt-16">
-        <div className=" max-w-[1200px] bg-[#f2f2f2] m-auto">
+      <div className=" pt-10 md:pt-16 bg-gray-200">
+        <div className=" max-w-[1200px] bg-gray-300 m-auto">
           <div className=" py-16 px-3  md:grid grid-cols-2 md:max-w-[700px] lg:max-w-[1000px] gap-8 m-auto md:place-items-center">
             <img
               src={call}
@@ -120,7 +120,7 @@ const Contacts = () => {
         </div>
       </div>
 
-      <div>
+      <div className=" bg-gray-200">
         <div className="  pb-10 px-3">
           <h2 className=" text-center py-6 text-[1.2rem]">
             {" "}
@@ -285,7 +285,7 @@ const Contacts = () => {
         </div>
       </div>
 
-      <div>
+      <div className=" bg-gray-200">
      <div className=" py-6">
           <div className="bg-gray-700">
           <h2 className="px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] ">

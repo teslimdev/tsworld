@@ -35,7 +35,7 @@ const Inverter = () => {
 
   return (
     <div>
-      <div className="">
+      <div className=" bg-gray-200">
       <div className="bg-gray-400 fixed w-full">
         <div className=" flex items-center max-w-[1200px] m-auto px-4  py-2 gap-6 ">
             <p className="  text-3xl"><Link to='/'><IoIosArrowRoundBack /></Link></p>

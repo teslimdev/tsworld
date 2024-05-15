@@ -118,7 +118,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f2f2f2] ">
+      <div className="bg-gray-200 ">
         <h2 className="py-3 px-6">Good Deals!!!</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 m-auto px-6 gap-3 md:gap-4 lg:gap-6 lg:max-w-[1200px] item">
           {items.map((item, index) => (
@@ -152,7 +152,7 @@ const Home = () => {
         </div>
       </div>
 
-       <div className="py-10">
+       <div className="py-10 bg-gray-200">
         <div className="bg-gray-700">
           <h2 className="px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase">
             recently viewed
