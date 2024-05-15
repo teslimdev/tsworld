@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div>
       <div>
-        <div className="bg-[#14381f] text-white pt-6">
+        <div className="bg-gray-400 text-black pt-6">
           <div className=" flex   flex-col-reverse md:flex-row  justify-around lg:max-w-[1200px] m-auto">
             <div className=" basis-[20%]  text-center md:text-start pt-6 md:pt-0">
               <h2>Join Us On</h2>
@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
           </div>
           <div className=" text-center  pt-6">
-            <p className=" border-t py-3"> All Rights Reserved</p>
+            <p className=" border-t border-gray-600 py-3"> All Rights Reserved</p>
           </div>
         </div>
       </div>

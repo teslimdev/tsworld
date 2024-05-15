@@ -59,14 +59,14 @@ const Contacts = () => {
   return (
     <div>
       <div>
-        <div className="bg-[#14381f] fixed w-full z-20">
+        <div className="bg-gray-400 fixed w-full z-20">
           <div className="flex items-center justify-between max-w-[1200px] m-auto px-4 py-2">
-            <p className="text-white text-3xl">
+            <p className="text-whit text-3xl">
               <Link to="/">
                 <IoIosArrowRoundBack />
               </Link>
             </p>
-            <h2 className="text-white text-[1.1rem] uppercase">NEED HELP?</h2>
+            <h2 className="text-whit text-[1.1rem] uppercase">NEED HELP?</h2>
             <div></div>{" "}
             {/* This empty div creates space for the center alignment */}
           </div>

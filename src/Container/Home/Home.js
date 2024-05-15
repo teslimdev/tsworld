@@ -77,7 +77,7 @@ const Home = () => {
     <div className="bg-[#f2f2f2]">
       <Header />
       <div className="pt-[7.3rem] lg:pt-[4.3rem]">
-        <div className="bg-[#14381f] py-4">
+        <div className="bg-gray-700 py-4">
           <div className="max-w-[400px] m-auto">
             <Swiper
               modules={[
@@ -136,7 +136,7 @@ const Home = () => {
                     alt=""
                     className="h-[192px] w-full"
                   />
-                  <div className="rounded-e-lg bg-[#14381f] text-white px-3 py-3">
+                  <div className="rounded-e-lg bg-gray-500 tex px-3 py-3">
                     <h3 className="text-[.9rem] pb-2">{item.title}</h3>
                     <ul className="list-disc pl-4">
                       {item.features.map((feature, index) => (
@@ -153,7 +153,7 @@ const Home = () => {
       </div>
 
        <div className="py-10">
-        <div className="bg-[#14381f]">
+        <div className="bg-gray-700">
           <h2 className="px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase">
             recently viewed
           </h2>
@@ -204,7 +204,7 @@ const Home = () => {
                         alt=""
                         className="h-[192px] w-fit"
                       />
-                      <div className="rounded-e-lg bg-[#14381f] text-white px-3 py-3">
+                      <div className="rounded-e-lg bg-gray-500  px-3 py-3">
                         <h3 className="text-[.9rem] pb-2">{item.title}</h3>
                         <ul className="list-disc pl-4">
                           {item.features.map((feature, index) => (

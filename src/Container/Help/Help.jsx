@@ -364,7 +364,7 @@ const Help = () => {
   return (
     <div>
       <div>
-        <div className="bg-gray-200 fixed w-full z-20">
+        <div className="bg-gray-400 fixed w-full z-20">
           <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
             <p className="text-black text-3xl">
               <Link to="/">
@@ -598,7 +598,7 @@ const Help = () => {
         <div className=" px-3 max-w-[400px] md:max-w-[700px] sl:max-w-[1200px] m-auto">
             <h3 className=" pb-4 font-bold lg:text-[1.2rem]">Get In Touch</h3>
             <div className=" pb-10">
-                <ul className=" border border-gray-300 bg-gray-100 ">
+                <ul className=" border border-gray-300 bg-gray-100  rounded-md">
                    <a href="https://wa.link/jzu6e1">
                      <li className=" flex items-center px-5 text-[0.9rem] gap-8 border-b border-gray-300 md:py-4  pb-3">
                       <IoChatboxEllipses className="  text-[3rem] md:text-[2rem]"/>
