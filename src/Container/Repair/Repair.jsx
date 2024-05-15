@@ -137,7 +137,7 @@ const Repair = () => {
             </div>
             <div className="pt-6">
               <label htmlFor="attachment" className="text-[1.1rem] block mb-2">Attach a Picture or Video (Max 20MB)</label>
-              <label htmlFor="attachment" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded outline-none cursor-pointer inline-block mb-4">
+              <label htmlFor="attachment" className="bg-gray-500 hover:bg-gray-700 hover:text-white  text-gray-700 font-bold py-2 px-4 rounded outline-none cursor-pointer inline-block mb-4">
                 {fileButtonText}
               </label>
               <input
@@ -167,7 +167,7 @@ const Repair = () => {
             <label htmlFor=""> I agree to the above condition</label>
             <br />
             <div className="pb-12">
-              <button type="submit" className="mt-4 bg-gray-500 px-4 py-2 w-full rounded">Submit</button>
+              <button type="submit" className="mt-4 bg-gray-500  hover:bg-gray-700 hover:text-white px-4 py-2 w-full rounded">Submit</button>
             </div>
           </form>
         </div>
@@ -175,7 +175,7 @@ const Repair = () => {
        <div className=" px-6">
         {showSuccessMessage && (
       <div className="fixed top-0 left-0 w-full px-6 h-full flex items-center justify-center">
-        <div className="bg-gray-600 text-white shadow-md rounded p-6">
+        <div className="bg-gray-600 text-white shadow-md rounded-lg p-6">
           <h2 className="text-lg font-semibold mb-4">Request Sent Successfully!</h2>
           <p className=" pt-4 text-[1rem]">Your repair request has been submitted successfully.</p>
         </div>
