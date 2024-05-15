@@ -591,6 +591,22 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -621,30 +637,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[2px\] {
-  height: 2px;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-\[220px\] {
-  height: 220px;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[200p\] {
-  height: 200p;
-}
-
-.h-\[px\] {
-  height: px;
 }
 
 .w-10 {
@@ -689,6 +681,10 @@ video {
   max-width: 730px;
 }
 
+.max-w-\[\] {
+  max-width: ;
+}
+
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -703,6 +699,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize-none {
+  resize: none;
 }
 
 .list-disc {
@@ -799,6 +799,10 @@ video {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -856,19 +860,9 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-\[\#14381f\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 56 31 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#222222\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 34 34 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#444444\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(68 68 68 / var(--tw-bg-opacity));
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
 .bg-\[\#f2f2f2\] {
@@ -901,19 +895,28 @@ video {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
-.bg-gray-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-}
-
 .bg-gray-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
-.bg-white {
+.bg-gray-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.p-16 {
+  padding: 4rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-3 {
@@ -969,11 +972,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .pb-10 {
@@ -1052,24 +1050,16 @@ video {
   padding-top: 7.3rem;
 }
 
-.pb-5 {
-  padding-bottom: 1.25rem;
+.pt-16 {
+  padding-top: 4rem;
 }
 
-.pt-\[7\.2rem\] {
-  padding-top: 7.2rem;
+.pr-4 {
+  padding-right: 1rem;
 }
 
-.pt-\[7\.rem\] {
-  padding-top: 7.rem;
-}
-
-.pt-\[7\.1rem\] {
-  padding-top: 7.1rem;
-}
-
-.pt-\[7rem\] {
-  padding-top: 7rem;
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .text-center {
@@ -1144,6 +1134,10 @@ video {
   text-transform: uppercase;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 .text-\[\#14381f\] {
   --tw-text-opacity: 1;
   color: rgb(20 56 31 / var(--tw-text-opacity));
@@ -1159,14 +1153,22 @@ video {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+.text-\[\] {
+  color: ;
+}
+
+.text-\[1\.\] {
+  color: 1.;
 }
 
 .shadow-2xl {
@@ -1295,6 +1297,14 @@ input[type="search"]::-webkit-search-cancel-button {
     max-width: 700px;
   }
 
+  .md\:max-w-\[\] {
+    max-width: ;
+  }
+
+  .md\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1315,6 +1325,10 @@ input[type="search"]::-webkit-search-cancel-button {
     gap: 1rem;
   }
 
+  .md\:border {
+    border-width: 1px;
+  }
+
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -1326,6 +1340,10 @@ input[type="search"]::-webkit-search-cancel-button {
 
   .md\:pt-16 {
     padding-top: 4rem;
+  }
+
+  .md\:pb-16 {
+    padding-bottom: 4rem;
   }
 
   .md\:text-center {

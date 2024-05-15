@@ -56,7 +56,7 @@ const Footer = () => {
                     Cookie Notice
                   </li>
                 </a>
-                <a href="/">
+                <a href="/Upgrade">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Request For Upgrade
                   </li>

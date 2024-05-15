@@ -10,6 +10,7 @@ import Contacts from "./Container/Contacts/Contacts";
 import Help from "./Container/Help/Help";
 import { Footer } from "./Compnents";
 import { Description } from "./Container";
+import Upgrade from "./Container/Upgrade/Upgrade";
 // import Header from "./Compnents/Header";
 // import { Slide } from "./Compnents";
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <Route path="/Products" element={<Products />}/>
                <Route path="/Contacts" element={<Contacts />}/>
                 <Route path="/Help" element={<Help />}/>
+                <Route path="/Upgrade" element={<Upgrade />}/>
                
        </Routes>
        <Footer/>
