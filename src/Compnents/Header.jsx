@@ -35,7 +35,7 @@ const Header = () => {
                   <form action="" className="flex gap-2">
                     <input
                       type="search"
-                      className="bg-gray-200 w-[400px] rounded placeholder:text-xl placeholder:text-white pl-10 pr-3 py-1 outline-none"
+                      className="bg-gray-400 w-[400px] border border-gray-700 rounded placeholder:text-xl placeholder:text-white pl-10 pr-3 py-1 outline-none"
                       placeholder="search"
                     />
                     <CiSearch className="absolute top-3 text-xl left-3" />
@@ -46,14 +46,18 @@ const Header = () => {
                 </div>
                 <div className="flex items-center gap-6">
                   <div className="flex items-center gap-6 xl:gap-16">
-                    <p className="flex items-center gap-2">
-                      <IoPersonOutline className="text-2xl font-light text-[#14381f]" />
+                    <a href="/">
+                      <p className="flex items-center gap-2">
+                      <IoPersonOutline className="text-2xl font-light text-gray-700" />
                       <span className="hidden lg:flex">Account</span>
                     </p>
-                    <p className="flex items-center gap-2">
-                      <IoCartOutline className="text-2xl font-light text-[#14381f]" />
+                    </a>
+                    <a href="/">
+                      <p className="flex items-center gap-2">
+                      <IoCartOutline className="text-2xl font-light text-gray-700" />
                       <span className="hidden lg:flex">Cart</span>
                     </p>
+                    </a>
                   </div>
                   <div className="lg:hidden">
                     {!nav ? (
@@ -189,10 +193,10 @@ const Header = () => {
                 <form action="">
                   <input
                     type="search"
-                    className="bg-gray-200 w-full rounded-full placeholder:text-xl placeholder:text-black pl-10 pr-3 py-1 outline-none"
+                    className="bg-gray-400 w-full rounded-full border border-gray-700 placeholder:text-xl placeholder:text-black pl-10 pr-3 py-1 outline-none"
                     placeholder="search"
                   />
-                  <CiSearch className="absolute top-2 text-xl left-3" />
+                  <CiSearch className="absolute top-3  text-xl left-3" />
                 </form>
               </div>
             </div>
