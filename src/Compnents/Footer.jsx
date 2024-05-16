@@ -41,17 +41,17 @@ const Footer = () => {
                     Contact Us
                   </li>
                 </a>
-                <a href="/">
+                <a href="/Terms">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Terms & Conditions
                   </li>
                 </a>
-                <a href="/">
+                <a href="/Privacy">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Privacy Notice
                   </li>
                 </a>
-                <a href="/">
+                <a href="/Cookies">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Cookie Notice
                   </li>

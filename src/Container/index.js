@@ -10,3 +10,6 @@ export { default as Contacts} from "./Contacts/Contacts";
 export { default as Help} from "./Help/Help";
 export { default as Upgrade} from "./Upgrade/Upgrade";
 export { default as Repair} from "./Repair/Repair";
+export { default as Terms} from "./Terms/Terms";
+export { default as Cookies} from "./Cookies/Cookies";
+export { default as Privacy} from "./Privacy/Privacy";

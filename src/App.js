@@ -12,6 +12,9 @@ import { Footer } from "./Compnents";
 import { Description } from "./Container";
 import Upgrade from "./Container/Upgrade/Upgrade";
 import Repair from "./Container/Repair/Repair";
+import Terms from "./Container/Terms/Terms";
+import Cookies from "./Container/Cookies/Cookies";
+import Privacy from "./Container/Privacy/Privacy";
 // import Header from "./Compnents/Header";
 // import { Slide } from "./Compnents";
 function App() {
@@ -30,6 +33,9 @@ function App() {
                 <Route path="/Help" element={<Help />}/>
                 <Route path="/Upgrade" element={<Upgrade />}/>
                 <Route path="/Repair" element={<Repair/>}/>
+                 <Route path="/Terms" element={<Terms/>}/>
+                 <Route path="/Cookies" element={<Cookies/>}/>
+                 <Route path="/Privacy" element={<Privacy/>}/>
                
        </Routes>
        <Footer/>
