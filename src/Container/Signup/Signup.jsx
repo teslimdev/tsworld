@@ -25,25 +25,25 @@ const Signup = () => {
                 <input type="text" 
                 required
                 placeholder='Name'
-                 className=' w-full mt-3 py-2 bg-gray-500 text-gray-200 placeholder:text-gray-200 outline-none  border border-gray-700 rounded-full pl-5'/>
+                 className=' w-full mt-3 py-2 bg-gray-500 text-gray-200 placeholder:text-gray-200 outline-none  border border-gray-400 focus:text-gray-700 focus:bg-gray-300 focus:placeholder:text-gray-700 rounded-full pl-5'/>
             </div>
              <div className=' pt-4'>
                 <input type="tel" 
                 required
                 placeholder='Mobile No'
-                 className=' w-full mt-3 pl-5 bg-gray-500 text-gray-200 placeholder:text-gray-200  py-2 outline-none  border border-gray-700 rounded-full'/>
+                 className=' w-full mt-3 pl-5 bg-gray-500 text-gray-200 placeholder:text-gray-200  py-2 outline-none  border border-gray-400 focus:text-gray-700 focus:bg-gray-300 focus:placeholder:text-gray-700 rounded-full'/>
             </div>
              <div className=' pt-4'>
                 <input type="password"  
                 required
                 placeholder='Password'
-                className=' w-full mt-3 pl-5 bg-gray-500 text-gray-200 placeholder:text-gray-200  py-2 outline-none  border border-gray-700 rounded-full'/>
+                className=' w-full mt-3 pl-5 bg-gray-500 text-gray-200 placeholder:text-gray-200  py-2 outline-none  border border-gray-400 focus:text-gray-700 focus:bg-gray-300 focus:placeholder:text-gray-700 rounded-full'/>
             </div>
              <div className=' pt-4'>
                 <input type="text" 
                 required
                 placeholder='Confirm Password'
-                 className=' w-full mt-3 pl-5 bg-gray-500 text-gray-200 placeholder:text-gray-200  py-2 outline-none  border border-gray-700 rounded-full'/>
+                 className=' w-full mt-3 pl-5 bg-gray-500 text-gray-200 placeholder:text-gray-200  py-2 outline-none   border border-gray-400 focus:text-gray-700 focus:bg-gray-300 focus:placeholder:text-gray-700 rounded-full'/>
             </div>
             <div className=' pt-4'>
                 <input type="checkbox"

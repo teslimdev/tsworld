@@ -23,7 +23,7 @@ const Header = () => {
     <div>
       <div className="z-[80] w-full">
         <nav>
-          <div id="navmain" className="py-2 w-full fixed bg-gray-300 z-10">
+          <div id="navmain" className="py-2 w-full fixed bg-gray-300 shadow-lg z-10">
             <div className="sl:max-w-[1200px] px-6 sl:px-0 m-auto">
               <div className="flex justify-between items-center">
                 <div>
