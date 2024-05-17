@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
-
+import { Footer } from "../../Compnents";
 const Repair = () => {
   const otherDetailsRef = useRef(null);
   const [fileButtonText, setFileButtonText] = useState("Browse File");
@@ -182,6 +182,7 @@ const Repair = () => {
       </div>
     )}
        </div>
+       <Footer/>
     </div>
   );
 };

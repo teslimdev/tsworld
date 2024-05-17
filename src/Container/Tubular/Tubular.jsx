@@ -3,6 +3,7 @@ import itemsData from "../../../src/itemsData.json";
 import power4 from "../../../src/Assets/power4.png";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { Footer } from "../../Compnents";
 
 const Tubular = () => {
     const [tubularItems, setTubularItems] = useState([]);
@@ -69,6 +70,7 @@ const Tubular = () => {
         ))}
       </div>
     </div>
+    <Footer/>
     </div>
   )
 }

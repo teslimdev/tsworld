@@ -19,6 +19,7 @@ import power8 from "../../../src/Assets/power8.png";
 import power9 from "../../../src/Assets/power9.png";
 import itemsData from "../../../src/itemsData.json";
 import { Link } from "react-router-dom";
+import {Footer} from "../../Compnents";
 
 const images = {
   "power.jpg": power,
@@ -221,8 +222,8 @@ const Home = () => {
           )}
         </div>
       </div>
-
-      
+ 
+      <Footer/>
     </div>
   );
 };

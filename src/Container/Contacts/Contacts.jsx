@@ -12,6 +12,7 @@ import "swiper/css/effect-fade";
 import { Pagination, A11y, Autoplay } from "swiper/modules";
 import power4 from "../../../src/Assets/power4.png";
 import itemsData from "../../../src/itemsData.json";
+import { Footer } from "../../Compnents";
 const images = {
   "power4.png": power4,
 };
@@ -358,6 +359,7 @@ const Contacts = () => {
         </div>
       </div>
       </div>
+      <Footer/>
     </div>
   );
 };

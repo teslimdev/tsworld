@@ -3,6 +3,7 @@ import itemsData from "../../../src/itemsData.json";
 import power4 from "../../../src/Assets/power4.png";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { Footer } from "../../Compnents";
 
 const Products = () => {
     const [allItems, setAllItems] = useState([]);
@@ -74,6 +75,7 @@ const Products = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

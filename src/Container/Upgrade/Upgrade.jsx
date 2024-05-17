@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Footer } from "../../Compnents";
 
 const Upgrade = () => {
     const [batteryType, setBatteryType] = useState("");
@@ -143,6 +144,7 @@ const otherDetailsRef = useRef(null);
           </form>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

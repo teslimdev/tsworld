@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Footer } from '../../Compnents';
 
 const Cookies = () => {
   return (
@@ -133,6 +134,7 @@ const Cookies = () => {
         </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

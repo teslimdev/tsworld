@@ -5,6 +5,7 @@ import { PiShoppingBagOpenFill } from "react-icons/pi";
 import { MdKeyboardArrowRight, MdOutlineKeyboardArrowLeft , MdAdd, MdRemove } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoChatboxEllipses } from "react-icons/io5";
+import { Footer } from "../../Compnents";
 const Help = () => {
   const [selectedGuide, setSelectedGuide] = useState(null);
   const [selectedFAQ, setSelectedFAQ] = useState(null);
@@ -621,7 +622,7 @@ const Help = () => {
             </div>
         </div>
       </div>
-     
+     <Footer/>
     </div>
   );
 };

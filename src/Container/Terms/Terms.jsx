@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Footer } from '../../Compnents';
 
 const Terms = () => {
   return (
@@ -132,6 +133,7 @@ const Terms = () => {
         </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

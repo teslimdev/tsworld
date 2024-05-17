@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Footer } from '../../Compnents';
 
 const Privacy = () => {
   return (
@@ -132,7 +133,7 @@ const Privacy = () => {
         </div>
         </div>
       </div>
-
+     <Footer/>
     </div>
   )
 }

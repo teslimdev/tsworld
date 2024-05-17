@@ -46,7 +46,7 @@ const Header = () => {
                 </div>
                 <div className="flex items-center gap-6">
                   <div className="flex items-center gap-6 xl:gap-16">
-                    <a href="/">
+                    <a href="/Signup">
                       <p className="flex items-center gap-2">
                       <IoPersonOutline className="text-2xl font-light text-gray-700" />
                       <span className="hidden lg:flex">Account</span>

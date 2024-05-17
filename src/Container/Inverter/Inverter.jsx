@@ -3,7 +3,7 @@ import itemsData from "../../../src/itemsData.json";
 import power4 from "../../../src/Assets/power4.png";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
-
+import { Footer } from "../../Compnents";
 const Inverter = () => {
     const [inverterItems, setInverterItems] = useState([]);
     const [recentlyClickedItems, setRecentlyClickedItems] = useState(
@@ -70,6 +70,7 @@ const Inverter = () => {
         ))}
       </div>
     </div>
+    <Footer/>
     </div>
   )
 }
