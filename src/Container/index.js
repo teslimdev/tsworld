@@ -14,3 +14,4 @@ export { default as Terms} from "./Terms/Terms";
 export { default as Cookies} from "./Cookies/Cookies";
 export { default as Privacy} from "./Privacy/Privacy";
 export { default as Signup} from "./Signup/Signup";
+export { default as Signin} from "./Signin/Signin";

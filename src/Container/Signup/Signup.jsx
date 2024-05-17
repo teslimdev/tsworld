@@ -47,13 +47,13 @@ const Signup = () => {
     <div className=''>
       <div className='bg-gray-500 w-full h-svh'>
         <div className='flex justify-center'>
-          <div className='bg-gray-800 w-full md:rounded-lg md:py-10 md:mx-6 md:top-[15%] lg:top-[20%] absolute md:px-6 md:w-fit m-auto h-full md:h-fit '>
-            <div className='md:grid grid-cols-2 md:max-w-fit gap-10 m-auto'>
+          <div className='bg-gray-800 w-full md:rounded-lg md:py-10 md:mx-6 md:top-[1%] sl:top-[5%]  absolute md:px-6  md:w-[700px] lg:w-[1000px]  m-auto h-full md:h-fit '>
+            <div className='md:max-w-[500px] gap-10 m-auto'>
               <div className='text-center pt-5'>
                 <div className='flex justify-center'>
                   <img src={logo2} alt="" className='w-[100px]' />
                 </div>
-                <p className='pb-4 text-gray-200 '>Create your account. <br className='md:hidden' /> It's free and only takes a minute</p>
+                <p className='pb-4 text-gray-200 '>Create your account. <br className='md:hidden' /> It only takes a minute</p>
               </div>
               <div className='px-3 max-w-[400px] m-auto'>
                 <form onSubmit={handleSubmit}>
@@ -116,7 +116,7 @@ const Signup = () => {
                   </div>
                   <div className='pt-6'>
                     <button type="submit" className='bg-gray-100 hover:text-white hover:bg-gray-600 py-2 w-full rounded-full'>SIGN UP</button>
-                    <p className='pt-3 text-center text-gray-200'>Already a member?<a href="/" className='underline'>Sign in</a></p>
+                    <p className='pt-3 text-center text-gray-200'>Already a member?<a href="/Signin" className='underline'>Sign in</a></p>
                   </div>
                 </form>
               </div>
