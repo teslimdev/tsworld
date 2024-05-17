@@ -9,7 +9,7 @@ import logo6 from '../../../src/Assets/logo6.png'
 const Signup = () => {
   return (
     <div className='  '>
- <div  className=' bg-gray-500 w-full h-screen '>
+ <div  className=' bg-gray-500 w-full   h-svh '>
      <div className='  flex justify-center     '>
      <div className='  bg-gray-800  w-full   md:rounded-lg md:py-10 md:mx-6 md:top-[15%] lg:top-[20%] absolute md:px-6 md:w-fit m-auto h-full md:h-fit '>
      <div className=' md:grid grid-cols-2 md:max-w-fit gap-10 m-auto   '>
