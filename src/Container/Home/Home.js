@@ -78,7 +78,7 @@ const Home = () => {
     <div className="bg-[#f2f2f2]">
       <Header />
       <div className="pt-[7.3rem] lg:pt-[4.3rem]">
-        <div className="bg-gray-700 py-4">
+        <div className="bg-gray-800 py-4">
           <div className="max-w-[400px] m-auto">
             <Swiper
               modules={[
@@ -154,7 +154,7 @@ const Home = () => {
       </div>
 
        <div className="py-10 bg-gray-200">
-        <div className="bg-gray-700">
+        <div className="bg-gray-800">
           <h2 className="px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase">
             recently viewed
           </h2>
