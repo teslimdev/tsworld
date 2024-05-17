@@ -8,7 +8,6 @@ import Tubular from "./Container/Tubular/Tubular";
 import Products from "./Container/Products/Products";
 import Contacts from "./Container/Contacts/Contacts";
 import Help from "./Container/Help/Help";
-// import { Footer } from "./Compnents";
 import { Description } from "./Container";
 import Upgrade from "./Container/Upgrade/Upgrade";
 import Repair from "./Container/Repair/Repair";
@@ -16,8 +15,6 @@ import Terms from "./Container/Terms/Terms";
 import Cookies from "./Container/Cookies/Cookies";
 import Privacy from "./Container/Privacy/Privacy";
 import Signup from "./Container/Signup/Signup";
-// import Header from "./Compnents/Header";
-// import { Slide } from "./Compnents";
 function App() {
   return (
     <div className="App">
