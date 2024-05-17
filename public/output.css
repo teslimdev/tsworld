@@ -1393,6 +1393,11 @@ input[type="search"]::-webkit-search-cancel-button {
     margin: 0px;
   }
 
+  .md\:mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
   .md\:block {
     display: block;
   }
