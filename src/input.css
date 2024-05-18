@@ -21,6 +21,27 @@ input[type="search"]::-webkit-search-cancel-button {
 cursor: pointer;
 }
 
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color:#374151;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: 3px solid transparent;
+    /* Add a border to create spacing */
+    background-clip: content-box;
+    /* Clip the background to create the effect */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Color of the track */
+}
+
 @media screen and (min-width:640px) {
     .item{
         display: grid;
