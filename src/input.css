@@ -22,7 +22,7 @@ cursor: pointer;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
     /* Width of the scrollbar */
 }
 
