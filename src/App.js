@@ -7,7 +7,7 @@ import Acid from "./Container/Acid/Acid";
 import Tubular from "./Container/Tubular/Tubular";
 import Products from "./Container/Products/Products";
 import Contacts from "./Container/Contacts/Contacts";
-import Help from "./Container/Help/Help";
+import Help from "./Container/Privacy/Help/Help";
 import { Description } from "./Container";
 import Upgrade from "./Container/Upgrade/Upgrade";
 import Repair from "./Container/Repair/Repair";
