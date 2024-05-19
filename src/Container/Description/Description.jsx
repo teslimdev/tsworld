@@ -34,7 +34,9 @@ const Description = () => {
     setItems(slicedItems);
 
     const handleResize = () => {
-      setIsExpanded(window.innerWidth >= 1024);
+      if (window.innerWidth >= 1024) {
+        setIsExpanded(true);
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -49,7 +51,7 @@ const Description = () => {
       randomIndex;
 
     while (currentIndex !== 0) {
-      randomIndex = Math.floor(Math.randomIndex * currentIndex);
+      randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
 
       [array[currentIndex], array[randomIndex]] = [
@@ -76,6 +78,7 @@ const Description = () => {
   const handleToggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
+
   return (
     <div>
       <Header />
@@ -359,4 +362,3 @@ const Description = () => {
 };
 
 export default Description;
-

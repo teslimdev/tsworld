@@ -8,7 +8,7 @@ import Tubular from "./Container/Tubular/Tubular";
 import Products from "./Container/Products/Products";
 import Contacts from "./Container/Contacts/Contacts";
 import Help from "./Container/Help/Help";
-import { Description } from "./Container";
+import { Description } from "./Container/";
 import Upgrade from "./Container/Upgrade/Upgrade";
 import Repair from "./Container/Repair/Repair";
 import Terms from "./Container/Terms/Terms";
