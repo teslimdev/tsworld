@@ -76,7 +76,6 @@ const Description = () => {
   const handleToggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
-
   return (
     <div>
       <Header />
