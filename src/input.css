@@ -23,23 +23,34 @@ cursor: pointer;
 
 .custom-scrollbar::-webkit-scrollbar {
     width: 10px;
-    /* Width of the scrollbar */
+ 
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
     background-color:#374151;
-    /* Color of the scrollbar thumb */
+
     border-radius: 10px;
-    /* Rounded corners */
+   
     border: 3px solid transparent;
-    /* Add a border to create spacing */
+  
     background-clip: content-box;
-    /* Clip the background to create the effect */
+    
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
     background-color: transparent;
-    /* Color of the track */
+    
+}
+
+.sticky-button-container {
+    position: sticky;
+    bottom: 0;
+    background-color: #e5e7eb;
+    /* Same as bg-gray-200 */
+   padding: .5rem 1rem ;
+    /* Adjust padding as needed */
+    z-index: 1000;
+    /* Ensures it stays above other content */
 }
 
 @media screen and (min-width:640px) {
