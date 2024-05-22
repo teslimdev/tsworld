@@ -1,32 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { Footer, Header } from "../../Compnents";
-import pic4 from "../../../src/Assets/power4.png";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
 import { Pagination, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, EffectCoverflow } from "swiper/modules";
-import Slides from "../../Compnents/Slides";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import power4 from "../../../src/Assets/power4.png";
-import power5 from '../../../src/Assets/power5.png';
-import itemsData from "../../../src/itemsData.json";
 import { FaPhoneAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { EffectFade, EffectCoverflow } from "swiper/modules";
+import Slides from "../../Compnents/Slides";
+import itemsData from "../../../src/itemsData.json";
+import descriptionData from "../../../src/descriptionData.json";
+import power4 from "../../../src/Assets/power4.png";
+import power5 from "../../../src/Assets/power5.png";
 
 const images = {
   "power4.png": power4,
+  "power5.png": power5,
 };
 
 const Description = () => {
   const [items, setItems] = useState([]);
+  const [item, setItem] = useState(null);
+  const { itemId } = useParams();
   const [recentlyClickedItems, setRecentlyClickedItems] = useState(
     JSON.parse(localStorage.getItem("recentlyClickedItems")) || []
   );
-  const [isExpanded, setIsExpanded] = useState(window.innerWidth >= 1024);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const shuffledItems = shuffleArray(itemsData);
@@ -34,9 +33,7 @@ const Description = () => {
     setItems(slicedItems);
 
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsExpanded(true);
-      }
+      setIsExpanded(window.innerWidth >= 1024);
     };
 
     window.addEventListener("resize", handleResize);
@@ -75,9 +72,18 @@ const Description = () => {
     );
   };
 
+  useEffect(() => {
+    const selectedItem = descriptionData.find((item) => item.itemId === itemId);
+    setItem(selectedItem);
+  }, [itemId]);
+
   const handleToggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
+
+  if (!item) {
+    return <div>No item found for itemId: {itemId}</div>;
+  }
 
   return (
     <div>
@@ -85,16 +91,22 @@ const Description = () => {
       <div className="bg-gray-800">
         <div className="pt-24 lg:pt-32">
           <div className="bg-gray-300 px-3 flex flex-col pt-6 pb-6 lg:pb-20 lg:rounded-t-lg md:px-6 lg:max-w-[900px] m-auto md:gap-10 md:flex-row">
+            {/* Item images */}
             <div className="max-w-[400px] m-auto md:hidden pb-3">
               <div className="relative overflow-auto max-h-[300px] custom-scrollbar">
                 <div className="flex max-w-[1200px] gap-3 pt-4">
-                  <img src={pic4} alt="" className="w-[250px] h-[250px]" />
-                  <img src={pic4} alt="" className="w-[250px] h-[250px]" />
-                  <img src={pic4} alt="" className="w-[250px] h-[250px]" />
-                  <img src={pic4} alt="" className="w-[250px] h-[250px]" />
+                  {item.images.map((image, index) => (
+                    <img
+                      key={index}
+                      src={images[image]}
+                      alt={`Product ${index + 1}`}
+                      className="w-[250px] h-[250px]"
+                    />
+                  ))}
                 </div>
               </div>
             </div>
+            {/* Item details */}
             <div className="max-w-[300px] hidden md:block pb-10 relative">
               <Swiper
                 modules={[
@@ -130,153 +142,81 @@ const Description = () => {
                 }}
                 scrollbar={{ draggable: true }}
               >
-                <SwiperSlide>
-                  <Slides image={pic4} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Slides image={power5} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Slides image={pic4} />
-                </SwiperSlide>
+                {item.images.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <Slides image={images[image]} />
+                  </SwiperSlide>
+                ))}
               </Swiper>
               <div className=" pt-3">
                 <div className="swiper-pagination-top flex gap-4 justify-center"></div>
               </div>
             </div>
+            {/* Item description */}
             <div className="md:pt-3 max-w-[400px] m-auto md:m-0">
               <p className="text-[0.9rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                molestiae.
+                {isExpanded ? item.description : item.description.substring(0, isExpanded ? item.description.length : 100)}
+                {item.description.length > 100 && (
+                  <button onClick={handleToggleExpand} className="text-blue-600 hover:text-blue-800">
+                    {isExpanded ? "Show Less" : "Show More"}
+                  </button>
+                )}
               </p>
-              <p className="text-[0.9rem] pt-1">Brand: company</p>
-              <p className="text-[1.2rem] text-gray-800 pt-1 font-bold">
-                ₦ 260,000
-              </p>
-              <p className="text-[0.9rem] pt-1">In stock</p>
-              <p className="text-[0.9rem] pt-1">
-                Available for delivery or pick-up 24-72hrs after order is made
-              </p>
+              <p className="text-[0.9rem] pt-1">Brand: {item.brand}</p>
+              <p className="text-[1.2rem] text-gray-800 pt-1 font-bold">{item.price}</p>
+              <p className="text-[0.9rem] pt-1">{item.stockStatus}</p>
+              <p className="text-[0.9rem] pt-1">{item.deliveryInfo}</p>
               <div className="hidden md:block pt-6 relative">
-                <button className="bg-gray-800 text-white py-2 w-full rounded-md">
-                  ADD TO CART
-                </button>
+                <button className="bg-gray-800 text-white py-2 w-full rounded-md">ADD TO CART</button>
                 <BsFillCartPlusFill className="absolute top-8 left-12 text-gray-200 text-[1.3rem]" />
               </div>
             </div>
           </div>
-          <div className="bg-gray-300 lg:bg-gray-800 pt-2">
-            <div className="lg:max-w-[900px] m-auto bg-gray-800 lg:bg-gray-600 py-2 px-4">
-              <h2 className="text-gray-200">PRODUCT DETAILS</h2>
+          {/* Product Details */}
+  <div className="bg-gray-300 lg:bg-gray-800 pt-2">
+  <div className="lg:max-w-[900px] m-auto bg-gray-800 lg:bg-gray-600 py-2 px-4">
+    <h2 className="text-gray-200">PRODUCT DETAILS</h2>
+  </div>
+  <div className="px-3 lg:px-0 lg:max-w-[900px] m-auto pt-2 pb-3 lg:pt-0">
+    <ul className="bg-gray-300 shadow-2xl shadow-slate-700 mt-1 lg:mt-0 pb-12">
+      <li className="py-2 description ">
+        <p
+          className="text-[1.2rem] flex items-center border-b pl-4 border-gray-700 pb-2 justify-between px-3 cursor-pointer"
+          onClick={handleToggleExpand}
+        >
+          Description <MdKeyboardArrowRight />
+        </p>
+        <div className="px-5 pt-3">
+          {isExpanded ? (
+            <div>
+              {item.details.map((detail, detailIndex) => (
+                <div key={detailIndex}>
+                  <h2 className="text-[1rem] font-bold pt-5 pb-2">{detail.sectionTitle}</h2>
+                  <ul className="list-disc space-y-1 pl-6 ">
+                    {detail.content.map((item, index) => (
+                      <li key={index} className="text-[0.9rem]">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-            <div className="px-3 lg:px-0 lg:max-w-[900px] m-auto pt-2 pb-3 lg:pt-0">
-              <ul className="bg-gray-300 shadow-2xl shadow-slate-700 mt-1 lg:mt-0 pb-12">
-                <li className="py-2 description">
-                  <p
-                    className="text-[1.2rem] flex items-center border-b border-gray-700 pb-2 justify-between px-3 cursor-pointer"
-                    onClick={handleToggleExpand}
-                  >
-                    Description <MdKeyboardArrowRight />
-                  </p>
-                  <div className="px-3 pt-3">
-                    {isExpanded ? (
-                      <div>
-                        <p className="text-[0.9rem] pt-1">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.
-                        </p>
-                        <p className="text-[0.9rem] pt-2">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.
-                        </p>
-                        <p className="text-[0.9rem] pt-2">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.
-                        </p>
-                        <div className="pt-4">
-                          <h2 className="text-[0.9rem] font-bold">Lightning</h2>
-                          <ul className="list-disc space-y-1 pl-6">
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet.
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="pt-6">
-                          <h2 className="text-[0.9rem] font-bold">Key Features</h2>
-                          <ul className="list-disc space-y-1 pl-6">
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="pt-6">
-                          <h2 className="text-[0.9rem] font-bold">
-                            What's in the box
-                          </h2>
-                          <ul className="list-disc space-y-1 pl-6">
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="pt-6">
-                          <h2 className="text-[0.9rem] font-bold">Specifications</h2>
-                          <ul className="list-disc space-y-1 pl-6">
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur.
-                            </li>
-                            <li className="text-[0.9rem]">
-                              Lorem ipsum dolor sit amet consectetur.
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    ) : (
-                      <p className="text-[0.9rem] pt-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.
-                      </p>
-                    )}
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+          ) : (
+            <p className="text-[0.9rem] pt-1">
+              {item.description}
+            </p>
+          )}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+          {/* You May Also Like */}
           <div className="bg-gray-800">
             <div className="">
               <div className="bg-gray-700 max-w-[900px] m-auto">
@@ -316,10 +256,7 @@ const Description = () => {
                   {items.map((item, index) => (
                     <SwiperSlide key={index}>
                       <Link
-                        to={{
-                          pathname: "/description",
-                          state: { item },
-                        }}
+                         to={`/description/${item.itemId}`} key={index}
                         onClick={() => handleItemClick(item)}
                       >
                         <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
@@ -352,10 +289,11 @@ const Description = () => {
             <button className="bg-gray-800 text-white py-2 w-full rounded-md">
               ADD TO CART
             </button>
-            <BsFillCartPlusFill className="absolute top-4 left-20 text-gray-200 text-[1.3rem]" />
+            <MdKeyboardArrowRight className="absolute top-4 left-20 text-gray-200 text-[1.3rem]" />
           </div>
         </div>
       </div>
+  
       <Footer />
     </div>
   );

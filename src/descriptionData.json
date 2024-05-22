@@ -1,0 +1,1540 @@
+[
+  {
+    "itemId": "lithium1",
+    "title": "Product 1",
+    "brand": "Company A",
+    "price": "₦ 260,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "lithium2",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+  {
+    "itemId": "lithium3",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 320,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "lithium4",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 330,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "lithium5",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 340,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "lithium6",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 350,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+
+
+   {
+    "itemId": "tubular1",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "tubular2",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "tubular3",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "tubular4",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "tubular5",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+ {
+    "itemId": "tubular6",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+
+
+   {
+    "itemId": "acid1",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "acid2",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "acid3",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "acid4",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "acid5",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "acid6",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+
+   {
+    "itemId": "inverter1",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 200,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "inverter2",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 100,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "inverter3",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 150,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "inverter4",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 180,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "inverter5",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 190,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "inverter6",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 500,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+
+
+   {
+    "itemId": "solar1",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "torem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "solar2",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "solar3",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "solar4",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "solar5",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  },
+   {
+    "itemId": "solar6",
+    "title": "Product 2",
+    "brand": "Company B",
+    "price": "₦ 300,000",
+    "stockStatus": "In stock",
+    "deliveryInfo": "Available for delivery or pick-up 24-72hrs after order is made",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, molestiae.",
+    "details": [
+      {
+        "sectionTitle": "Description",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident libero sint explicabo consequatur, alias eum est ratione? Rem, eligendi."
+        ]
+      },
+      {
+        "sectionTitle": "Lightning",
+        "content": [
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet.",
+          "Lorem ipsum dolor sit amet."
+        ]
+      },
+      {
+        "sectionTitle": "Key Features",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "What's in the box",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing."
+        ]
+      },
+      {
+        "sectionTitle": "Specifications",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur."
+        ]
+      }
+    ],
+    "images": ["power4.png", "power5.png", "power4.png"]
+  }
+
+]

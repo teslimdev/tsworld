@@ -49,10 +49,7 @@ const Products = () => {
           {allItems.map((item, index) => (
             <div onClick={() => handleItemClick(item)} key={index}>
               <Link
-                to={{
-                  pathname: `/description`,
-                  state: { item },
-                }}
+                to={`/description/${item.itemId}`} key={index}
               >
                 <div className="shadow-2xl h-[12rem] grid grid-cols-2">
                   <img

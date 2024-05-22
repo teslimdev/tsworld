@@ -48,10 +48,7 @@ const Solar = () => {
         {solarItems.map((item, index) => (
         <div onClick={() => handleItemClick(item)}> 
               <Link 
-          to={{
-                  pathname: `/description`,
-                  state: { item },
-                }}
+           to={`/description/${item.itemId}`} key={index}
           >
             <div key={index} className="shadow-2xl h-[12rem] grid grid-cols-2">
             <img src={power4} alt="" className="h-[192px] w-full" /> {/* Using the imported image */}

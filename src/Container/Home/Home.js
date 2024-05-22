@@ -125,11 +125,7 @@ const Home = () => {
           {items.map((item, index) => (
             <div onClick={() => handleItemClick(item)}>
               <Link
-                to={{
-                  pathname: `/description`,
-                  state: { item },
-                }}
-                key={index}
+                to={`/description/${item.itemId}`} key={index}
               >
                 <div className="shadow-2xl h-[12rem] grid grid-cols-2">
                   <img
@@ -198,7 +194,7 @@ const Home = () => {
             >
               {recentlyClickedItems.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <Link to={{ pathname: "/description", state: { item } }}>
+                  <Link  to={`/description/${item.itemId}`} key={index}>
                     <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
                       <img
                         src={images[item.imageSrc]}

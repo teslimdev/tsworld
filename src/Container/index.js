@@ -1,5 +1,4 @@
 export { default as Home } from "./Home/Home";
-export { default as Description} from "./Description/Description";
 export { default as Lithium } from "./Lithium/Lithium";
 export { default as Inverter } from "./Inverter/Inverter";
 export { default as Acid } from "./Acid/Acid";
@@ -15,3 +14,4 @@ export { default as Cookies} from "./Cookies/Cookies";
 export { default as Privacy} from "./Privacy/Privacy";
 export { default as Signup} from "./Signup/Signup";
 export { default as Signin} from "./Signin/Signin";
+export { default as Description} from "./Description/Description";
