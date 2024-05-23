@@ -35,6 +35,20 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const isFirstVisit = localStorage.getItem("isFirstVisit") === null;
+
+    if (!isFirstVisit) {
+      // Not first visit, enable loading
+      setLoading(true);
+      fetchItems();
+    } else {
+      // First visit, disable loading
+      setLoading(false);
+      localStorage.setItem("isFirstVisit", "false");
+    }
+  }, []);
+
+  const fetchItems = () => {
     const shuffledItems = shuffleArray(itemsData);
     const slicedItems = shuffledItems.slice(0, 12);
     setItems(slicedItems);
@@ -45,7 +59,7 @@ const Home = () => {
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  };
 
   const shuffleArray = (array) => {
     let currentIndex = array.length,
