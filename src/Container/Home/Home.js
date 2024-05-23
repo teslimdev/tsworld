@@ -37,14 +37,14 @@ const Home = () => {
   useEffect(() => {
     const isFirstVisit = localStorage.getItem("isFirstVisit") === null;
 
-    if (!isFirstVisit) {
+    if (isFirstVisit) {
+      // First visit, disable loading and fetch items
+      fetchItems();
+      localStorage.setItem("isFirstVisit", "false");
+    } else {
       // Not first visit, enable loading
       setLoading(true);
       fetchItems();
-    } else {
-      // First visit, disable loading
-      setLoading(false);
-      localStorage.setItem("isFirstVisit", "false");
     }
   }, []);
 
@@ -89,10 +89,9 @@ const Home = () => {
       JSON.stringify(updatedRecentlyClickedItems)
     );
   };
-
-  if (loading) {
+   if (loading) {
     return (
-      <div className="fflex justify-center items-center relative container  bg-gray-400  h-lvh">
+      <div className="fflex justify-center items-center relative container  bg-gray-300  h-svh">
         <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
       </div>
     );
@@ -183,75 +182,73 @@ const Home = () => {
           </h2>
         </div>
         <div className="px-6 max-w-[1200px] m-auto pt-7">
-          {recentlyClickedItems.length === 0 ? (
-            <p className="text-center text-gray-500 text-lg">No results</p>
-          ) : (
-            <Swiper
-              modules={[
-                Pagination,
-                A11y,
-                EffectFade,
-                Autoplay,
-                EffectCoverflow,
-              ]}
-              effect="f"
-              loop={true}
-              speed={1200}
-              autoplay={{
-                delay: 4000,
-                stopOnLastSlide: false,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: false,
-                waitForTransition: true,
-              }}
-              breakpoints={{
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                300: {
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-                },
-              }}
-              slidesPerView={1}
-              pagination={{
-                el: ".swiper-pagination",
-                clickable: true,
-              }}
-              scrollbar={{ draggable: true }}
-              className=""
-            >
-              {recentlyClickedItems.map((item) => (
-                <SwiperSlide key={item.itemId}>
-                  <Link to={{
+          <Swiper
+            modules={[
+              Pagination,
+              A11y,
+              EffectFade,
+              Autoplay,
+              EffectCoverflow,
+            ]}
+            effect="f"
+            loop={true}
+            speed={1200}
+            autoplay={{
+              delay: 4000,
+              stopOnLastSlide: false,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+              waitForTransition: true,
+            }}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              300: {
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
+            slidesPerView={1}
+            pagination={{
+              el: ".swiper-pagination",
+              clickable: true,
+            }}
+            scrollbar={{ draggable: true }}
+            className=""
+          >
+            {recentlyClickedItems.map((item) => (
+              <SwiperSlide key={item.itemId}>
+                <Link
+                  to={{
                     pathname: `/description/${item.itemId}`,
                     state: { item },
-                  }}>
-                    <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
-                      <img
-                        src={images[item.imageSrc]}
-                        alt=""
-                        className="h-[192px] w-fit"
-                      />
-                      <div className="rounded-e-lg bg-gray-500  px-3 py-3">
-                        <h3 className="text-[.9rem] pb-2">{item.title}</h3>
-                        <ul className="list-disc pl-4">
-                          {item.features.map((feature, index) => (
-                            <li key={index}>{feature}</li>
-                          ))}
-                        </ul>
-                        <p className="pt-5">{item.price}</p>
-                      </div>
+                  }}
+                >
+                  <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
+                    <img
+                      src={images[item.imageSrc]}
+                      alt=""
+                      className="h-[192px] w-fit"
+                    />
+                    <div className="rounded-e-lg bg-gray-500  px-3 py-3">
+                      <h3 className="text-[.9rem] pb-2">{item.title}</h3>
+                      <ul className="list-disc pl-4">
+                        {item.features.map((feature, index) => (
+                          <li key={index}>{feature}</li>
+                        ))}
+                      </ul>
+                      <p className="pt-5">{item.price}</p>
                     </div>
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
+                  </div>
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
 
