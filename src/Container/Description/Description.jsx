@@ -88,13 +88,13 @@ const Description = () => {
   }, []);
 
   const handleToggleExpand = () => {
-    setIsExpanded((prevExpanded) => !prevExpanded); // Toggle expansion state
+    setIsExpanded(!isExpanded); // Toggle expansion state
   };
 
   if (isLoading || loadingYouMayLike) {
     return (
       <div className=" flex justify-center items-center relative container  bg-gray-300  h-svh">
-        <div className=" absolute top-[20rem]  sl:top-[25rem] box border  "></div>
+        <div className=" absolute top-[20rem]  sl:top-[25rem] box  "></div>
       </div>
     );
   }
@@ -163,7 +163,8 @@ const Description = () => {
                     onClick={handleToggleExpand}
                     className="text-blue-600 hover:text-blue-800"
                   >
-                    {isExpanded ? "Show Less" : "Show More"}
+                    {isExpanded ? "Show Less" : "Show More"}{" "}
+                    <MdKeyboardArrowRight />
                   </button>
                 )}
               </p>
@@ -192,30 +193,31 @@ const Description = () => {
                     className="text-[1.2rem] flex items-center border-b pl-4 border-gray-700 pb-2 justify-between px-3 cursor-pointer"
                     onClick={handleToggleExpand}
                   >
-                    Description <MdKeyboardArrowRight />
+                    {isExpanded ? "Show Less" : "Show More"}{" "}
+                    <MdKeyboardArrowRight />
                   </p>
                   <div className="px-5 pt-3">
-    {isExpanded ? (
-      <div>
-        {item.details.map((detail, detailIndex) => (
-          <div key={detailIndex}>
-            <h2 className="text-[1rem] font-bold pt-5 pb-2">
-              {detail.sectionTitle}
-            </h2>
-            <ul className="list-disc space-y-1 pl-6 ">
-              {detail.content.map((item, index) => (
-                <li key={index} className="text-[0.9rem]">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    ) : (
-      <p className="text-[0.9rem] pt-1">{item.description}</p>
-    )}
-  </div>
+                    {isExpanded ? (
+                      <div>
+                        {item.details.map((detail, detailIndex) => (
+                          <div key={detailIndex}>
+                            <h2 className="text-[1rem] font-bold pt-5 pb-2">
+                              {detail.sectionTitle}
+                            </h2>
+                            <ul className="list-disc space-y-1 pl-6 ">
+                              {detail.content.map((item, index) => (
+                                <li key={index} className="text-[0.9rem]">
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-[0.9rem] pt-1">{item.description}</p>
+                    )}
+                  </div>
                 </li>
               </ul>
             </div>
