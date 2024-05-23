@@ -195,32 +195,32 @@ const Description = () => {
                     Description <MdKeyboardArrowRight />
                   </p>
                   <div className="px-5 pt-3">
-                    {isExpanded ? (
-                      <div>
-                        {item.details.map((detail, detailIndex) => (
-                          <div key={detailIndex}>
-                            <h2 className="text-[1rem] font-bold pt-5 pb-2">
-                              {detail.sectionTitle}
-                            </h2>
-                            <ul className="list-disc space-y-1 pl-6 ">
-                              {detail.content.map((item, index) => (
-                                <li key={index} className="text-[0.9rem]">
-                                  {item}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <p className="text-[0.9rem] pt-1">{item.description}</p>
-                    )}
-                  </div>
+    {isExpanded ? (
+      <div>
+        {item.details.map((detail, detailIndex) => (
+          <div key={detailIndex}>
+            <h2 className="text-[1rem] font-bold pt-5 pb-2">
+              {detail.sectionTitle}
+            </h2>
+            <ul className="list-disc space-y-1 pl-6 ">
+              {detail.content.map((item, index) => (
+                <li key={index} className="text-[0.9rem]">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p className="text-[0.9rem] pt-1">{item.description}</p>
+    )}
+  </div>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="pb-8 max-w-[900px] lg:px-6 bg-gray-300 m-auto">
+          <div className="pb-8 max-w-[900px]  bg-gray-300 m-auto">
             <div className="">
               <div className="bg-gray-700 max-w-[900px] m-auto">
                 <h2 className="px-6 py-2 text-white text-[1.1rem]">
