@@ -6,6 +6,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { Footer } from "../../Compnents";
 
 const Products = () => {
+   const [loading, setLoading] = useState(true);
     const [allItems, setAllItems] = useState([]);
   const [recentlyClickedItems, setRecentlyClickedItems] = useState(
     JSON.parse(localStorage.getItem("recentlyClickedItems")) || []
@@ -32,17 +33,39 @@ const Products = () => {
       );
     }
   };
+
+  useEffect(() => {
+   
+
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+   if (loading) {
+    return (
+      <div className="fflex justify-center items-center relative container  bg-gray-300  h-svh">
+        <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className=" bg-gray-200">
-        <div className="bg-gray-400 fixed w-full">
-          <div className="flex items-center max-w-[1200px] m-auto px-4 py-2 gap-6">
-            <p className=" text-3xl">
+        <div className="bg-gray-400 fixed w-full z-20">
+          <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
+            <p className="text-black text-3xl">
               <Link to="/">
                 <IoIosArrowRoundBack />
               </Link>
             </p>
-            <h2 className=" text-[1.1rem] uppercase">All Items</h2>
+            <h2 className="text-black text-[1.1rem] uppercase">All Items</h2>
+            <div></div>{" "}
+            {/* This empty div creates space for the center alignment */}
           </div>
         </div>
         <div className="lithium max-w-[1200px] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-20 pb-8 px-6">

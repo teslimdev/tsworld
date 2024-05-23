@@ -1,13 +1,10 @@
-import Header from "../../Compnents/Header";
 import React, { useEffect, useState } from "react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
-import { Pagination, A11y, Autoplay } from "swiper/modules";
+import { Footer, Header } from "../../Compnents";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, EffectCoverflow } from "swiper/modules";
+import { Pagination, A11y, Autoplay, EffectFade, EffectCoverflow } from "swiper/modules";
 import { Slide } from "../../Compnents";
+import itemsData from "../../../src/itemsData.json";
 import power from "../../../src/Assets/power.jpg";
 import power2 from "../../../src/Assets/power2.png";
 import power3 from "../../../src/Assets/power3.png";
@@ -17,9 +14,6 @@ import power6 from "../../../src/Assets/power6.png";
 import power7 from "../../../src/Assets/power7.png";
 import power8 from "../../../src/Assets/power8.png";
 import power9 from "../../../src/Assets/power9.png";
-import itemsData from "../../../src/itemsData.json";
-import { Link } from "react-router-dom";
-import { Footer } from "../../Compnents";
 
 const images = {
   "power.jpg": power,
@@ -34,15 +28,23 @@ const images = {
 };
 
 const Home = () => {
-   const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
   const [recentlyClickedItems, setRecentlyClickedItems] = useState(
     JSON.parse(localStorage.getItem("recentlyClickedItems")) || []
   );
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const shuffledItems = shuffleArray(itemsData);
     const slicedItems = shuffledItems.slice(0, 12);
     setItems(slicedItems);
+
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const shuffleArray = (array) => {
@@ -74,6 +76,13 @@ const Home = () => {
     );
   };
 
+  if (loading) {
+    return (
+      <div className="fflex justify-center items-center relative container  bg-gray-300  h-svh">
+        <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-gray-300">
@@ -205,9 +214,9 @@ const Home = () => {
               {recentlyClickedItems.map((item) => (
                 <SwiperSlide key={item.itemId}>
                   <Link to={{
-                  pathname: `/description/${item.itemId}`,
-                  state: { item },
-                }}>
+                    pathname: `/description/${item.itemId}`,
+                    state: { item },
+                  }}>
                     <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
                       <img
                         src={images[item.imageSrc]}

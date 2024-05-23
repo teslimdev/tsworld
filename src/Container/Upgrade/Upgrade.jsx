@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Footer } from "../../Compnents";
 
 const Upgrade = () => {
+   const [loading, setLoading] = useState(true);
     const [batteryType, setBatteryType] = useState("");
 const otherDetailsRef = useRef(null);
   const handleBatteryTypeChange = (event) => {
@@ -21,6 +22,26 @@ const otherDetailsRef = useRef(null);
   useEffect(() => {
     adjustTextareaHeight(); // Adjust height initially
   }, []);
+
+  useEffect(() => {
+   
+
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+   if (loading) {
+    return (
+      <div className="fflex justify-center items-center relative container  bg-gray-300  h-svh">
+        <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
+      </div>
+    );
+  }
+
 
   return (
     <div>

@@ -52,7 +52,7 @@ const Header = () => {
                       <span className="hidden lg:flex">Account</span>
                     </p>
                     </a>
-                    <a href="/">
+                    <a href="/Cart">
                       <p className="flex items-center gap-2">
                       <IoCartOutline className="text-2xl font-light text-gray-700" />
                       <span className="hidden lg:flex">Cart</span>

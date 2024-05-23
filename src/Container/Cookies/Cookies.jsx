@@ -2,8 +2,28 @@ import React from 'react'
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Footer } from '../../Compnents';
+import { useState ,useEffect } from 'react';
 
 const Cookies = () => {
+      const [loading, setLoading] = useState(true);
+  useEffect(() => {
+   
+
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+   if (loading) {
+    return (
+      <div className="fflex justify-center items-center relative container  bg-gray-300  h-svh">
+        <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
+      </div>
+    );
+  }
   return (
     <div>
       <div>

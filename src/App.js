@@ -16,6 +16,7 @@ import Cookies from "./Container/Cookies/Cookies";
 import Privacy from "./Container/Privacy/Privacy";
 import Signup from "./Container/Signup/Signup";
 import Signin from "./Container/Signin/Signin";
+import Cart from "./Container/Cart/Cart";
 function App() {
   return (
     <div className="App">
@@ -37,6 +38,7 @@ function App() {
                  <Route path="/Privacy" element={<Privacy/>}/>
                  <Route path="/Signup" element={<Signup/>}/>
                    <Route path="/Signin" element={<Signin/>}/>
+                    <Route path="/Cart" element={<Cart/>}/>
        </Routes>
       
     </div>

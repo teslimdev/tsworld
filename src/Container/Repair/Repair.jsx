@@ -3,6 +3,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Footer } from "../../Compnents";
 const Repair = () => {
+      const [loading, setLoading] = useState(true);
   const otherDetailsRef = useRef(null);
   const [fileButtonText, setFileButtonText] = useState("Browse File");
   const [filePreview, setFilePreview] = useState(null);
@@ -62,6 +63,24 @@ const Repair = () => {
     adjustTextareaHeight(); // Adjust height initially
   }, []);
   
+useEffect(() => {
+   
+
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+   if (loading) {
+    return (
+      <div className="fflex justify-center items-center relative container  bg-gray-300  h-svh">
+        <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
+      </div>
+    );
+  }
 
   return (
     <div>

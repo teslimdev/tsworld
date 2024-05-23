@@ -1,4 +1,4 @@
-import React, { useState ,useMemo } from "react";
+import React, { useState ,useMemo, useEffect } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { PiShoppingBagOpenFill } from "react-icons/pi";
@@ -7,6 +7,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoChatboxEllipses } from "react-icons/io5";
 import { Footer } from "../../Compnents";
 const Help = () => {
+    const [loading, setLoading] = useState(true);
   const [selectedGuide, setSelectedGuide] = useState(null);
   const [selectedFAQ, setSelectedFAQ] = useState(null);
   const [expandedQuestion, setExpandedQuestion] = useState(null);
@@ -362,6 +363,25 @@ const Help = () => {
   const firstGuide = Object.keys(listItemData)[0];
   setSelectedMediumGuide(firstGuide);
 }, [listItemData]);
+
+useEffect(() => {
+   
+
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+   if (loading) {
+    return (
+      <div className="fflex justify-center items-center relative container  bg-gray-300  h-svh">
+        <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
+      </div>
+    );
+  }
   return (
     <div>
       <div>

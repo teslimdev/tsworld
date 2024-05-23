@@ -93,8 +93,8 @@ const Description = () => {
   };
 
   if (isLoading || loadingYouMayLike) {
-    return <div className=" flex justify-center items-center relative container">
-       <div className=" absolute top-[20rem]  sl:top-[25rem] box "></div>
+    return <div className=" flex justify-center items-center relative container  bg-gray-300  h-svh">
+       <div className=" absolute top-[20rem]  sl:top-[25rem] box border  "></div>
        
     </div>;
   }
@@ -221,6 +221,13 @@ const Description = () => {
             </div>
           </div>
        <div className="pb-8 max-w-[900px] lg:px-6 bg-gray-300 m-auto">
+       <div className="">
+              <div className="bg-gray-700 max-w-[900px] m-auto">
+                <h2 className="px-6 py-2 text-white text-[1.1rem]">
+                  You May Also Like
+                </h2>
+              </div>
+            </div>
         <div className="max-w-[800px] m-auto pt-6 px-6 sl:px-0 like">
           <Swiper
             modules={[Pagination, A11y, Autoplay]}

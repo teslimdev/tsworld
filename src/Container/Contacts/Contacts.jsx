@@ -17,6 +17,7 @@ const images = {
   "power4.png": power4,
 };
 const Contacts = () => {
+  const [loading, setLoading] = useState(true);
     const [items, setItems] = useState([]);
   const [recentlyClickedItems, setRecentlyClickedItems] = useState(
     JSON.parse(localStorage.getItem("recentlyClickedItems")) || []
@@ -57,6 +58,24 @@ const Contacts = () => {
     );
   };
 
+  useEffect(() => {
+   
+
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+   if (loading) {
+    return (
+      <div className="fflex justify-center items-center relative container  bg-gray-300  h-svh">
+        <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
+      </div>
+    );
+  }
   return (
     <div>
       <div>
@@ -298,7 +317,7 @@ const Contacts = () => {
         <div className="max-w-[1200px] m-auto  px-6 sl:px-0 like">
           <Swiper
               modules={[Pagination, A11y, Autoplay]}
-              loop={true}
+          
               autoplay={{
                 delay: 5000,
                 stopOnLastSlide: false,
@@ -330,9 +349,9 @@ const Contacts = () => {
               {items.map((item, index) => (
                 <SwiperSlide key={index}>
                   <Link
-                    to={{
-                      pathname: "/description",
-                      state: { item },
+                   to={{
+                  pathname: `/description/${item.itemId}`,
+                  state: { item }
                     }}
                     onClick={() => handleItemClick(item)} // Add this onClick event
                   >
