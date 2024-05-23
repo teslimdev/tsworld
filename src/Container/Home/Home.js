@@ -19,7 +19,7 @@ import power8 from "../../../src/Assets/power8.png";
 import power9 from "../../../src/Assets/power9.png";
 import itemsData from "../../../src/itemsData.json";
 import { Link } from "react-router-dom";
-import {Footer} from "../../Compnents";
+import { Footer } from "../../Compnents";
 
 const images = {
   "power.jpg": power,
@@ -74,6 +74,7 @@ const Home = () => {
     );
   };
 
+
   return (
     <div className="bg-gray-300">
       <Header />
@@ -122,10 +123,13 @@ const Home = () => {
       <div className="bg-gray-300 ">
         <h2 className="py-3 px-6">Good Deals!!!</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 m-auto px-6 gap-3 md:gap-4 lg:gap-6 lg:max-w-[1200px] item">
-          {items.map((item, index) => (
-            <div onClick={() => handleItemClick(item)}>
+          {items.map((item) => (
+            <div key={item.itemId} onClick={() => handleItemClick(item)}>
               <Link
-                to={`/description/${item.itemId}`} key={index}
+                to={{
+                  pathname: `/description/${item.itemId}`,
+                  state: { item },
+                }}
               >
                 <div className="shadow-2xl h-[12rem] grid grid-cols-2">
                   <img
@@ -149,7 +153,7 @@ const Home = () => {
         </div>
       </div>
 
-       <div className="py-10 bg-gray-300">
+      <div className="py-10 bg-gray-300">
         <div className="bg-gray-700">
           <h2 className="px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase">
             recently viewed
@@ -160,7 +164,13 @@ const Home = () => {
             <p className="text-center text-gray-500 text-lg">No results</p>
           ) : (
             <Swiper
-              modules={[Pagination, A11y, EffectFade, Autoplay, EffectCoverflow]}
+              modules={[
+                Pagination,
+                A11y,
+                EffectFade,
+                Autoplay,
+                EffectCoverflow,
+              ]}
               effect="f"
               loop={true}
               speed={1200}
@@ -192,9 +202,12 @@ const Home = () => {
               scrollbar={{ draggable: true }}
               className=""
             >
-              {recentlyClickedItems.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <Link  to={`/description/${item.itemId}`} key={index}>
+              {recentlyClickedItems.map((item) => (
+                <SwiperSlide key={item.itemId}>
+                  <Link to={{
+                  pathname: `/description/${item.itemId}`,
+                  state: { item },
+                }}>
                     <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
                       <img
                         src={images[item.imageSrc]}
@@ -218,8 +231,8 @@ const Home = () => {
           )}
         </div>
       </div>
- 
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };

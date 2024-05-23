@@ -89,7 +89,7 @@
   },
    {
     "id": "solar",
-    "itemId": "solar4",
+    "itemId": "solar6",
     "imageSrc": "power4.png",
     "title": "Another Title",
     "features": ["feature one", "feature two", "feature three"],

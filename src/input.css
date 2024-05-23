@@ -53,6 +53,34 @@ cursor: pointer;
     /* Ensures it stays above other content */
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box {
+    animation: loader 1s infinite;
+    background-color: #374151;
+    width: 50px;
+    height: 50px;
+    color: #00136c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes loader {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        border-radius: 50%;
+        rotate: 180deg;
+    }
+}
+
 @media screen and (min-width:640px) {
     .item{
         display: grid;
