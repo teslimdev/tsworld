@@ -93,8 +93,8 @@ const Description = () => {
 
   if (isLoading || loadingYouMayLike) {
     return (
-      <div className=" flex justify-center items-center relative container  bg-gray-300  h-svh">
-        <div className=" absolute top-[20rem]  sl:top-[25rem] box  "></div>
+      <div className=" flex justify-center items-center relative container   bg-gray-400   h-lvh">
+        <div className=" absolute top-[20rem]  sl:top-[25rem] box   "></div>
       </div>
     );
   }
