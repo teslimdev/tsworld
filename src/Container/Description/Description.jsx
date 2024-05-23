@@ -38,7 +38,7 @@ const Description = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsExpanded(window.innerWidth >= 1024);
+      setIsExpanded(window.innerWidth >= 1024 ? true : isExpanded);
     };
 
     window.addEventListener("resize", handleResize);
@@ -46,7 +46,7 @@ const Description = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isExpanded]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -193,7 +193,7 @@ const Description = () => {
                     className="text-[1.2rem] flex items-center border-b pl-4 border-gray-700 pb-2 justify-between px-3 cursor-pointer"
                     onClick={handleToggleExpand}
                   >
-                    {isExpanded ? "Show Less" : "Show More"}{" "}
+                    {isExpanded ? "Description" : "Description"}{" "}
                     <MdKeyboardArrowRight />
                   </p>
                   <div className="px-5 pt-3">
