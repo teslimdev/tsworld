@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { Footer, Header } from "../../Compnents"; // Check for correct import path
+import { Footer, Header } from "../../Compnents";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import Slides from "../../Compnents/Slides"; // Ensure Slides component is correctly defined
+import Slides from "../../Compnents/Slides";
 import itemsData from "../../../src/itemsData.json";
 import descriptionData from "../../../src/descriptionData.json";
 import power4 from "../../../src/Assets/power4.png";
 import power5 from "../../../src/Assets/power5.png";
-import "swiper/css"; // Check if correct CSS paths are imported
+import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
@@ -23,12 +23,12 @@ const images = {
 };
 
 const Description = () => {
-   const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
   const [item, setItem] = useState(null);
   const { itemId } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [loadingYouMayLike, setLoadingYouMayLike] = useState(false); // State to control loading for You May Also Like section
+  const [loadingYouMayLike, setLoadingYouMayLike] = useState(false);
 
   useEffect(() => {
     const shuffledItems = shuffleArray(itemsData);
@@ -78,30 +78,31 @@ const Description = () => {
   };
 
   const handleItemClick = useCallback((clickedItem) => {
-    setLoadingYouMayLike(true); // Set loading state for You May Also Like section
+    setLoadingYouMayLike(true);
 
     const timer = setTimeout(() => {
-      setLoadingYouMayLike(false); // Turn off loading after 3 seconds
-      // Handle item click here
+      setLoadingYouMayLike(false);
     }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
   const handleToggleExpand = () => {
-    setIsExpanded(!isExpanded);
+    setIsExpanded((prevExpanded) => !prevExpanded); // Toggle expansion state
   };
 
   if (isLoading || loadingYouMayLike) {
-    return <div className=" flex justify-center items-center relative container  bg-gray-300  h-svh">
-       <div className=" absolute top-[20rem]  sl:top-[25rem] box border  "></div>
-       
-    </div>;
+    return (
+      <div className=" flex justify-center items-center relative container  bg-gray-300  h-svh">
+        <div className=" absolute top-[20rem]  sl:top-[25rem] box border  "></div>
+      </div>
+    );
   }
 
   if (!item) {
     return <div>No item found for itemId: {itemId}</div>;
   }
+
   return (
     <div>
       <Header />
@@ -125,7 +126,6 @@ const Description = () => {
             <div className="max-w-[300px] hidden md:block pb-10 relative">
               <Swiper
                 modules={[Pagination, A11y, EffectFade, Autoplay]}
-                // Enable loop mode only if there are more than 1 slide
                 autoplay={{
                   delay: 7000,
                   stopOnLastSlide: false,
@@ -133,7 +133,7 @@ const Description = () => {
                   pauseOnMouseEnter: false,
                   waitForTransition: true,
                 }}
-                slidesPerView={1} // You can adjust this value as needed
+                slidesPerView={1}
                 pagination={{
                   el: ".swiper-pagination-top",
                   clickable: true,
@@ -220,72 +220,70 @@ const Description = () => {
               </ul>
             </div>
           </div>
-       <div className="pb-8 max-w-[900px] lg:px-6 bg-gray-300 m-auto">
-       <div className="">
+          <div className="pb-8 max-w-[900px] lg:px-6 bg-gray-300 m-auto">
+            <div className="">
               <div className="bg-gray-700 max-w-[900px] m-auto">
                 <h2 className="px-6 py-2 text-white text-[1.1rem]">
                   You May Also Like
                 </h2>
               </div>
             </div>
-        <div className="max-w-[800px] m-auto pt-6 px-6 sl:px-0 like">
-          <Swiper
-            modules={[Pagination, A11y, Autoplay]}
-            autoplay={{
-              delay: 5000,
-              stopOnLastSlide: false,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-              waitForTransition: true,
-            }}
-            breakpoints={{
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              300: {
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-            }}
-            slidesPerView={1}
-            scrollbar={{ draggable: true }}
-          >
-            {items.map((item, index) => (
-              <SwiperSlide key={index}>
-                <Link
-                  to={`/description/${item.itemId}`}
-                  key={index}
-                  onClick={() => handleItemClick(item)}
-                >
-                  <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
-                    <img
-                      src={images[item.imageSrc]}
-                      alt=""
-                      className="h-[192px] w-fit"
-                    />
-                    <div className="rounded-e-lg bg-gray-500 px-3 py-3">
-                      <h3 className="text-[.9rem] pb-2">{item.title}</h3>
-                      <ul className="list-disc pl-4">
-                        {item.features.map((feature, index) => (
-                          <li key={index}>{feature}</li>
-                        ))}
-                      </ul>
-                      <p className="pt-5">{item.price}</p>
-                    </div>
-                  </div>
-                </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          {/* Loading state for You May Also Like section */}
-          {loadingYouMayLike && <div>Loading...</div>}
-        </div>
-      </div>
-
+            <div className="max-w-[800px] m-auto pt-6 px-6 sl:px-0 like">
+              <Swiper
+                modules={[Pagination, A11y, Autoplay]}
+                autoplay={{
+                  delay: 5000,
+                  stopOnLastSlide: false,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: false,
+                  waitForTransition: true,
+                }}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  300: {
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                }}
+                slidesPerView={1}
+                scrollbar={{ draggable: true }}
+              >
+                {items.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <Link
+                      to={`/description/${item.itemId}`}
+                      key={index}
+                      onClick={() => handleItemClick(item)}
+                    >
+                      <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
+                        <img
+                          src={images[item.imageSrc]}
+                          alt=""
+                          className="h-[192px] w-fit"
+                        />
+                        <div className="rounded-e-lg bg-gray-500 px-3 py-3">
+                          <h3 className="text-[.9rem] pb-2">{item.title}</h3>
+                          <ul className="list-disc pl-4">
+                            {item.features.map((feature, index) => (
+                              <li key={index}>{feature}</li>
+                            ))}
+                          </ul>
+                          <p className="pt-5">{item.price}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              {loadingYouMayLike && <div>Loading...</div>}
+            </div>
+          </div>
           <div className="md:hidden relative small sticky-button-container flex gap-4 items-center shadow-[3rem] border-gray-700 ">
             <div className="w-12 h-10">
               <FaPhoneAlt className="border border-gray-800 rounded-md w-full h-full py-2 text-[1rem]" />
