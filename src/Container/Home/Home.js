@@ -257,9 +257,10 @@ const Home = () => {
           </div>
         </>
       )}
-      <Footer />
+      {!loading && <Footer />} {/* Render footer only when loading is complete */}
     </div>
   );
 };
 
 export default Home;
+
