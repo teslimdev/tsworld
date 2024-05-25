@@ -26,7 +26,7 @@ const Description = () => {
   const [items, setItems] = useState([]);
   const [item, setItem] = useState(null);
   const { itemId } = useParams();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(window.innerWidth >= 1024);
   const [isLoading, setIsLoading] = useState(true);
   const [loadingYouMayLike, setLoadingYouMayLike] = useState(false);
 
@@ -49,15 +49,22 @@ const Description = () => {
   }, [isExpanded]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const selectedItem = descriptionData.find(
-        (item) => item.itemId === itemId
-      );
-      setItem(selectedItem);
-      setIsLoading(false);
-    }, 3000);
+    // Check if itemId is present (i.e., page is refreshed)
+    if (itemId) {
+      // Simulate loading state
+      setIsLoading(true);
 
-    return () => clearTimeout(timer);
+      // Simulate fetching item data
+      const timer = setTimeout(() => {
+        const selectedItem = descriptionData.find(
+          (item) => item.itemId === itemId
+        );
+        setItem(selectedItem);
+        setIsLoading(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
   }, [itemId]);
 
   const shuffleArray = (array) => {
@@ -93,8 +100,8 @@ const Description = () => {
 
   if (isLoading || loadingYouMayLike) {
     return (
-      <div className=" flex justify-center items-center relative container   bg-gray-400   h-lvh">
-        <div className=" absolute top-[20rem]  sl:top-[25rem] box   "></div>
+      <div className="flex justify-center items-center relative container w-full bg-gray-400 h-lvh">
+        <div className="absolute top-[20rem] sl:top-[25rem] box w-full"></div>
       </div>
     );
   }
@@ -222,7 +229,7 @@ const Description = () => {
               </ul>
             </div>
           </div>
-          <div className="pb-8 max-w-[900px]  bg-gray-300 m-auto">
+          <div className="pb-8 max-w-[900px] bg-gray-300 m-auto">
             <div className="">
               <div className="bg-gray-700 max-w-[900px] m-auto">
                 <h2 className="px-6 py-2 text-white text-[1.1rem]">
