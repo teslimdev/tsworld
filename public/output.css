@@ -649,6 +649,10 @@ video {
   top: 20rem;
 }
 
+.left-16 {
+  left: 4rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -805,6 +809,10 @@ video {
 
 .w-\[130px\] {
   width: 130px;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .max-w-\[1200px\] {

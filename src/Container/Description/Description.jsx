@@ -366,7 +366,7 @@ const Description = () => {
             </div>
            {addToCartButton}
             {!isItemInCart && (
-    <BsFillCartPlusFill className="absolute top-8 left-12 text-gray-200 text-[1.3rem]" />
+    <BsFillCartPlusFill className="absolute top-4 left-24 text-gray-200 text-[1.3rem]" />
   )}
           </div>
         </div>
