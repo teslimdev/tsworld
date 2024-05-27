@@ -29,6 +29,8 @@ const Description = () => {
   const [isExpanded, setIsExpanded] = useState(window.innerWidth >= 1024);
   const [isLoading, setIsLoading] = useState(true);
   const [loadingYouMayLike, setLoadingYouMayLike] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+  const [quantity, setQuantity] = useState(1); // State for item quantity
 
   useEffect(() => {
     const shuffledItems = shuffleArray(itemsData);
@@ -49,12 +51,8 @@ const Description = () => {
   }, [isExpanded]);
 
   useEffect(() => {
-    // Check if itemId is present (i.e., page is refreshed)
     if (itemId) {
-      // Simulate loading state
       setIsLoading(true);
-
-      // Simulate fetching item data
       const timer = setTimeout(() => {
         const selectedItem = descriptionData.find(
           (item) => item.itemId === itemId
@@ -62,10 +60,17 @@ const Description = () => {
         setItem(selectedItem);
         setIsLoading(false);
       }, 3000);
-
       return () => clearTimeout(timer);
     }
   }, [itemId]);
+
+  useEffect(() => {
+    // Load cart items from localStorage on component mount
+    const storedCartItems = localStorage.getItem("cartItems");
+    if (storedCartItems) {
+      setCartItems(JSON.parse(storedCartItems));
+    }
+  }, []);
 
   const shuffleArray = (array) => {
     let currentIndex = array.length,
@@ -86,17 +91,57 @@ const Description = () => {
 
   const handleItemClick = useCallback((clickedItem) => {
     setLoadingYouMayLike(true);
-
     const timer = setTimeout(() => {
       setLoadingYouMayLike(false);
     }, 3000);
-
     return () => clearTimeout(timer);
   }, []);
 
   const handleToggleExpand = () => {
     setIsExpanded(!isExpanded); // Toggle expansion state
   };
+
+  const handleAddToCartClick = () => {
+    console.log("Adding item to cart:", item); // Debug log
+    if (item) {
+      const isItemInCart = cartItems.some(
+        (cartItem) => cartItem.itemId === item.itemId
+      );
+      console.log("Is item already in cart?", isItemInCart); // Debug log
+
+      if (!isItemInCart) {
+        const updatedCartItems = [...cartItems, item];
+        console.log("Updated cart items:", updatedCartItems); // Debug log
+        setCartItems(updatedCartItems);
+        localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+      } else {
+        console.log("Item is already in the cart");
+      }
+
+      // Change "Add to Cart" button to plus and minus buttons with quantity
+      setQuantity(1); // Reset quantity to 1
+    }
+  };
+
+  const handleIncreaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const handleDecreaseQuantity = () => {
+  if (quantity === 1) {
+    // Remove item from cart
+    const updatedCartItems = cartItems.filter(
+      (cartItem) => cartItem.itemId !== item.itemId
+    );
+    setCartItems(updatedCartItems);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+    // Reset quantity to 1
+    setQuantity(1);
+  } else {
+    setQuantity((prevQuantity) => prevQuantity - 1);
+  }
+};
+
 
   if (isLoading || loadingYouMayLike) {
     return (
@@ -109,6 +154,28 @@ const Description = () => {
   if (!item) {
     return <div>No item found for itemId: {itemId}</div>;
   }
+
+  // Check if item is already in cart
+  const isItemInCart = cartItems.some((cartItem) => cartItem.itemId === item.itemId);
+
+  // Render plus and minus buttons with quantity if item is in cart
+  const addToCartButton = isItemInCart ? (
+    <div className="flex items-center gap-2 w-full shadow-md">
+      <div className=" w-16  h-10 bg-gray-800">
+        <button className="border  border-gray-800 rounded-md w-full h-full text-[1rem] text-gray-200 " onClick={handleDecreaseQuantity}>-</button>
+      </div>
+      <span className=" w-full text-center">{quantity}</span>
+      <div className=" w-16 h-10 bg-gray-800">
+         <button className="border border-gray-800 rounded-md w-full h-full text-[1rem] text-gray-200 " onClick={handleIncreaseQuantity}>+</button>
+      </div>
+     
+    </div>
+  ) : (
+    <button onClick={handleAddToCartClick} className="bg-gray-800 text-white py-2 w-full rounded-md">
+      ADD TO CART
+    </button>
+  );
+
 
   return (
     <div>
@@ -182,10 +249,10 @@ const Description = () => {
               <p className="text-[0.9rem] pt-1">{item.stockStatus}</p>
               <p className="text-[0.9rem] pt-1">{item.deliveryInfo}</p>
               <div className="hidden md:block pt-6 relative">
-                <button className="bg-gray-800 text-white py-2 w-full rounded-md">
-                  ADD TO CART
-                </button>
+               {addToCartButton}
+                  {!isItemInCart && (
                 <BsFillCartPlusFill className="absolute top-8 left-12 text-gray-200 text-[1.3rem]" />
+                  )}
               </div>
             </div>
           </div>
@@ -297,10 +364,10 @@ const Description = () => {
             <div className="w-12 h-10">
               <FaPhoneAlt className="border border-gray-800 rounded-md w-full h-full py-2 text-[1rem]" />
             </div>
-            <button className="bg-gray-800 text-white py-2 w-full rounded-md">
-              ADD TO CART
-            </button>
-            <BsFillCartPlusFill className="absolute top-4 left-24 text-gray-200 text-[1.3rem]" />
+           {addToCartButton}
+            {!isItemInCart && (
+    <BsFillCartPlusFill className="absolute top-8 left-12 text-gray-200 text-[1.3rem]" />
+  )}
           </div>
         </div>
       </div>

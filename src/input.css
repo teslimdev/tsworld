@@ -70,6 +70,12 @@ cursor: pointer;
     align-items: center;
 }
 
+.empty-cart-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 @keyframes loader {
     0% {
         rotate: 0deg;

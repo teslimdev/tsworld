@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Footer, Header } from "../../Compnents";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, A11y, Autoplay, EffectFade, EffectCoverflow } from "swiper/modules";
 import { Slide } from "../../Compnents";
@@ -28,6 +28,7 @@ const images = {
 };
 
 const Home = () => {
+  const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const [recentlyClickedItems, setRecentlyClickedItems] = useState(
     JSON.parse(localStorage.getItem("recentlyClickedItems")) || []
@@ -89,6 +90,9 @@ const Home = () => {
       "recentlyClickedItems",
       JSON.stringify(updatedRecentlyClickedItems)
     );
+
+    // Redirect to the Description page with itemId
+    navigate(`/description/${item.itemId}`);
   };
 
   return (
@@ -263,4 +267,3 @@ const Home = () => {
 };
 
 export default Home;
-
