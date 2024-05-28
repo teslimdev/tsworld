@@ -31,6 +31,7 @@ const Description = () => {
   const [loadingYouMayLike, setLoadingYouMayLike] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [quantity, setQuantity] = useState(1); // State for item quantity
+  const [initialQuantity, setInitialQuantity] = useState(1); // State for initial quantity
 
   useEffect(() => {
     const shuffledItems = shuffleArray(itemsData);
@@ -54,12 +55,19 @@ const Description = () => {
     if (itemId) {
       setIsLoading(true);
       const timer = setTimeout(() => {
-        const selectedItem = descriptionData.find(
-          (item) => item.itemId === itemId
-        );
+        const selectedItem = descriptionData.find((item) => item.itemId === itemId);
         setItem(selectedItem);
         setIsLoading(false);
       }, 3000);
+
+      // Load quantity from local storage for the current item
+      const storedQuantity = localStorage.getItem(`quantity_${itemId}`);
+      if (storedQuantity) {
+        const parsedQuantity = parseInt(storedQuantity);
+        setQuantity(parsedQuantity);
+        setInitialQuantity(parsedQuantity); // Set initial quantity
+      }
+
       return () => clearTimeout(timer);
     }
   }, [itemId]);
@@ -114,38 +122,43 @@ const Description = () => {
         console.log("Updated cart items:", updatedCartItems); // Debug log
         setCartItems(updatedCartItems);
         localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+
+        // Set initial quantity to 1 when adding the item to cart
+        setQuantity(1);
+        localStorage.setItem(`quantity_${item.itemId}`, 1); // Save quantity to localStorage
       } else {
         console.log("Item is already in the cart");
       }
-
-      // Change "Add to Cart" button to plus and minus buttons with quantity
-      setQuantity(1); // Reset quantity to 1
     }
   };
 
-  const handleIncreaseQuantity = () => {
-    setQuantity((prevQuantity) => prevQuantity + 1);
-  };
+const handleChangeQuantity = (newQuantity) => {
+  // Ensure quantity does not go below 1
+  newQuantity = Math.max(newQuantity, 0);
 
-  const handleDecreaseQuantity = () => {
-  if (quantity === 1) {
-    // Remove item from cart
-    const updatedCartItems = cartItems.filter(
-      (cartItem) => cartItem.itemId !== item.itemId
-    );
-    setCartItems(updatedCartItems);
-    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
-    // Reset quantity to 1
-    setQuantity(1);
+  // If the new quantity is 0, change back to the Add to Cart button
+  if (newQuantity === 0) {
+    // Reset cart items and remove quantity from local storage
+    setCartItems([]);
+    localStorage.removeItem(`quantity_${itemId}`);
   } else {
-    setQuantity((prevQuantity) => prevQuantity - 1);
+    // Update local storage with the new quantity
+    localStorage.setItem(`quantity_${itemId}`, newQuantity);
   }
+
+  // Update quantity state
+  setQuantity(newQuantity);
 };
+
+
+
+
+
 
 
   if (isLoading || loadingYouMayLike) {
     return (
-      <div className="flex justify-center items-center relative container w-full bg-gray-400 h-lvh">
+      <div className="flex justify-center items-center relative container w-full bg-gray-400 h-screen">
         <div className="absolute top-[20rem] sl:top-[25rem] box w-full"></div>
       </div>
     );
@@ -159,22 +172,23 @@ const Description = () => {
   const isItemInCart = cartItems.some((cartItem) => cartItem.itemId === item.itemId);
 
   // Render plus and minus buttons with quantity if item is in cart
-  const addToCartButton = isItemInCart ? (
-    <div className="flex items-center gap-2 w-full shadow-md">
-      <div className=" w-16  h-10 bg-gray-800">
-        <button className="border  border-gray-800 rounded-md w-full h-full text-[1rem] text-gray-200 " onClick={handleDecreaseQuantity}>-</button>
-      </div>
-      <span className=" w-full text-center">{quantity}</span>
-      <div className=" w-16 h-10 bg-gray-800">
-         <button className="border border-gray-800 rounded-md w-full h-full text-[1rem] text-gray-200 " onClick={handleIncreaseQuantity}>+</button>
-      </div>
-     
+ const addToCartButton = isItemInCart ? (
+  <div className="flex items-center gap-2 w-full shadow-md">
+    {/* Minus button */}
+    <div className="w-16 h-10 bg-gray-800">
+      <button className="border border-gray-800 rounded-md w-full h-full text-[1rem] text-gray-200 " onClick={() => handleChangeQuantity(quantity - 1)}>-</button>
     </div>
-  ) : (
-    <button onClick={handleAddToCartClick} className="bg-gray-800 text-white py-2 w-full rounded-md">
-      ADD TO CART
-    </button>
-  );
+    <span className="w-full text-center">{quantity}</span>
+    {/* Plus button */}
+    <div className="w-16 h-10 bg-gray-800">
+       <button className="border border-gray-800 rounded-md w-full h-full text-[1rem] text-gray-200 " onClick={() => handleChangeQuantity(quantity + 1)}>+</button>
+    </div>
+  </div>
+) : (
+  <button onClick={handleAddToCartClick} className="bg-gray-800 text-white py-2 w-full rounded-md">
+    ADD TO CART
+  </button>
+);
 
 
   return (
@@ -249,10 +263,10 @@ const Description = () => {
               <p className="text-[0.9rem] pt-1">{item.stockStatus}</p>
               <p className="text-[0.9rem] pt-1">{item.deliveryInfo}</p>
               <div className="hidden md:block pt-6 relative">
-               {addToCartButton}
-                  {!isItemInCart && (
-                <BsFillCartPlusFill className="absolute top-8 left-12 text-gray-200 text-[1.3rem]" />
-                  )}
+                {addToCartButton}
+                {!isItemInCart && (
+                  <BsFillCartPlusFill className="absolute top-8 left-12 text-gray-200 text-[1.3rem]" />
+                )}
               </div>
             </div>
           </div>
@@ -364,10 +378,10 @@ const Description = () => {
             <div className="w-12 h-10">
               <FaPhoneAlt className="border border-gray-800 rounded-md w-full h-full py-2 text-[1rem]" />
             </div>
-           {addToCartButton}
+            {addToCartButton}
             {!isItemInCart && (
-    <BsFillCartPlusFill className="absolute top-4 left-24 text-gray-200 text-[1.3rem]" />
-  )}
+              <BsFillCartPlusFill className="absolute top-4 left-24 text-gray-200 text-[1.3rem]" />
+            )}
           </div>
         </div>
       </div>

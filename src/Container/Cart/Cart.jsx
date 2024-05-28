@@ -10,6 +10,7 @@ import power6 from "../../../src/Assets/power6.png";
 import power7 from "../../../src/Assets/power7.png";
 import power8 from "../../../src/Assets/power8.png";
 import power9 from "../../../src/Assets/power9.png";
+import { MdDeleteOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const images = {
@@ -42,21 +43,23 @@ const Cart = () => {
     return itemsData.find((item) => item.itemId === itemId);
   };
 
-  // Load cart items from localStorage on component mount
-  useEffect(() => {
-    const storedCartItems = localStorage.getItem("cartItems");
-    if (storedCartItems) {
-      setCartItems(JSON.parse(storedCartItems));
-    }
-  }, []);
 
-  useEffect(() => {
-    const initialQuantities = cartItems.reduce((acc, cartItem) => {
-      acc[cartItem.itemId] = 1; // Initialize quantity to 1 for each item
-      return acc;
-    }, {});
-    setQuantity(initialQuantities);
-  }, [cartItems]);
+// Load cart items from localStorage on component mount
+useEffect(() => {
+  const storedCartItems = localStorage.getItem("cartItems");
+  if (storedCartItems) {
+    setCartItems(JSON.parse(storedCartItems));
+    
+    // Load quantity from local storage for each item
+    const quantities = {};
+    JSON.parse(storedCartItems).forEach((cartItem) => {
+      const storedQuantity = localStorage.getItem(`quantity_${cartItem.itemId}`);
+      quantities[cartItem.itemId] = storedQuantity ? parseInt(storedQuantity) : 1;
+    });
+    setQuantity(quantities);
+  }
+}, []);
+
 
   const handleAddToCartClick = () => {
     // Example: Add a new item to the cart
@@ -71,97 +74,109 @@ const Cart = () => {
 
     // Update localStorage with the updated cartItems
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+
+    // Initialize quantity for the new item to 1
+    setQuantity((prevQuantity) => ({
+      ...prevQuantity,
+      [newItem.itemId]: 1,
+    }));
+
+    // Update local storage with the initial quantity (1) for the new item
+    localStorage.setItem(`quantity_${newItem.itemId}`, 1);
   };
 
- const handleRemoveItemClick = (itemId) => {
-  // Add itemId to itemsToRemove state
-  setItemsToRemove([...itemsToRemove, itemId]);
+  const handleRemoveItemClick = (itemId) => {
+    // Add itemId to itemsToRemove state
+    setItemsToRemove([...itemsToRemove, itemId]);
 
-  // Remove the item from cartItems state
-  const updatedCartItems = cartItems.filter((cartItem) => cartItem.itemId !== itemId);
-  setCartItems(updatedCartItems);
+    // Remove the item from cartItems state
+    const updatedCartItems = cartItems.filter((cartItem) => cartItem.itemId !== itemId);
+    setCartItems(updatedCartItems);
 
-  // Update localStorage with the updated cartItems
-  localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
-};
+    // Update localStorage with the updated cartItems
+    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
 
-const handleChangeQuantity = (itemId, newQuantity) => {
+    // Remove quantity from local storage for the removed item
+    localStorage.removeItem(`quantity_${itemId}`);
+  };
+
+  const handleChangeQuantity = (itemId, newQuantity) => {
     // Ensure quantity does not go below 1
     newQuantity = Math.max(newQuantity, 1);
     setQuantity({ ...quantity, [itemId]: newQuantity });
+
     // Update local storage with the new quantity
     localStorage.setItem(`quantity_${itemId}`, newQuantity);
-};
-
-
+  };
 
   const filteredCartItems = cartItems.filter(
     (cartItem) => !itemsToRemove.includes(cartItem.itemId)
   );
 
-return (
-  <div>
-    <Header />
-    <div className="h-lvh overflow-auto">
-      <div className="pt-28 flex flex-col justify-center items-center">
-        {filteredCartItems.length === 0 ? (
-          <div className="empty-cart-container">
-            <h2 className="text-[1rem] pb-2 text-center">Your cart is empty.</h2>
-            <div>
-              <button className="bg-gray-800 text-gray-300 py-2 px-7 rounded-md">Start shopping</button>
+  return (
+    <div>
+      <Header />
+      <div className="h-lvh overflow-auto">
+        <div className="pt-28 flex flex-col justify-center items-center">
+          {filteredCartItems.length === 0 ? (
+            <div className="empty-cart-container">
+              <h2 className="text-[1rem] pb-2 text-center">Your cart is empty.</h2>
+              <div>
+                <button className="bg-gray-800 text-gray-300 py-2 px-7 rounded-md">Start shopping</button>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="place-self-start pt-6">
-            <div className="items grid md:grid-cols-2 gap-4 px-3 overflow-auto">
-              {filteredCartItems.map((cartItem) => {
-                const itemDetails = getItemDetails(cartItem.itemId);
-                return (
-                  <div key={cartItem.itemId} className="w-fit">
-                   <Link
+          ) : (
+            <div className="place-self-start pt-6">
+              <div className="items grid md:grid-cols-2 gap-4 px-3 overflow-auto">
+                {filteredCartItems.map((cartItem) => {
+                  const itemDetails = getItemDetails(cartItem.itemId);
+                  return (
+                    <div key={cartItem.itemId} className="w-fit">
+                     <Link
                         to={{
                           pathname: `/description/${cartItem.itemId}`,
                           state: { cartItem},
                         }}
                       >
-                    <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
-                      <img src={images[itemDetails.imageSrc]} alt="" className="h-[192px] w-fit" />
-                      <div className="rounded-tr-lg  bg-gray-500 px-3 py-3">
-                        <h3 className="text-[.9rem] pb-2">{itemDetails.title}</h3>
-                        <ul className="list-disc pl-4">
-                          {itemDetails.features.map((feature, index) => (
-                            <li key={index}>{feature}</li>
-                          ))}
-                        </ul>
-                        <p className="pt-5">{itemDetails.price}</p>
+                      <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
+                        <img src={images[itemDetails.imageSrc]} alt="" className="h-[192px] w-fit" />
+                        <div className="rounded-tr-lg  bg-gray-500 px-3 py-3">
+                          <h3 className="text-[.9rem] pb-2">{itemDetails.title}</h3>
+                          <ul className="list-disc pl-4">
+                            {itemDetails.features.map((feature, index) => (
+                              <li key={index}>{feature}</li>
+                            ))}
+                          </ul>
+                          <p className="pt-5">{itemDetails.price}</p>
+                        </div>
+                      </div>
+                      </Link>
+                      <div className="rounded-br-lg  py-2 px-3 grid grid-cols-2  bg-gray-900">
+                       <div className="text-white pt-1 flex items-center gap-2">
+                          <MdDeleteOutline onClick={() => handleRemoveItemClick(cartItem.itemId)} />
+                          <button onClick={() => handleRemoveItemClick(cartItem.itemId)}>Remove</button>
+                       </div>
+                       <div className="quantity flex items-center">
+                         <div className={`w-12 h-8 rounded-md text-center ${quantity[cartItem.itemId] === 1 ? 'bg-gray-400' : 'bg-gray-200'}`}>
+                            <button className="border border-gray-800  w-full h-full text-[1.2rem] " onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] - 1)}>-</button>
+                         </div>
+                         <span className="w-full text-center text-gray-200">{quantity[cartItem.itemId]}</span>
+                         <div className="w-12 h-8 bg-gray-200 rounded-md text-center">
+                           <button className="border border-gray-800  w-full h-full text-[1.2rem] "  onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] + 1)}>+</button>
+                         </div>
+                       </div>
                       </div>
                     </div>
-                    </Link>
-                    <div className="rounded-br-lg  py-2 px-4 grid grid-cols-2  bg-gray-900">
-                     <div className="text-white pt-1">
-                       <button onClick={() => handleRemoveItemClick(cartItem.itemId)}>Remove</button>
-                     </div>
-                     <div className="quantity flex items-center">
-                     <div className={`w-12 h-8 rounded-md text-center ${quantity[cartItem.itemId] === 1 ? 'bg-gray-400' : 'bg-gray-200'}`}>
-                        <button className="border border-gray-800  w-full h-full text-[1.2rem] " onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] - 1)}>-</button>
-                     </div>
-                       <span className="w-full text-center text-gray-200">{quantity[cartItem.itemId]}</span>
-                      <div className="w-12 h-8 bg-gray-200 rounded-md text-center">
-                         <button className="border border-gray-800  w-full h-full text-[1.2rem] "  onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] + 1)}>+</button>
-                      </div>
-                     </div>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
-);
+  );
 };
 
 export default Cart;
