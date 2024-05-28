@@ -133,22 +133,32 @@ const Description = () => {
   };
 
 const handleChangeQuantity = (newQuantity) => {
-  // Ensure quantity does not go below 1
+  // Ensure quantity does not go below 0
   newQuantity = Math.max(newQuantity, 0);
 
-  // If the new quantity is 0, change back to the Add to Cart button
+  // If the new quantity is 0, remove the item from cart
   if (newQuantity === 0) {
-    // Reset cart items and remove quantity from local storage
-    setCartItems([]);
+    // Remove the item from cartItems state
+    const updatedCartItems = cartItems.filter((cartItem) => cartItem.itemId !== item.itemId);
+    setCartItems(updatedCartItems);
+
+    // Update localStorage with the updated cartItems
+    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+
+    // Remove quantity from local storage for the removed item
     localStorage.removeItem(`quantity_${itemId}`);
+
+    // Reset quantity to 1
+    setQuantity(1);
   } else {
     // Update local storage with the new quantity
     localStorage.setItem(`quantity_${itemId}`, newQuantity);
-  }
 
-  // Update quantity state
-  setQuantity(newQuantity);
+    // Update quantity state
+    setQuantity(newQuantity);
+  }
 };
+
 
 
 
