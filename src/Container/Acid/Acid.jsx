@@ -86,7 +86,7 @@ useEffect(() => {
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
-              <p className="pt-2">{item.price}</p>
+              <p className="pt-2">₦ {item.price}</p>
             </div>
           </div>
           </Link>

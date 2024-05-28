@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Footer, Header } from "../../Compnents";
+import { Footer, Header } from "../../Compnents"; // Assuming the correct path to components
 import itemsData from "../../../src/itemsData.json";
 import power from "../../../src/Assets/power.jpg";
 import power2 from "../../../src/Assets/power2.png";
@@ -26,40 +26,38 @@ const images = {
 };
 
 const Cart = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // State for loading
   const [cartItems, setCartItems] = useState([]);
   const [itemsToRemove, setItemsToRemove] = useState([]);
   const [quantity, setQuantity] = useState({}); // State for item quantity
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
+      setLoading(false); // Update loading state after 2 seconds
     }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
+  // Load cart items from localStorage on component mount
+  useEffect(() => {
+    const storedCartItems = localStorage.getItem("cartItems");
+    if (storedCartItems) {
+      setCartItems(JSON.parse(storedCartItems));
+      
+      // Load quantity from local storage for each item
+      const quantities = {};
+      JSON.parse(storedCartItems).forEach((cartItem) => {
+        const storedQuantity = localStorage.getItem(`quantity_${cartItem.itemId}`);
+        quantities[cartItem.itemId] = storedQuantity ? parseInt(storedQuantity) : 1;
+      });
+      setQuantity(quantities);
+    }
+  }, []);
+
   const getItemDetails = (itemId) => {
     return itemsData.find((item) => item.itemId === itemId);
   };
-
-
-// Load cart items from localStorage on component mount
-useEffect(() => {
-  const storedCartItems = localStorage.getItem("cartItems");
-  if (storedCartItems) {
-    setCartItems(JSON.parse(storedCartItems));
-    
-    // Load quantity from local storage for each item
-    const quantities = {};
-    JSON.parse(storedCartItems).forEach((cartItem) => {
-      const storedQuantity = localStorage.getItem(`quantity_${cartItem.itemId}`);
-      quantities[cartItem.itemId] = storedQuantity ? parseInt(storedQuantity) : 1;
-    });
-    setQuantity(quantities);
-  }
-}, []);
-
 
   const handleAddToCartClick = () => {
     // Example: Add a new item to the cart
@@ -113,58 +111,78 @@ useEffect(() => {
     (cartItem) => !itemsToRemove.includes(cartItem.itemId)
   );
 
+  if (loading) {
+    // Display loading UI
+    return (
+      <div className="flex justify-center items-center relative container w-full bg-gray-400 h-screen">
+        <div className="absolute top-[20rem] sl:top-[25rem] box w-full"></div>
+      </div>
+    );
+  }
+
+  // Calculate total price
+  const totalPrice = filteredCartItems.reduce((total, cartItem) => {
+    const itemDetails = getItemDetails(cartItem.itemId);
+    // Remove commas and convert price to a number
+    const itemPrice = parseFloat(itemDetails.price.replace(/,/g, ''));
+    return total + itemPrice * quantity[cartItem.itemId];
+  }, 0);
+
+  // Format totalPrice with commas
+  const formattedPrice = totalPrice.toLocaleString('en-US');
+
   return (
     <div>
       <Header />
-      <div className="h-lvh overflow-auto">
+      <div className="h-lvh overflow-auto bg-gray-300">
         <div className="pt-28 flex flex-col justify-center items-center">
           {filteredCartItems.length === 0 ? (
             <div className="empty-cart-container">
               <h2 className="text-[1rem] pb-2 text-center">Your cart is empty.</h2>
               <div>
-                <button className="bg-gray-800 text-gray-300 py-2 px-7 rounded-md">Start shopping</button>
+                <a href="/"><button className="bg-gray-800 text-gray-300 py-2 px-7 rounded-md">Start shopping </button></a>
               </div>
             </div>
           ) : (
-            <div className="place-self-start pt-6">
+            <div className="place-self-start pt-6 pb-10">
               <div className="items grid md:grid-cols-2 gap-4 px-3 overflow-auto">
                 {filteredCartItems.map((cartItem) => {
                   const itemDetails = getItemDetails(cartItem.itemId);
                   return (
                     <div key={cartItem.itemId} className="w-fit">
-                     <Link
+                      <Link
                         to={{
                           pathname: `/description/${cartItem.itemId}`,
                           state: { cartItem},
                         }}
                       >
-                      <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
-                        <img src={images[itemDetails.imageSrc]} alt="" className="h-[192px] w-fit" />
-                        <div className="rounded-tr-lg  bg-gray-500 px-3 py-3">
-                          <h3 className="text-[.9rem] pb-2">{itemDetails.title}</h3>
-                          <ul className="list-disc pl-4">
-                            {itemDetails.features.map((feature, index) => (
-                              <li key={index}>{feature}</li>
-                            ))}
-                          </ul>
-                          <p className="pt-5">{itemDetails.price}</p>
+                        <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
+                          <img src={images[itemDetails.imageSrc]} alt="" className="h-[192px] w-fit" />
+                          <div className="rounded-tr-lg  bg-gray-500 px-3 py-3">
+                            <h3 className="text-[.9rem] pb-2">{itemDetails.title}</h3>
+                            <ul className="list-disc pl-4">
+                              {itemDetails.features.map((feature, index) => (
+                                <li key={index}>{feature}</li>
+                              ))}
+                            </ul>
+                            <p className="pt-5">₦ {itemDetails.price}</p>
+                          </div>
                         </div>
-                      </div>
                       </Link>
                       <div className="rounded-br-lg  py-2 px-3 grid grid-cols-2  bg-gray-900">
-                       <div className="text-white pt-1 flex items-center gap-2">
+                        <div className="text-white pt-1 flex items-center gap-2">
                           <MdDeleteOutline onClick={() => handleRemoveItemClick(cartItem.itemId)} />
                           <button onClick={() => handleRemoveItemClick(cartItem.itemId)}>Remove</button>
-                       </div>
-                       <div className="quantity flex items-center">
-                         <div className={`w-12 h-8 rounded-md text-center ${quantity[cartItem.itemId] === 1 ? 'bg-gray-400' : 'bg-gray-200'}`}>
+                        </div>
+                        <div className="quantity flex items-center">
+                          <div className={`w-12 h-8 rounded-md text-center ${quantity[cartItem.itemId] === 1 ? 'bg-gray-400' : 'bg-gray-200'}`}>
                             <button className="border border-gray-800  w-full h-full text-[1.2rem] " onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] - 1)}>-</button>
-                         </div>
-                         <span className="w-full text-center text-gray-200">{quantity[cartItem.itemId]}</span>
-                         <div className="w-12 h-8 bg-gray-200 rounded-md text-center">
-                           <button className="border border-gray-800  w-full h-full text-[1.2rem] "  onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] + 1)}>+</button>
-                         </div>
-                       </div>
+                          </div>
+                          <span className="w-full text-center text-gray-200">{quantity[cartItem.itemId]}</span>
+                          <div className="w-12 h-8 bg-gray-200 rounded-md text-center">
+                            <button className="border border-gray-800  w-full h-full text-[1.2rem] " onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] + 1)}>+</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   );
@@ -173,6 +191,11 @@ useEffect(() => {
             </div>
           )}
         </div>
+        {filteredCartItems.length > 0 && ( // Conditionally render checkout button
+          <div className=" bg-gray-100 sticky bottom-0 px-3 py-2 shadow-lg">
+            <button className=" bg-gray-800  py-2 w-full rounded-md text-gray-100">Checkout (₦ {formattedPrice})</button>
+          </div>
+        )}
       </div>
       <Footer />
     </div>
