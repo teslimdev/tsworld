@@ -218,7 +218,7 @@ const Header = () => {
                             </div>
                             <div>
                               <a
-                                href="/Contacts"
+                                href="/Logo"
                                 className={`${
                                   location.pathname === "/Contacts"
                                     ? "text-white font-semibold text-[0.9rem]"

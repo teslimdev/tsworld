@@ -1,6 +1,5 @@
-import { Routes, Route } from "react-router-dom";
-import React from "react";
-import { Header } from "./Compnents"; // Importing the updated Header component
+import React, { useState, useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Lithium from "./Container/Lithium/Lithium";
 import Home from "./Container/Home/Home";
 import Inverter from "./Container/Inverter/Inverter";
@@ -19,31 +18,51 @@ import Privacy from "./Container/Privacy/Privacy";
 import Signup from "./Container/Signup/Signup";
 import Signin from "./Container/Signin/Signin";
 import Cart from "./Container/Cart/Cart";
+import Logo from "./Compnents/Logo";
 
 function App() {
+  const [showLogo, setShowLogo] = useState(true);
+
+  useEffect(() => {
+    const hasLogoBeenShown = localStorage.getItem("logoShown");
+
+    if (!hasLogoBeenShown) {
+      const timer = setTimeout(() => {
+        setShowLogo(false);
+        localStorage.setItem("logoShown", "true");
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <div className="App">
-      
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/description/:itemId" element={<Description />} />
-        <Route path="/Lithium" element={<Lithium />} />
-        <Route path="/Inverter" element={<Inverter />} />
-        <Route path="/Acid" element={<Acid />} />
-        <Route path="/Solar" element={<Solar />} />
-        <Route path="/Tubular" element={<Tubular />} />
-        <Route path="/Products" element={<Products />} />
-        <Route path="/Contacts" element={<Contacts />} />
-        <Route path="/Help" element={<Help />} />
-        <Route path="/Upgrade" element={<Upgrade />} />
-        <Route path="/Repair" element={<Repair />} />
-        <Route path="/Terms" element={<Terms />} />
-        <Route path="/Cookies" element={<Cookies />} />
-        <Route path="/Privacy" element={<Privacy />} />
-        <Route path="/Signup" element={<Signup />} />
-        <Route path="/Signin" element={<Signin />} />
-        <Route path="/Cart" element={<Cart />} />
-      </Routes>
+      {showLogo ? (
+        <Logo />
+      ) : (
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/description/:itemId" element={<Description />} />
+          <Route path="/Lithium" element={<Lithium />} />
+          <Route path="/Inverter" element={<Inverter />} />
+          <Route path="/Acid" element={<Acid />} />
+          <Route path="/Solar" element={<Solar />} />
+          <Route path="/Tubular" element={<Tubular />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/Contacts" element={<Contacts />} />
+          <Route path="/Help" element={<Help />} />
+          <Route path="/Upgrade" element={<Upgrade />} />
+          <Route path="/Repair" element={<Repair />} />
+          <Route path="/Terms" element={<Terms />} />
+          <Route path="/Cookies" element={<Cookies />} />
+          <Route path="/Privacy" element={<Privacy />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Signin" element={<Signin />} />
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/*" element={<Navigate to="/" />} />
+        </Routes>
+      )}
     </div>
   );
 }
