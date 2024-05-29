@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import pic1 from "../../src/Assets/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoCartOutline, IoPersonOutline } from "react-icons/io5";
@@ -7,17 +7,66 @@ import { CiSearch } from "react-icons/ci";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
+  const [cartItemCount, setCartItemCount] = useState(0); // State for cart item count
+  const location = useLocation();
+
+  // Function to calculate total cart item count
+ const updateCartItemCount = () => {
+  const storedCartItems = localStorage.getItem("cartItems");
+  if (storedCartItems) {
+    const totalQuantity = JSON.parse(storedCartItems).reduce((total, cartItem) => {
+      const storedQuantity = localStorage.getItem(`quantity_${cartItem.itemId}`);
+      return total + (storedQuantity ? parseInt(storedQuantity) : 0);
+    }, 0);
+    setCartItemCount(totalQuantity);
+    // Update localStorage with the latest count
+    localStorage.setItem("cartItemCount", totalQuantity.toString());
+  } else {
+    setCartItemCount(0);
+    localStorage.setItem("cartItemCount", "0");
+  }
+};
+
+
+  useEffect(() => {
+    // Calculate total cart item count when component mounts
+    updateCartItemCount();
+
+    // Listen for changes in local storage
+    const storageListener = () => {
+      updateCartItemCount();
+    };
+    window.addEventListener("storage", storageListener);
+
+    // Clean up the listener on component unmount
+    return () => {
+      window.removeEventListener("storage", storageListener);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Update cart item count whenever cart items change
+    updateCartItemCount();
+  }, [location.pathname]); // Listen for changes in location.pathname
+
+  // Function to handle changes in cart quantity
+  const handleCartQuantityChange = () => {
+    // Update the cart item count
+    updateCartItemCount();
+  };
+
   const isOpen = () => {
     setNav(true);
     document.getElementById("navmain").classList.remove("items-center");
     document.getElementById("navmain").classList.remove("py-3");
   };
+
   const closeNav = () => {
     setNav(false);
     document.getElementById("navmain").classList.add("items-center");
     document.getElementById("navmain").classList.add("py-3");
   };
-  const location = useLocation();
+  
 
   return (
     <div>
@@ -48,15 +97,23 @@ const Header = () => {
                   <div className="flex items-center gap-6 xl:gap-16">
                     <a href="/Signup">
                       <p className="flex items-center gap-2">
-                      <IoPersonOutline className="text-2xl font-light text-gray-700" />
-                      <span className="hidden lg:flex">Account</span>
-                    </p>
+                        <IoPersonOutline className="text-2xl font-light text-gray-700" />
+                        <span className="hidden lg:flex">Account</span>
+                      </p>
                     </a>
                     <a href="/Cart">
-                      <p className="flex items-center gap-2">
-                      <IoCartOutline className="text-2xl font-light text-gray-700" />
-                      <span className="hidden lg:flex">Cart</span>
-                    </p>
+                      <div className=" relative   flex  gap-3  ">
+                       <div>
+                         <IoCartOutline className="text-2xl font-light text-gray-700" />
+                        {cartItemCount > 0 && (
+                          <div className="absolute  top-[-14px] right-[-10px] lg:right-7 bg-gray-700 rounded-full w-fit h-fit">
+                            <p className="px-2 text-center rounded-full text-[0.7rem] text-gray-200">{cartItemCount}</p>
+                          </div>
+                        )}
+                       </div>
+                        <span className="hidden lg:flex">Cart</span>
+                      </div>
+                     
                     </a>
                   </div>
                   <div className="lg:hidden">

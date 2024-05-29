@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import React from "react";
+import { Header } from "./Compnents"; // Importing the updated Header component
 import Lithium from "./Container/Lithium/Lithium";
 import Home from "./Container/Home/Home";
 import Inverter from "./Container/Inverter/Inverter";
@@ -17,30 +19,31 @@ import Privacy from "./Container/Privacy/Privacy";
 import Signup from "./Container/Signup/Signup";
 import Signin from "./Container/Signin/Signin";
 import Cart from "./Container/Cart/Cart";
+
 function App() {
   return (
     <div className="App">
-       <Routes>
-        <Route path="/" element={<Home />}/>
-    <Route path="/description/:itemId" element={<Description />} />
-         <Route path="/Lithium" element={<Lithium />}/>
-           <Route path="/Inverter" element={<Inverter />}/>
-           <Route path="/Acid" element={<Acid />}/>
-            <Route path="/Solar" element={<Solar />}/>
-             <Route path="/Tubular" element={<Tubular />}/>
-              <Route path="/Products" element={<Products />}/>
-               <Route path="/Contacts" element={<Contacts />}/>
-                <Route path="/Help" element={<Help />}/>
-                <Route path="/Upgrade" element={<Upgrade />}/>
-                <Route path="/Repair" element={<Repair/>}/>
-                 <Route path="/Terms" element={<Terms/>}/>
-                 <Route path="/Cookies" element={<Cookies/>}/>
-                 <Route path="/Privacy" element={<Privacy/>}/>
-                 <Route path="/Signup" element={<Signup/>}/>
-                   <Route path="/Signin" element={<Signin/>}/>
-                    <Route path="/Cart" element={<Cart/>}/>
-       </Routes>
       
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/description/:itemId" element={<Description />} />
+        <Route path="/Lithium" element={<Lithium />} />
+        <Route path="/Inverter" element={<Inverter />} />
+        <Route path="/Acid" element={<Acid />} />
+        <Route path="/Solar" element={<Solar />} />
+        <Route path="/Tubular" element={<Tubular />} />
+        <Route path="/Products" element={<Products />} />
+        <Route path="/Contacts" element={<Contacts />} />
+        <Route path="/Help" element={<Help />} />
+        <Route path="/Upgrade" element={<Upgrade />} />
+        <Route path="/Repair" element={<Repair />} />
+        <Route path="/Terms" element={<Terms />} />
+        <Route path="/Cookies" element={<Cookies />} />
+        <Route path="/Privacy" element={<Privacy />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="/Signin" element={<Signin />} />
+        <Route path="/Cart" element={<Cart />} />
+      </Routes>
     </div>
   );
 }
