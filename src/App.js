@@ -25,14 +25,14 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    const hasLogoBeenShown = localStorage.getItem("logoShown");
+    const hasLogoBeenShown = sessionStorage.getItem("logoShown");
 
     if (!hasLogoBeenShown) {
       setShowLogo(true);
+      sessionStorage.setItem("logoShown", "true");
 
       const timer = setTimeout(() => {
         setShowLogo(false);
-        localStorage.setItem("logoShown", "true");
       }, 5000);
 
       return () => clearTimeout(timer);
