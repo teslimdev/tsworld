@@ -196,12 +196,13 @@ const Cart = () => {
             </div>
           )}
         </div>
-        {filteredCartItems.length > 0 && ( // Conditionally render checkout button
+        
+      </div>
+      {filteredCartItems.length > 0 && ( // Conditionally render checkout button
           <div className=" bg-gray-100 sticky bottom-0 px-3 py-2 shadow-lg">
             <button className=" bg-gray-800  py-2 w-full rounded-md text-gray-100">Checkout (₦ {formattedPrice})</button>
           </div>
         )}
-      </div>
       <Footer />
     </div>
   );
