@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Lithium from "./Container/Lithium/Lithium";
 import Home from "./Container/Home/Home";
 import Inverter from "./Container/Inverter/Inverter";
@@ -21,18 +21,20 @@ import Cart from "./Container/Cart/Cart";
 import Logo from "./Compnents/Logo";
 
 function App() {
-  const [showLogo, setShowLogo] = useState(true);
+  const [showLogo, setShowLogo] = useState(false);
 
   useEffect(() => {
-    const hasLogoBeenShown = localStorage.getItem("logoShown");
+    let visitCount = localStorage.getItem("visitCount");
+    visitCount = visitCount ? parseInt(visitCount) : 0;
 
-    if (hasLogoBeenShown) {
-      setShowLogo(false);
-    } else {
+    if (visitCount === 0) {
+      setShowLogo(true);
+
       const timer = setTimeout(() => {
         setShowLogo(false);
-        localStorage.setItem("logoShown", "true");
       }, 5000);
+
+      localStorage.setItem("visitCount", (visitCount + 1).toString());
 
       return () => clearTimeout(timer);
     }
@@ -62,7 +64,6 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="/Cart" element={<Cart />} />
-          <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       )}
     </div>
