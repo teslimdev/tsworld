@@ -21,23 +21,14 @@ import Cart from "./Container/Cart/Cart";
 import Logo from "./Compnents/Logo";
 
 function App() {
-  const [showLogo, setShowLogo] = useState(false);
+  const [showLogo, setShowLogo] = useState(true);
 
   useEffect(() => {
-    let visitCount = localStorage.getItem("visitCount");
-    visitCount = visitCount ? parseInt(visitCount) : 0;
+    const timer = setTimeout(() => {
+      setShowLogo(false);
+    }, 5000);
 
-    if (visitCount === 0) {
-      setShowLogo(true);
-
-      const timer = setTimeout(() => {
-        setShowLogo(false);
-      }, 5000);
-
-      localStorage.setItem("visitCount", (visitCount + 1).toString());
-
-      return () => clearTimeout(timer);
-    }
+    return () => clearTimeout(timer);
   }, []);
 
   return (
