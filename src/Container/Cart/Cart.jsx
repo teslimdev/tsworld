@@ -98,14 +98,20 @@ const Cart = () => {
     localStorage.removeItem(`quantity_${itemId}`);
   };
 
-  const handleChangeQuantity = (itemId, newQuantity) => {
-    // Ensure quantity does not go below 1
-    newQuantity = Math.max(newQuantity, 1);
-    setQuantity({ ...quantity, [itemId]: newQuantity });
+ const handleChangeQuantity = (itemId, newQuantity) => {
+  // Ensure quantity does not go below 1
+  newQuantity = Math.max(newQuantity, 1);
+  
+  // Update local storage with the new quantity
+  localStorage.setItem(`quantity_${itemId}`, newQuantity);
 
-    // Update local storage with the new quantity
-    localStorage.setItem(`quantity_${itemId}`, newQuantity);
-  };
+  // Update the quantity state immediately
+  setQuantity((prevQuantity) => ({
+    ...prevQuantity,
+    [itemId]: newQuantity,
+  }));
+};
+
 
   const filteredCartItems = cartItems.filter(
     (cartItem) => !itemsToRemove.includes(cartItem.itemId)
