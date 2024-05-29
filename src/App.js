@@ -26,7 +26,9 @@ function App() {
   useEffect(() => {
     const hasLogoBeenShown = localStorage.getItem("logoShown");
 
-    if (!hasLogoBeenShown) {
+    if (hasLogoBeenShown) {
+      setShowLogo(false);
+    } else {
       const timer = setTimeout(() => {
         setShowLogo(false);
         localStorage.setItem("logoShown", "true");
