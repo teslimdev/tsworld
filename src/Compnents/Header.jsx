@@ -28,6 +28,7 @@ const Header = () => {
 };
 
 
+
   useEffect(() => {
     // Calculate total cart item count when component mounts
     updateCartItemCount();
