@@ -670,6 +670,10 @@ video {
   top: 20rem;
 }
 
+.top-36 {
+  top: 9rem;
+}
+
 .z-10 {
   z-index: 10;
 }

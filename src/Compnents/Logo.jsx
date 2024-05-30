@@ -6,7 +6,7 @@ const Logo = () => {
       <div className='  bg-gray-300 h-lvh'>
         <div className=' flex justify-center  relative '>
             
-            <div className=' absolute top-32'>
+            <div className=' absolute top-36'>
                 <img src={logo} alt="" className=' w-[300px]' />
             </div>
         </div>
