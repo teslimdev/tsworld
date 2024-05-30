@@ -1,9 +1,9 @@
 import React from 'react'
-import logo from '../../src/Assets/logo2.png'
+import logo from '../../src/Assets/logo3.png'
 const Logo = () => {
   return (
     <div>
-      <div className='  bg-gray-900 h-lvh'>
+      <div className='  bg-gray-300 h-lvh'>
         <div className=' flex justify-center  relative '>
             
             <div className=' absolute top-32'>
