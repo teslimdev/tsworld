@@ -16,7 +16,7 @@ const Notification = () => {
       {isVisible && (
       <div className=' relative z-50'>
           <div className='flex justify-center notify ' >
-          <div className='max-w-[400px] md:max-w-[700px] lg:max-w-[900px] m-auto fixed top-10 lg:top-36 px-4'>
+          <div className='max-w-[400px] md:max-w-[700px] lg:max-w-[900px] m-auto fixed top-16 lg:top-36 px-4'>
             <div className='h-[35rem] rounded-lg lg:h-[30rem] shadow-2xl overflow-y-scroll' style={{ scrollbarWidth: 'none' }}>
               <div className='bg-gray-200 rounded-lg m-auto max-w-[400px] md:max-w-[700px] max-h-full h-full overflow-auto lg:max-w-[900px] sl:mr-[-17px]'>
                 <div className='bg-gray-400 py-2 rounded-tr-lg rounded-tl-lg text-center text-white sticky top-0 w-full max-w-[400px] md:max-w-[700px] lg:max-w-[900px]'>
