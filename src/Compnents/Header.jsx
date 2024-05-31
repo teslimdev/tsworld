@@ -70,10 +70,10 @@ const Header = () => {
   
 
   return (
-    <div>
+    <div className=" z-10">
       <div className="z-[80] w-full">
         <nav>
-          <div id="navmain" className="py-2 w-full fixed bg-gray-300 shadow-lg z-10">
+          <div id="navmain" className="py-2 w-full fixed bg-gray-300 shadow-lg   z-10">
             <div className="sl:max-w-[1200px] px-6 sl:px-0 m-auto">
               <div className="flex justify-between items-center">
                 <div>
@@ -121,12 +121,12 @@ const Header = () => {
                     {!nav ? (
                       <FaBars className="text-gray-700 text-2xl cursor-pointer" onClick={isOpen} />
                     ) : (
-                      <div id="ul" className="right-0 h-full bg-gray-600 fixed">
+                      <div id="ul" className="right-0 h-full overflow-scroll pb-10 bg-gray-600 fixed">
                         <div className="pt-6 pb-3">
                           <div className="flex items-center justify-between px-6">
                             <div></div>
-                            <div className="text-end" onClick={closeNav}>
-                              <FaTimes className="text-2xl cursor-pointer text-white" />
+                            <div className="text-end " onClick={closeNav}>
+                              <FaTimes className="text-2xl  cursor-pointer text-white" />
                             </div>
                           </div>
                         </div>
@@ -218,7 +218,19 @@ const Header = () => {
                             </div>
                             <div>
                               <a
-                                href="/Logo"
+                                href="/Notificatiion"
+                                className={`${
+                                  location.pathname === "/Contacts"
+                                    ? "text-white font-semibold text-[0.9rem]"
+                                    : "text-[0.9rem]"
+                                }`}
+                              >
+                                <li className="border-b py-1 border-white">ABOUT US</li>
+                              </a>
+                            </div>
+                            <div>
+                              <a
+                                href="/Pages"
                                 className={`${
                                   location.pathname === "/Contacts"
                                     ? "text-white font-semibold text-[0.9rem]"

@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Footer, Header } from "../../Compnents";
+import { Footer, Header, Pages } from "../../Compnents";
 import { Link, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, A11y, Autoplay, EffectFade, EffectCoverflow } from "swiper/modules";
+import {
+  Pagination,
+  A11y,
+  Autoplay,
+  EffectFade,
+  EffectCoverflow,
+} from "swiper/modules";
 import { Slide } from "../../Compnents";
 import itemsData from "../../../src/itemsData.json";
 import power from "../../../src/Assets/power.jpg";
@@ -34,7 +40,7 @@ const Home = () => {
     JSON.parse(localStorage.getItem("recentlyClickedItems")) || []
   );
   const [loading, setLoading] = useState(false); // Set initial loading state to false
-
+  const swiperZIndex = 999;
   useEffect(() => {
     const isFirstVisit = localStorage.getItem("isFirstVisit") === null;
 
@@ -96,8 +102,9 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-gray-300">
-      {!loading && <Header />} {/* Render header only when loading is complete */}
+    <div className="bg-gray-300 ">
+      {!loading && <Header />}{" "}
+      {/* Render header only when loading is complete */}
       {loading && (
         <div className="flex justify-center items-center relative container  bg-gray-400  h-svh">
           <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
@@ -105,7 +112,7 @@ const Home = () => {
       )}
       {!loading && (
         <>
-          <div className="pt-[7.3rem] lg:pt-[4.3rem]">
+          <div className="pt-[7.3rem] lg:pt-[4.3rem] w-full  relative   ">
             <div className="bg-gray-700 py-4">
               <div className="max-w-[400px] m-auto">
                 <Swiper
@@ -117,7 +124,6 @@ const Home = () => {
                     EffectCoverflow,
                   ]}
                   effect="f"
-                  loop={true}
                   speed={1200}
                   autoplay={{
                     delay: 7000,
@@ -147,9 +153,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="bg-gray-300 ">
+
+          <div className="bg-gray- ">
             <h2 className="py-3 px-6">Good Deals!!!</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 m-auto px-6 gap-3 md:gap-4 lg:gap-6 lg:max-w-[1200px] item">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1200px]  m-auto bg-gray-300  bg-transparent  px-6 sl:px-0 gap-3 md:gap-4 lg:gap-6  item">
               {items.map((item) => (
                 <div key={item.itemId} onClick={() => handleItemClick(item)}>
                   <Link
@@ -179,13 +186,13 @@ const Home = () => {
               ))}
             </div>
           </div>
-          <div className="py-10 bg-gray-300">
-            <div className="bg-gray-700">
-              <h2 className="px-6 max-w-[1200px] m-auto py-2 text-white text-[1.1rem] uppercase">
+          <div className="py-10 bg-gray-300 sl:bg-transparent ">
+            <div className="bg-gray-700 ">
+              <h2 className="px-6 sl:px-0  lg:max-w-[1200px]  m-auto py-2 text-white text-[1.1rem] uppercase">
                 recently viewed
               </h2>
             </div>
-            <div className="px-6 max-w-[1200px] m-auto pt-7">
+            <div className="px-6 sl:px-0 lg:max-w-[1200px]  m-auto  pt-7">
               {recentlyClickedItems.length === 0 ? (
                 <p className="text-center text-gray-500 text-lg">No results</p>
               ) : (
@@ -198,7 +205,6 @@ const Home = () => {
                     EffectCoverflow,
                   ]}
                   effect="f"
-                  loop={true}
                   speed={1200}
                   autoplay={{
                     delay: 4000,
@@ -261,7 +267,8 @@ const Home = () => {
           </div>
         </>
       )}
-      {!loading && <Footer />} {/* Render footer only when loading is complete */}
+      {!loading && <Footer />}{" "}
+      {/* Render footer only when loading is complete */}
     </div>
   );
 };

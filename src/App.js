@@ -19,10 +19,12 @@ import Signup from "./Container/Signup/Signup";
 import Signin from "./Container/Signin/Signin";
 import Cart from "./Container/Cart/Cart";
 import Logo from "./Compnents/Logo";
+import Notification from "./Compnents/Notificatiion";
 
 function App() {
   const [showLogo, setShowLogo] = useState(true);
   const [showHome, setShowHome] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -39,6 +41,27 @@ function App() {
       setShowHome(true);
     }
   }, []);
+
+  useEffect(() => {
+    if (showHome) {
+      const hasNotificationBeenShown = sessionStorage.getItem(
+        "notificationShown"
+      );
+
+      if (!hasNotificationBeenShown) {
+        const notificationTimer = setTimeout(() => {
+          setShowNotification(true);
+          sessionStorage.setItem("notificationShown", "true");
+        }, 10000); // Show notification 10 seconds after showing home page
+
+        return () => clearTimeout(notificationTimer);
+      }
+    }
+  }, [showHome]);
+
+  const handleNotificationClose = () => {
+    setShowNotification(false);
+  };
 
   if (showLogo) {
     return <Logo />;
@@ -67,6 +90,9 @@ function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      {showNotification && (
+        <Notification onClose={handleNotificationClose} />
+      )}
     </div>
   );
 }
