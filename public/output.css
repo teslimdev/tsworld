@@ -646,8 +646,8 @@ video {
   top: 50%;
 }
 
-.top-10 {
-  top: 2.5rem;
+.top-16 {
+  top: 4rem;
 }
 
 .top-3 {
@@ -676,10 +676,6 @@ video {
 
 .top-\[20rem\] {
   top: 20rem;
-}
-
-.top-16 {
-  top: 4rem;
 }
 
 .z-10 {

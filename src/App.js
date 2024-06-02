@@ -20,6 +20,7 @@ import Signin from "./Container/Signin/Signin";
 import Cart from "./Container/Cart/Cart";
 import Logo from "./Compnents/Logo";
 import Notification from "./Compnents/Notificatiion";
+import Enquiries from "./Container/Enquiries/Enquiries";
 
 function App() {
   const [showLogo, setShowLogo] = useState(true);
@@ -89,6 +90,7 @@ function App() {
         <Route path="/Signin" element={<Signin />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/Enquiries" element={<Enquiries />} />
       </Routes>
       {showNotification && (
         <Notification onClose={handleNotificationClose} />

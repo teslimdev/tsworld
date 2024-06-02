@@ -218,14 +218,14 @@ const Header = () => {
                             </div>
                             <div>
                               <a
-                                href="/Notificatiion"
+                                href="/Enquiries"
                                 className={`${
                                   location.pathname === "/Contacts"
                                     ? "text-white font-semibold text-[0.9rem]"
                                     : "text-[0.9rem]"
                                 }`}
                               >
-                                <li className="border-b py-1 border-white">ABOUT US</li>
+                                <li className="border-b py-1 border-white">ENQUIRIES</li>
                               </a>
                             </div>
                             <div>

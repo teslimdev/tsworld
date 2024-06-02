@@ -16,3 +16,4 @@ export { default as Signup} from "./Signup/Signup";
 export { default as Signin} from "./Signin/Signin";
 export { default as Description} from "./Description/Description";
 export { default as Cart} from "./Cart/Cart";
+export { default as Enquiries} from "./Enquiries/Enquiries";

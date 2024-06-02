@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Footer, Header, Pages } from "../../Compnents";
+import { Footer, Header } from "../../Compnents";
 import { Link, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -40,7 +40,7 @@ const Home = () => {
     JSON.parse(localStorage.getItem("recentlyClickedItems")) || []
   );
   const [loading, setLoading] = useState(false); // Set initial loading state to false
-  const swiperZIndex = 999;
+ 
   useEffect(() => {
     const isFirstVisit = localStorage.getItem("isFirstVisit") === null;
 
