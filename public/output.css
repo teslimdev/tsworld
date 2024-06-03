@@ -1796,6 +1796,22 @@ input[type="search"]::-webkit-search-cancel-button {
     height: fit-content;
   }
 
+  .md\:h-\[\] {
+    height: ;
+  }
+
+  .md\:h-\[80\] {
+    height: 80;
+  }
+
+  .md\:h-\[80vh\] {
+    height: 80vh;
+  }
+
+  .md\:h-\[60vh\] {
+    height: 60vh;
+  }
+
   .md\:w-\[500px\] {
     width: 500px;
   }
@@ -1856,6 +1872,11 @@ input[type="search"]::-webkit-search-cancel-button {
   .md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .md\:py-4 {

@@ -106,7 +106,7 @@ const Home = () => {
       {!loading && <Header />}{" "}
       {/* Render header only when loading is complete */}
       {loading && (
-        <div className="flex justify-center items-center relative container  bg-gray-400  h-svh">
+        <div className="flex justify-center items-center relative container  bg-gray-300  h-svh">
           <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
         </div>
       )}

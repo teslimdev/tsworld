@@ -12,7 +12,7 @@ const Manage = () => {
 
       <div className=' pt-10'>
         <ul className=' space-y-3 px-4'>
-            <li className=' py-3 border shadow-lg px-3 bg-gray-50 '><a href="/">Edit Phone Number</a></li>
+           <a href="/NumberChange"><li className=' py-3 border shadow-lg px-3 bg-gray-50 '>Edit Phone Number</li></a> 
            <a href=" /PasswordChange"> <li className=' py-3 border shadow-lg px-3 bg-gray-50 mt-3'><a href="/"></a>Change Password</li></a>
         </ul>
       </div>
