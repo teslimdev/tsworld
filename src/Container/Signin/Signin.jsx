@@ -3,9 +3,9 @@ import logo2 from "../../../src/Assets/logo3.png";
 const Signin = () => {
   return (
     <div>
-      <div className="bg-gray-600 w-full h-svh">
+      <div className="bg-gray-500 w-full h-svh">
         <div className="flex justify-center">
-          <div className="bg-gray-500 w-full md:rounded-lg md:py-10 md:mx-6 md:top-[12%]  absolute md:px-6 md:w-[700px] lg:w-[1000px] m-auto h-full md:h-fit ">
+          <div className="bg-gray-200 w-full md:rounded-lg md:py-10 md:mx-6 md:top-[12%]  absolute md:px-6 md:w-[700px] lg:w-[1000px] m-auto h-full md:h-fit ">
             <div className=" md:max-w-[500px] gap-10 m-auto">
               <div className="text-center pt-5">
                 <div className="flex justify-center">
@@ -24,7 +24,7 @@ const Signin = () => {
                     required
                     name="mobile"
                     placeholder="Mobile No"
-                    className="w-full mt-3 pl-5 bg-gray-800 text-gray-200 placeholder:text-gray-200  py-2 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full"
+                    className="w-full mt-3 pl-5  text-gray-200 shadow-lg placeholder:text-gray-700  py-2 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full"
                   />
                 </div>
                  <div className="pt-4">
@@ -33,7 +33,7 @@ const Signin = () => {
                     required
                     name="password"
                     placeholder="password"
-                    className="w-full mt-3 py-2 bg-gray-800 text-gray-200 placeholder:text-gray-200 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full pl-5"
+                    className="w-full mt-3 py-2  text-gray-200 shadow-lg placeholder:text-gray-700 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full pl-5"
                   />
                 </div>
 
@@ -45,7 +45,7 @@ const Signin = () => {
                 <div className="pt-8">
                   <button
                     type="submit"
-                    className="bg-gray-800 text-white hover:bg-gray-900 py-2 w-full rounded-full"
+                    className="bg-gray-600 text-white  hover:bg-gray-900 py-2 w-full rounded-full"
                   >
                     SIGN IN
                   </button>

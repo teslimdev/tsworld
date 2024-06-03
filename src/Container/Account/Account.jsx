@@ -4,6 +4,9 @@ import { MdProductionQuantityLimits } from "react-icons/md";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoLockClosedSharp } from "react-icons/io5";
 import { MdManageAccounts } from "react-icons/md";
+import Logo from '../../../src/Assets/logo3.png'
+import { Link } from "react-router-dom";
+import { IoIosArrowRoundBack } from "react-icons/io";
 const Account = () => {
      const [loading, setLoading] = useState(true);
 useEffect(() => {
@@ -26,24 +29,35 @@ useEffect(() => {
   }
 
   return (
-    <div className="  ">
-      <Header/>
-   <div className=" h-[90vh] bg-gray-200">
-      <div className=" pt-28">
-         <div className=" bg-gray-800 py-2 pl-4" >
-        <h2 className=" font-semibold text-gray-200 py-2">Welcome, Abdullah</h2>
-        <p className=" font-semibold text-gray-200">08123456789</p>
+    <div className="  bg-gray-200 h-lvh ">
+     <div>
+        <div className=" shadow-lg  fixed w-full z-20">
+          <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
+            <p className="text-black text-3xl">
+              <Link to="/">
+                <IoIosArrowRoundBack /> 
+              </Link>
+            </p>
+            <h2 className="text-black text-[1.1rem] uppercase">Account Overview</h2>
+            <div></div>{" "}
+            {/* This empty div creates space for the center alignment */}
+          </div>
+        </div>
       </div>
+   <div className="  md:max-w-[700px] m-auto">
+      <div className=' text-center pt-20 '>
+     <div className=' flex justify-center'>
+         <img src={Logo} alt="" className=' w-28 h-28' />
      </div>
+        <h2 className=' font-bold text-[1.1rem]'>Hello Abdullah Teslim</h2>
+      </div>
 
-     <div className=" pt-4">
-        <div className=" bg-gray-700 py-2"><h2 className=" text-center text-gray-200 text-[1.1rem] font-semibold"> Account Overview</h2></div>
-     </div>
+     
      <div>
         <ul className=" space-y-3 px-3 pt-6">
-            <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white    "><p className=" flex items-center gap-3"><MdProductionQuantityLimits /> Orders</p><RiArrowRightSLine /></li>
+           <a href="/Manage ">  <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white    "><p className=" flex items-center gap-3"><MdProductionQuantityLimits /> Orders</p><RiArrowRightSLine /></li></a>
        <a href="/Manage "> <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white   mt-3  "><p className=" flex items-center gap-3"><MdManageAccounts /> Account Management </p><RiArrowRightSLine /></li></a>
-         <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white    "><p className=" flex items-center gap-3"><IoLockClosedSharp /> Close Account</p><RiArrowRightSLine /></li>
+        <a href="/Manage ">  <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white  mt-3   "><p className=" flex items-center gap-3"><IoLockClosedSharp /> Close Account</p><RiArrowRightSLine /></li></a>
         </ul>
      </div>
     <div className=" flex justify-center   relative">
@@ -52,7 +66,6 @@ useEffect(() => {
        </div>
     </div>
    </div>
-  <Footer/>
     </div>
   )
 }

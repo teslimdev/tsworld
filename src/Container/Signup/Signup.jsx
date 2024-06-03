@@ -44,10 +44,10 @@ const Signup = () => {
   };
 
   return (
-    <div className=''>
-      <div className='bg-gray-600 w-full h-svh'>
+    <div className=' '>
+      <div className='bg-gray-400 w-full h-svh'>
         <div className='flex justify-center'>
-          <div className='bg-gray-500 w-full md:rounded-lg md:py-10 md:mx-6 md:top-[1%] sl:top-[5%]  absolute md:px-6  md:w-[700px] lg:w-[1000px]  m-auto h-full md:h-fit '>
+          <div className='  bg-gray-200 w-full md:rounded-lg md:py-10 md:mx-6 md:top-[1%] sl:top-[5%]  absolute md:px-6  md:w-[700px] lg:w-[1000px]  m-auto h-full md:h-fit '>
             <div className='md:max-w-[500px] gap-10 m-auto'>
               <div className='text-center pt-5'>
                 <div className='flex justify-center'>
@@ -64,7 +64,7 @@ const Signup = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder='Name'
-                      className='w-full mt-3 py-2 bg-gray-800 text-gray-200 placeholder:text-gray-200 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full pl-5' />
+                      className='w-full mt-3 py-2  shadow-lg text-gray-200 placeholder:text-gray-700 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full pl-5' />
                   </div>
                   <div className='pt-4'>
                     <input type="tel"
@@ -73,7 +73,7 @@ const Signup = () => {
                       value={formData.mobile}
                       onChange={handleChange}
                       placeholder='Mobile No'
-                      className='w-full mt-3 pl-5 bg-gray-800 text-gray-200 placeholder:text-gray-200  py-2 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full' />
+                      className='w-full mt-3 pl-5  shadow-lg text-gray-200 placeholder:text-gray-700  py-2 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full' />
                   </div>
                   <div className='pt-4'>
                     <div className="relative">
@@ -83,9 +83,9 @@ const Signup = () => {
                         value={formData.password}
                         onChange={handleChange}
                         placeholder='Password'
-                        className='w-full mt-3 pl-5 bg-gray-800 text-gray-200 placeholder:text-gray-200  py-2 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full' />
+                        className='w-full mt-3 pl-5  shadow-lg text-gray-200 placeholder:text-gray-700  py-2 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full' />
                       <button type="button"
-                        className="absolute  top-1/2 right-3 transform -translate-y-1/2 text-gray-400"
+                        className="absolute  top-1/2 right-3 transform -translate-y-1/2 text-gray-600"
                         onClick={togglePasswordVisibility}>
                         {showPassword ? <RiEyeOffFill />   : <RiEyeFill />}
                       </button>
@@ -99,9 +99,9 @@ const Signup = () => {
                         value={formData.confirmPassword}
                         onChange={handleChange}
                         placeholder='Confirm Password'
-                        className='w-full mt-3 pl-5 bg-gray-800 text-gray-200 placeholder:text-gray-200  py-2 outline-none   border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full' />
+                        className='w-full mt-3 pl-5  text-gray-200 shadow-lg placeholder:text-gray-700  py-2 outline-none   border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full' />
                       <button type="button"
-                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-400"
+                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-600 "
                         onClick={togglePasswordVisibility}>
                         {showPassword ? <RiEyeOffFill /> : <RiEyeFill />}
                       </button>
@@ -116,7 +116,7 @@ const Signup = () => {
                     <label htmlFor=" " className='pl-2 text-gray-900'>I accept the Terms of Use and Privacy Policy</label>
                   </div>
                   <div className='pt-6'>
-                    <button type="submit" className='bg-gray-800 text-white hover:bg-gray-900 py-2 w-full rounded-full'>SIGN UP</button>
+                    <button type="submit" className='bg-gray-500 text-white hover:bg-gray-900 py-2 w-full rounded-full'>SIGN UP</button>
                     <p className='pt-3 text-center text-gray-900'>Already a member?<a href="/Signin" className='underline'>Sign in</a></p>
                   </div>
                 </form>

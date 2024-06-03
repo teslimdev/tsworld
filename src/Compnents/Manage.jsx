@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../../src/Assets/logo3.png'
 const Manage = () => {
   return (
-    <div>
+    <div className=' bg-gray-200 h-lvh'>
       <div className=' text-center pt-20 '>
      <div className=' flex justify-center'>
          <img src={Logo} alt="" className=' w-28 h-28' />
@@ -12,8 +12,8 @@ const Manage = () => {
 
       <div className=' pt-10'>
         <ul className=' space-y-3 px-4'>
-            <li className=' py-3 border shadow-lg px-3 '><a href="/">Edit Phone Number</a></li>
-            <li className=' py-3 border shadow-lg px-3'><a href="/"></a>Change Password</li>
+            <li className=' py-3 border shadow-lg px-3 bg-gray-50 '><a href="/">Edit Phone Number</a></li>
+           <a href=" /PasswordChange"> <li className=' py-3 border shadow-lg px-3 bg-gray-50 mt-3'><a href="/"></a>Change Password</li></a>
         </ul>
       </div>
       <div className=' flex justify-center'>
