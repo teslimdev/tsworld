@@ -21,6 +21,8 @@ import Cart from "./Container/Cart/Cart";
 import Logo from "./Compnents/Logo";
 import Notification from "./Compnents/Notificatiion";
 import Enquiries from "./Container/Enquiries/Enquiries";
+ import {Account} from './Container'
+ import { Manage } from "./Compnents";
 
 function App() {
   const [showLogo, setShowLogo] = useState(true);
@@ -91,6 +93,8 @@ function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/Enquiries" element={<Enquiries />} />
+       <Route path="/Account" element={<Account />} />
+        <Route path="/Manage" element={<Manage />} />
       </Routes>
       {showNotification && (
         <Notification onClose={handleNotificationClose} />

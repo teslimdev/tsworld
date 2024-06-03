@@ -389,7 +389,7 @@ useEffect(() => {
           <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
             <p className="text-black text-3xl">
               <Link to="/">
-                <IoIosArrowRoundBack />
+                <IoIosArrowRoundBack /> 
               </Link>
             </p>
             <h2 className="text-black text-[1.1rem] uppercase">Help center</h2>
