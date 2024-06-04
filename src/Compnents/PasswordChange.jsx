@@ -16,7 +16,7 @@ const PasswordChange = () => {
               type="password"
               required
               name="password"
-              placeholder="password"
+              placeholder=" current Password"
               className="w-full mt-3 py-2  text-gray-200 shadow-lg placeholder:text-gray-700 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full pl-5"
             />
           </div>
@@ -25,7 +25,7 @@ const PasswordChange = () => {
               type="password"
               required
               name="password"
-              placeholder=" Change Password"
+              placeholder=" New Password"
               className="w-full mt-3 py-2  text-gray-200 shadow-lg placeholder:text-gray-700 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full pl-5"
             />
           </div>
@@ -34,7 +34,7 @@ const PasswordChange = () => {
               type="Password"
               required
               name="Password"
-              placeholder=" Confirm  password"
+              placeholder=" Confirm New  Password"
               className="w-full mt-3 py-2  text-gray-200 shadow-lg placeholder:text-gray-700 outline-none  border border-gray-400 focus:text-gray-200 focus:bg-gray-900 focus:placeholder:text-gray-200 rounded-full pl-5"
             />
           </div>

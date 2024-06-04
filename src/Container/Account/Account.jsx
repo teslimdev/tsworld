@@ -1,5 +1,4 @@
-import React, { useState ,useMemo, useEffect } from "react";
-import { Footer, Header } from "../../Compnents";
+import React, { useState , useEffect } from "react";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoLockClosedSharp } from "react-icons/io5";
@@ -55,9 +54,9 @@ useEffect(() => {
      
      <div>
         <ul className=" space-y-3 px-3 pt-6">
-           <a href="/Manage ">  <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white    "><p className=" flex items-center gap-3"><MdProductionQuantityLimits /> Orders</p><RiArrowRightSLine /></li></a>
+           <a href="/Orders ">  <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white    "><p className=" flex items-center gap-3"><MdProductionQuantityLimits /> Orders</p><RiArrowRightSLine /></li></a>
        <a href="/Manage "> <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white   mt-3  "><p className=" flex items-center gap-3"><MdManageAccounts /> Account Management </p><RiArrowRightSLine /></li></a>
-        <a href="/Manage ">  <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white  mt-3   "><p className=" flex items-center gap-3"><IoLockClosedSharp /> Close Account</p><RiArrowRightSLine /></li></a>
+        <a href="/CloseAccount ">  <li className=" flex items-center justify-between px-4 py-3 shadow-lg  border bg-white  mt-3   "><p className=" flex items-center gap-3"><IoLockClosedSharp /> Close Account</p><RiArrowRightSLine /></li></a>
         </ul>
      </div>
     <div className=" flex justify-center   relative">

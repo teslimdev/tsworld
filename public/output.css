@@ -1206,6 +1206,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1269,6 +1273,11 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pb-10 {
@@ -1456,6 +1465,10 @@ video {
   line-height: 1.75rem;
 }
 
+.text-\[7rem\] {
+  font-size: 7rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1533,6 +1546,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .underline {
@@ -1796,22 +1813,6 @@ input[type="search"]::-webkit-search-cancel-button {
     height: fit-content;
   }
 
-  .md\:h-\[\] {
-    height: ;
-  }
-
-  .md\:h-\[80\] {
-    height: 80;
-  }
-
-  .md\:h-\[80vh\] {
-    height: 80vh;
-  }
-
-  .md\:h-\[60vh\] {
-    height: 60vh;
-  }
-
   .md\:w-\[500px\] {
     width: 500px;
   }
@@ -1872,11 +1873,6 @@ input[type="search"]::-webkit-search-cancel-button {
   .md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }
-
-  .md\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
   }
 
   .md\:py-4 {

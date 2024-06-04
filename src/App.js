@@ -22,7 +22,7 @@ import Logo from "./Compnents/Logo";
 import Notification from "./Compnents/Notificatiion";
 import Enquiries from "./Container/Enquiries/Enquiries";
  import {Account} from './Container'
- import { Manage ,PasswordChange ,NumberChange, ChangeNumber } from "./Compnents";
+ import { Manage ,PasswordChange ,NumberChange, ChangeNumber,CloseAccount, Orders,Error } from "./Compnents";
 
 function App() {
   const [showLogo, setShowLogo] = useState(true);
@@ -91,13 +91,16 @@ function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Signin" element={<Signin />} />
         <Route path="/Cart" element={<Cart />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={ <Error/>} />
         <Route path="/Enquiries" element={<Enquiries />} />
        <Route path="/Account" element={<Account />} />
         <Route path="/Manage" element={<Manage />} />
         <Route path="/PasswordChange" element={<PasswordChange />} />
           <Route path="/NumberChange" element={<NumberChange />} />
           <Route path="/ChangeNumber" element={<ChangeNumber/>} />
+           <Route path="/CloseAccount" element={<CloseAccount/>} />
+          <Route path="/Orders" element={<Orders/>} />
+             
       </Routes>
       {showNotification && (
         <Notification onClose={handleNotificationClose} />
