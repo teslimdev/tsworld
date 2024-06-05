@@ -38,7 +38,7 @@ const Signin = () => {
                 </div>
 
                 <p className="pt-4 text-end text-gray-800">
-                  <a href="/Signin" className="underline">
+                  <a href="/Forgot1" className="underline">
                     forgot password?
                   </a>
                 </p>

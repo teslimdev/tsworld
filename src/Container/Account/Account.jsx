@@ -29,7 +29,8 @@ useEffect(() => {
 
   return (
     <div className="  bg-gray-200 h-lvh ">
-     <div>
+    <div className="md:max-w-[500px] m-auto">
+       <div>
         <div className=" shadow-lg  fixed w-full z-20">
           <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
             <p className="text-black text-3xl">
@@ -49,6 +50,7 @@ useEffect(() => {
          <img src={Logo} alt="" className=' w-28 h-28' />
      </div>
         <h2 className=' font-bold text-[1.1rem]'>Hello Abdullah Teslim</h2>
+        <p className=" font-semibold text-[1.1rem] pt-3">08123456789</p>
       </div>
 
      
@@ -65,6 +67,7 @@ useEffect(() => {
        </div>
     </div>
    </div>
+    </div>
     </div>
   )
 }
