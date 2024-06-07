@@ -18,3 +18,4 @@ export { default as Description} from "./Description/Description";
 export { default as Cart} from "./Cart/Cart";
 export { default as Enquiries} from "./Enquiries/Enquiries";
 export { default as Account} from "./Account/Account";
+export { default as About} from "./About/About";

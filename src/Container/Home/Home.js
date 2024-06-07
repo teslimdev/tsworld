@@ -155,7 +155,7 @@ const Home = () => {
           </div>
 
           <div className="bg-gray- ">
-            <h2 className="py-3 px-6">Good Deals!!!</h2>
+         <a href="/Account">   <h2 className="py-3 px-6">Good Deals!!!</h2></a>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1200px]  m-auto bg-gray-300  bg-transparent  px-6 sl:px-0 gap-3 md:gap-4 lg:gap-6  item">
               {items.map((item) => (
                 <div key={item.itemId} onClick={() => handleItemClick(item)}>

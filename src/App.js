@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { Routes, Route, useLocation,} from "react-router-dom";
 import Lithium from "./Container/Lithium/Lithium";
 import Home from "./Container/Home/Home";
 import Inverter from "./Container/Inverter/Inverter";
@@ -23,7 +23,7 @@ import Notification from "./Compnents/Notificatiion";
 import Enquiries from "./Container/Enquiries/Enquiries";
  import {Account} from './Container'
  import { Manage ,PasswordChange ,NumberChange, ChangeNumber,CloseAccount, Orders,Error ,Forgot1 , Forgot2} from "./Compnents";
-
+import About from "./Container/About/About";
 function App() {
   const [showLogo, setShowLogo] = useState(true);
   const [showHome, setShowHome] = useState(false);
@@ -102,6 +102,7 @@ function App() {
           <Route path="/Orders" element={<Orders/>} />
                <Route path="/Forgot1" element={<Forgot1/>} />
                 <Route path="/Forgot2" element={<Forgot2/>} />
+                   <Route path="/About" element={<About/>} />
       </Routes>
       {showNotification && (
         <Notification onClose={handleNotificationClose} />
