@@ -78,10 +78,10 @@ const About = () => {
         </div>
       </div>
 
-      <div className="bg-gray-800  px-6 " >
-        <h2 className=" text-gray-200 text-xl uppercase text-center pt-8">our vission</h2>
+      <div className="bg-gray-200  px-6 " >
+        <h2 className=" text-gray-900 text-xl uppercase text-center pt-8">our vision</h2>
         <div className=" py-8 ">
-          <div className=" grid md:grid-cols-2 max-w-[1200px] m-auto md:bg-gray-300   md:gap-0  place-items-center   rounded-md border-gray-500  md:border">
+          <div className=" grid md:grid-cols-2 max-w-[1200px] m-auto md:bg-gray-300  gap-3  md:gap-0  place-items-center   rounded-md border-gray-500  md:border">
            <div className=" md:border-r h-full w-full border-b py-8  bg-gray-400  border-gray-500  ">
              <div className="  max-w-[400px] m-auto  px-3">
               <p className=" text-[4rem] flex items-center gap-3  text-gray-800 font-semibold">
@@ -191,8 +191,8 @@ const About = () => {
       </div>
 
       <div>
-        <div className=" bg-gray-700 py-8 lg:py-16 ">
-            <div className=" flex items-center flex-col md:flex-row max-w-[1200px] m-auto px-6    border border-dashed bg-gray-400 border-gray-600 py-8 ">
+        <div className=" bg-gray-300 py-8 lg:py-16 ">
+            <div className=" flex items-center flex-col md:flex-row max-w-[1200px] m-auto px-6     bg-gray-40  py-8 ">
                 <div className=" l">
                     <img src={logo} alt=""  className=" w-32"/>
                 </div>
@@ -201,13 +201,15 @@ const About = () => {
                     <p className=" text-[.9rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid exercitationem, accusamus molestiae inventore obcaecati natus libero nisi est tenetur omnis, quia perferendis iusto itaque. Doloribus dolorum voluptatem repellendus est soluta.</p>
                 </div>
             </div>
-            <div className=" flex flex-col lg:flex-row text-center lg:text-start gap-2 md:gap-4 bg-gray-40  items-center text-gray-200 mt-6  border-gray-200 w-fit border border-dashed py-6  md:px-24 justify-center m-auto px-6 lg:px-6">
+           <div className=" px-3">
+             <div className=" flex flex-col lg:flex-row text-center lg:text-start gap-3 md:gap-4 bg-gray-40  items-center text-gray-700 mt-6  border-gray-900 w-fit border border-dashed py-6  md:px-24 justify-center m-auto px-6 lg:px-6">
                 <p>Welcome to TS-WORLD</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <a href="/">
                     <button className=" bg-gray-900 text-gray-200 py-2 px-6 rounded-md w-fit m-auto hover:bg-gray-50 hover:text-gray-900 lg:m-0">Start Shopping</button>
                 </a>
             </div>
+           </div>
         </div>
       </div>
       <Footer/>
