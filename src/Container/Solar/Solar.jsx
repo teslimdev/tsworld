@@ -74,7 +74,7 @@ useEffect(() => {
               <Link 
            to={`/description/${item.itemId}`} key={index}
           >
-            <div key={index} className="shadow-2xl h-[12rem] grid grid-cols-2">
+            <div key={index} className="shadow-2xl h-[12rem] grid grid-cols-2 relative">
             <img src={power4} alt="" className="h-[192px] w-full" /> {/* Using the imported image */}
             <div className="bg-gray-500  py-3 px-4">
               <h3 className="text-[.9rem] pb-2">{item.title}</h3>
@@ -83,7 +83,7 @@ useEffect(() => {
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
-              <p className="pt-2">₦ {item.price}</p>
+              <p className="absolute bottom-4">₦ {item.price}</p>
             </div>
           </div>
           </Link>

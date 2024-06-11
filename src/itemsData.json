@@ -5,7 +5,8 @@
     "imageSrc": "power4.png",
     "title": "100k/Mah System",
     "features": ["one", "300watt inverter", "Smart charger"],
-    "price": "180,000"
+    "price": "180,000",
+    "weight": "2kg"
   },
   {
     "id": "lithium",

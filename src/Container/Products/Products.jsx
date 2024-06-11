@@ -74,7 +74,7 @@ const Products = () => {
               <Link
                 to={`/description/${item.itemId}`} key={index}
               >
-                <div className="shadow-2xl h-[12rem] grid grid-cols-2">
+                <div className="shadow-2xl h-[12rem] grid grid-cols-2 relative">
                   <img
                     src={power4}
                     alt=""
@@ -87,7 +87,7 @@ const Products = () => {
                         <li key={index}>{feature}</li>
                       ))}
                     </ul>
-                    <p className="pt-2">₦ {item.price}</p>
+                    <p className="absolute bottom-4">₦ {item.price}</p>
                   </div>
                 </div>
               </Link>

@@ -355,7 +355,7 @@ const Contacts = () => {
                     }}
                     onClick={() => handleItemClick(item)} // Add this onClick event
                   >
-                    <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
+                    <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2 relative">
                       <img
                         src={images[item.imageSrc]}
                         alt=""
@@ -368,7 +368,7 @@ const Contacts = () => {
                             <li key={index}>{feature}</li>
                           ))}
                         </ul>
-                        <p className="pt-5">₦ {item.price}</p>
+                        <p className="absolute bottom-4">₦ {item.price}</p>
                       </div>
                     </div>
                   </Link>

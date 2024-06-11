@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <div>
+      <div className=''>
         <div className="bg-gray-400 text-black pt-6">
           <div className=" flex   flex-col-reverse md:flex-row  justify-around lg:max-w-[1200px] m-auto">
             <div className=" basis-[20%]  text-center md:text-start pt-6 md:pt-0">
@@ -30,6 +30,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className=" basis-[70%]">
+
               <ul className="    flex flex-wrap justify-center  gap-y-4 md:grid grid-cols-3   md:max-w-[700px]  lg:max-w-[1000px] ">
                 <a href="/Help">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
@@ -56,6 +57,11 @@ const Footer = () => {
                     Cookie Notice
                   </li>
                 </a>
+                 <a href="/Enquiries">
+                  <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
+                  Enquiries
+                  </li>
+                </a>
                 <a href="/Upgrade">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Request For Upgrade
@@ -74,6 +80,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
     </div>
   )
 }

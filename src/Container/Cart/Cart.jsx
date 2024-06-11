@@ -161,7 +161,7 @@ const Cart = () => {
                           state: { cartItem},
                         }}
                       >
-                        <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2">
+                        <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2 relative">
                           <img src={images[itemDetails.imageSrc]} alt="" className="h-[192px] w-fit" />
                           <div className="rounded-tr-lg  bg-gray-500 px-3 py-3">
                             <h3 className="text-[.9rem] pb-2">{itemDetails.title}</h3>
@@ -170,7 +170,8 @@ const Cart = () => {
                                 <li key={index}>{feature}</li>
                               ))}
                             </ul>
-                            <p className="pt-5">₦ {itemDetails.price}</p>
+                            <p className=" pt-2">{itemDetails.weight}</p>
+                            <p className=" absolute bottom-4">₦ {itemDetails.price}</p>
                           </div>
                         </div>
                       </Link>
@@ -200,7 +201,7 @@ const Cart = () => {
       </div>
       {filteredCartItems.length > 0 && ( // Conditionally render checkout button
           <div className=" bg-gray-100 sticky bottom-0 px-3 py-2 shadow-lg">
-            <button className=" bg-gray-800  py-2 w-full rounded-md text-gray-100">Checkout (₦ {formattedPrice})</button>
+            <a href="/Delivery"><button className=" bg-gray-800  py-2 w-full rounded-md text-gray-100">Checkout (₦ {formattedPrice})</button></a>
           </div>
         )}
       <Footer />
