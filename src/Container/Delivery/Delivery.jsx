@@ -251,8 +251,8 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import { Footer } from "../../Compnents";
+import cities from "../../../src/cities.json";
 
 const Delivery = () => {
   const [selectedState, setSelectedState] = useState("");
@@ -271,6 +271,7 @@ const Delivery = () => {
   const handleSelectState = (event) => {
     setSelectedState(event.target.value);
     setSelectedCity(""); // Reset selected city when state changes
+    setSelectedMode(""); // Reset selected mode when state changes
   };
 
   const handleSelectCity = (event) => {
@@ -282,14 +283,13 @@ const Delivery = () => {
   };
 
   const handleSubmit = (e) => {
- 
     console.log("Form submitted with selected state:", selectedState);
     console.log("Form submitted with selected city:", selectedCity);
     console.log("Form submitted with selected mode:", selectedMode);
   };
 
   return (
-    <div>
+    <div className="lg:bg-gray-800">
       <div className="bg-gray-400 fixed w-full z-20">
         <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
           <p className="text-black text-3xl">
@@ -297,84 +297,76 @@ const Delivery = () => {
               <IoIosArrowRoundBack />
             </Link>
           </p>
-          <h2 className="text-black text-[1.1rem] uppercase">
-            delivery details
-          </h2>
+          <h2 className="text-black text-[1.1rem] uppercase">delivery details</h2>
           <div></div>{" "}
         </div>
       </div>
       <div className="pt-20">
         <div className="pb-7">
-          <h2 className="text-center text-[1.1rem] font-semibold capitalize text-gray-900">
+          <h2 className="text-center text-[1.1rem] font-semibold capitalize lg:text-gray-200 text-gray-900">
             Choose your Location
           </h2>
         </div>
-        <div>
-          <form onSubmit={handleSubmit} className="px-3 max-w-[700px] m-auto">
-            <div className="custom-select  mb-4">
+        <div className="lg:pb-6">
+          <form onSubmit={handleSubmit} className="px-3 max-w-[700px] lg:rounded-md m-auto lg:border border-gray-900 lg:pt-9 lg:bg-gray-300">
+            <div className="custom-select mb-4">
               <select
                 value={selectedState}
                 onChange={handleSelectState}
                 required
                 className="selected-item flex items-center py-1 w-full bg-gray-200 px-3 rounded-md border-gray-800 border justify-between"
               >
-                <option value="" disabled selected>Select State</option>
-                <option value="Abia">Abia</option>
-                <option value="Adamawa">Adamawa</option>
-                <option value="Akwa Ibom">Akwa Ibom</option>
-                <option value="Anambra">Anambra</option>
-                <option value="Bauchi">Bauchi</option>
-                <option value="Bayelsa">Bayelsa</option>
-                <option value="Benue">Benue</option>
-                <option value="Borno">Borno</option>
-                <option value="Cross River">Cross River</option>
-                <option value="Delta">Delta</option>
-                <option value="Ebonyi">Ebonyi</option>
-                <option value="Edo">Edo</option>
-                <option value="Ekiti">Ekiti</option>
-                <option value="Enugu">Enugu</option>
-                <option value="Federal Capital Territory (FCT)">Federal Capital Territory (FCT)</option>
-                <option value="Gombe">Gombe</option>
-                <option value="Imo">Imo</option>
-                <option value="Jigawa">Jigawa</option>
-                <option value="Kaduna">Kaduna</option>
-                <option value="Kano">Kano</option>
-                <option value="Katsina">Katsina</option>
-                <option value="Kebbi">Kebbi</option>
-                <option value="Kogi">Kogi</option>
-                <option value="Kwara">Kwara</option>
-                <option value="Lagos">Lagos</option>
-                <option value="Nasarawa">Nasarawa</option>
-                <option value="Niger">Niger</option>
-                <option value="Ogun">Ogun</option>
-                <option value="Ondo">Ondo</option>
-                <option value="Osun">Osun</option>
-                <option value="Oyo">Oyo</option>
-                <option value="Plateau">Plateau</option>
-                <option value="Rivers">Rivers</option>
-                <option value="Sokoto">Sokoto</option>
-                <option value="Taraba">Taraba</option>
-                <option value="Yobe">Yobe</option>
-                <option value="Zamfara">Zamfara</option>
+                <option value="" disabled>Select State</option>
+                {Object.keys(cities).map((state) => (
+                  <option key={state} value={state}>
+                    {state}
+                  </option>
+                ))}
               </select>
             </div>
-            {selectedState === "Lagos" && (
-              <div className="custom-select  mb-4">
+            {selectedState !== "" && (
+              <div className="custom-select mb-4">
                 <select
                   value={selectedMode}
                   required
                   onChange={handleSelectMode}
                   className="selected-item flex items-center w-full py-1 bg-gray-200 px-3 rounded-md border-gray-800 border justify-between"
                 >
-                  <option value="" disabled  selected>Select Mode</option>
-                  <option value="Pick Up">Pick Up</option>
-                  <option value="Delivery">Delivery</option>
-                  <option value="Installment service">Installment service</option>
+                  <option value="" disabled>Select Mode</option>
+                  {selectedState === "Lagos" ? (
+                    <>
+                      <option value="Pick Up">Pick Up</option>
+                      <option value="Delivery">Delivery</option>
+                      <option value="Installment Service">Installment Service</option>
+                    </>
+                  ) : (
+                    <>
+                      <option value="Pick Up">Pick Up</option>
+                      <option value="Delivery">Delivery</option>
+                    </>
+                  )}
+                </select>
+              </div>
+            )}
+            {selectedState !== "" && selectedMode === "Delivery" && (
+              <div className={`custom-select py-3`}>
+                <select
+                  value={selectedCity}
+                  required
+                  onChange={handleSelectCity}
+                  className="selected-item flex items-center w-full rounded-md py-1 bg-gray-200 px-3 border-gray-800 border justify-between"
+                >
+                  <option value="" disabled>Select City</option>
+                  {cities[selectedState].map((city) => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
                 </select>
               </div>
             )}
             {selectedState === "Lagos" &&
-              (selectedMode === "Delivery" || selectedMode === "Installment service") && (
+              selectedMode === "Installment Service" && (
                 <div className={`custom-select py-3`}>
                   <select
                     value={selectedCity}
@@ -382,36 +374,43 @@ const Delivery = () => {
                     onChange={handleSelectCity}
                     className="selected-item flex items-center w-full rounded-md py-1 bg-gray-200 px-3 border-gray-800 border justify-between"
                   >
-                    <option value="" disabled selected>Select City</option>
-                    <option value="Lagos Island">Lagos Island</option>
-                    <option value="Ikeja">Ikeja</option>
-                    <option value="Victoria Island">Victoria Island</option>
-                    <option value="Lekki">Lekki</option>
-                    <option value="Ajah">Ajah</option>
-                    <option value="Surulere">Surulere</option>
-                    <option value="Yaba">Yaba</option>
-                    <option value="Apapa">Apapa</option>
-                    <option value="Ikorodu">Ikorodu</option>
-                    <option value="Agege">Agege</option>
-                    <option value="Badagry">Badagry</option>
-                    <option value="Epe">Epe</option>
+                    <option value="" disabled>Select City</option>
+                    {cities[selectedState].map((city) => (
+                      <option key={city} value={city}>
+                        {city}
+                      </option>
+                    ))}
                   </select>
                 </div>
               )}
-            {selectedState === "Lagos" &&
-              (selectedMode === "Delivery" || selectedMode === "Installment service") && (
-                <div className={`py-3 max-w-[700px] m-auto`}>
-                  <textarea
-                    id="details"
-                    name="details"
-                    placeholder=" Detailed Address"
-                    required
-                    ref={otherDetailsRef}
-                    className="bg-gray-300 border placeholder:text-gray-700 w-full border-gray-600 rounded pl-4 pr-4 py-1 outline-none resize-none overflow-hidden"
-                    onInput={adjustTextareaHeight}
-                  ></textarea>
-                </div>
-              )}
+            {selectedMode === "Delivery" && (
+  <div className={`py-3 max-w-[700px] m-auto`}>
+    <textarea
+      id="details"
+      name="details"
+      placeholder=" Detailed Address"
+      required
+      ref={otherDetailsRef}
+      className="bg-gray-300 border placeholder:text-gray-700 w-full border-gray-600 rounded pl-4 pr-4 py-1 outline-none resize-none overflow-hidden"
+      onInput={adjustTextareaHeight}
+    ></textarea>
+  </div>
+)}
+{selectedState === "Lagos" &&
+  selectedMode === "Installment Service" && (
+    <div className={`py-3 max-w-[700px] m-auto`}>
+      <textarea
+        id="details"
+        name="details"
+        placeholder=" Detailed Address"
+        required
+        ref={otherDetailsRef}
+        className="bg-gray-300 border placeholder:text-gray-700 w-full border-gray-600 rounded pl-4 pr-4 py-1 outline-none resize-none overflow-hidden"
+        onInput={adjustTextareaHeight}
+      ></textarea>
+    </div>
+  )}
+
             <div className={`pt-3`}>
               <input
                 type="text"
@@ -435,8 +434,10 @@ const Delivery = () => {
               <p className="py-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas ad quod autem ab voluptatibus.</p>
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quas ad quod autem ab voluptatibus.</p>
             </div>
-            <div className="bg-gray-100 sticky bottom-0 px-3 py-2 shadow-lg">
-              <button type="submit" className="bg-gray-800 py-2 w-full rounded-md text-gray-100">Save</button>
+            <div className="bg-gray-100 lg:rounded-md sticky bottom-0 px-3 py-2 shadow-lg">
+              <button type="submit" className="bg-gray-800 py-2 w-full rounded-md text-gray-100">
+                Save
+              </button>
             </div>
             <div className="py-10">
               <p className="text-center">In Partnership with txx</p>
