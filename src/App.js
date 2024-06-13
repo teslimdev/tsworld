@@ -25,6 +25,7 @@ import Enquiries from "./Container/Enquiries/Enquiries";
  import { Manage ,PasswordChange ,NumberChange, ChangeNumber,CloseAccount, Orders,Error ,Forgot1 , Forgot2} from "./Compnents";
 import About from "./Container/About/About";
 import Delivery from "./Container/Delivery/Delivery";
+import Confirm from "./Container/Confirm/Confirm";
 function App() {
   const [showLogo, setShowLogo] = useState(true);
   const [showHome, setShowHome] = useState(false);
@@ -105,6 +106,7 @@ function App() {
                 <Route path="/Forgot2" element={<Forgot2/>} />
                    <Route path="/About" element={<About/>} />
                    <Route path="/Delivery" element={<Delivery/>} />
+                   <Route path="/Confirm" element={<Confirm/>} />
       </Routes>
       {showNotification && (
         <Notification onClose={handleNotificationClose} />

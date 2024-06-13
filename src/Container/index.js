@@ -20,3 +20,4 @@ export { default as Enquiries} from "./Enquiries/Enquiries";
 export { default as Account} from "./Account/Account";
 export { default as About} from "./About/About";
 export { default as Delivery} from "./Delivery/Delivery";
+export { default as Confirm} from "./Confirm/Confirm";

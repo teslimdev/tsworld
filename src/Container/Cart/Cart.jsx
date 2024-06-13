@@ -11,7 +11,7 @@ import power7 from "../../../src/Assets/power7.png";
 import power8 from "../../../src/Assets/power8.png";
 import power9 from "../../../src/Assets/power9.png";
 import { MdDeleteOutline } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const images = {
   "power.jpg": power,
@@ -30,6 +30,7 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const [itemsToRemove, setItemsToRemove] = useState([]);
   const [quantity, setQuantity] = useState({}); // State for item quantity
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -133,80 +134,101 @@ const Cart = () => {
     return total + itemPrice * quantity[cartItem.itemId];
   }, 0);
 
+  // Calculate total weight
+  const totalWeight = filteredCartItems.reduce((total, cartItem) => {
+    const itemDetails = getItemDetails(cartItem.itemId);
+    return total + itemDetails.weight * quantity[cartItem.itemId];
+  }, 0);
+
+  // Calculate total quantity
+  const totalQuantity = Object.values(quantity).reduce((total, qty) => total + qty, 0);
+
+  // Store total weight in localStorage
+  localStorage.setItem('totalWeight', totalWeight);
+
   // Format totalPrice with commas
   const formattedPrice = totalPrice.toLocaleString('en-US');
 
+  const handleCheckout = () => {
+    // Store total quantity, total price, and total weight in local storage
+    localStorage.setItem('totalQuantity', totalQuantity);
+    localStorage.setItem('totalPrice', totalPrice);
+    localStorage.setItem('totalWeight', totalWeight);
+
+    // Navigate to Delivery page
+    navigate("/Delivery");
+  };
+
   return (
-    <div>
-      <Header />
-      <div className="h-lvh overflow-auto bg-gray-300">
-        <div className="pt-28 flex flex-col justify-center items-center">
-          {filteredCartItems.length === 0 ? (
-            <div className="empty-cart-container">
-              <h2 className="text-[1rem] pb-2 text-center">Your cart is empty.</h2>
-              <div>
-                <a href="/"><button className="bg-gray-800 text-gray-300 py-2 px-7 rounded-md">Start shopping </button></a>
-              </div>
+  <div>
+    <Header />
+    <div className="h-lvh overflow-auto bg-gray-300">
+      <div className="pt-28 flex flex-col justify-center items-center">
+        {filteredCartItems.length === 0 ? (
+          <div className="empty-cart-container">
+            <h2 className="text-[1rem] pb-2 text-center">Your cart is empty.</h2>
+            <div>
+              <a href="/"><button className="bg-gray-800 text-gray-300 py-2 px-7 rounded-md">Start shopping</button></a>
             </div>
-          ) : (
-            <div className="place-self-start pt-6 pb-10">
-              <div className="items grid md:grid-cols-2 gap-4 px-3 overflow-auto">
-                {filteredCartItems.map((cartItem) => {
-                  const itemDetails = getItemDetails(cartItem.itemId);
-                  return (
-                    <div key={cartItem.itemId} className="w-fit">
-                      <Link
-                        to={{
-                          pathname: `/description/${cartItem.itemId}`,
-                          state: { cartItem},
-                        }}
-                      >
-                        <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2 relative">
-                          <img src={images[itemDetails.imageSrc]} alt="" className="h-[192px] w-fit" />
-                          <div className="rounded-tr-lg  bg-gray-500 px-3 py-3">
-                            <h3 className="text-[.9rem] pb-2">{itemDetails.title}</h3>
-                            <ul className="list-disc pl-4">
-                              {itemDetails.features.map((feature, index) => (
-                                <li key={index}>{feature}</li>
-                              ))}
-                            </ul>
-                            <p className=" pt-2">{itemDetails.weight}</p>
-                            <p className=" absolute bottom-4">₦ {itemDetails.price}</p>
-                          </div>
+          </div>
+        ) : (
+          <div className="place-self-start pt-6 pb-10">
+            <div className="items grid md:grid-cols-2 gap-4 px-3 overflow-auto">
+              {filteredCartItems.map((cartItem) => {
+                const itemDetails = getItemDetails(cartItem.itemId);
+                return (
+                  <div key={cartItem.itemId} className="w-fit">
+                    <Link
+                      to={{
+                        pathname: `/description/${cartItem.itemId}`,
+                        state: { cartItem },
+                      }}
+                    >
+                      <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2 relative">
+                        <img src={images[itemDetails.imageSrc]} alt="" className="h-[192px] w-fit" />
+                        <div className="rounded-tr-lg bg-gray-500 px-3 py-3">
+                          <h3 className="text-[.9rem] pb-2">{itemDetails.title}</h3>
+                          <ul className="list-disc pl-4">
+                            {itemDetails.features.map((feature, index) => (
+                              <li key={index}>{feature}</li>
+                            ))}
+                          </ul>
+                          <p className="pt-2">{itemDetails.weight}Kg</p>
+                          <p className="absolute bottom-4">₦ {itemDetails.price}</p>
                         </div>
-                      </Link>
-                      <div className="rounded-br-lg  py-2 px-3 grid grid-cols-2  bg-gray-900">
-                        <div className="text-white pt-1 flex items-center gap-2">
-                          <MdDeleteOutline onClick={() => handleRemoveItemClick(cartItem.itemId)} />
-                          <button onClick={() => handleRemoveItemClick(cartItem.itemId)}>Remove</button>
+                      </div>
+                    </Link>
+                    <div className="rounded-br-lg py-2 px-3 grid grid-cols-2 bg-gray-900">
+                      <div className="text-white pt-1 flex items-center gap-2">
+                        <MdDeleteOutline onClick={() => handleRemoveItemClick(cartItem.itemId)} />
+                        <button onClick={() => handleRemoveItemClick(cartItem.itemId)}>Remove</button>
+                      </div>
+                      <div className="quantity flex items-center">
+                        <div className={`w-12 h-8 rounded-md text-center ${quantity[cartItem.itemId] === 1 ? 'bg-gray-400' : 'bg-gray-200'}`}>
+                          <button className="border border-gray-800 w-full h-full text-[1.2rem]" onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] - 1)}>-</button>
                         </div>
-                        <div className="quantity flex items-center">
-                          <div className={`w-12 h-8 rounded-md text-center ${quantity[cartItem.itemId] === 1 ? 'bg-gray-400' : 'bg-gray-200'}`}>
-                            <button className="border border-gray-800  w-full h-full text-[1.2rem] " onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] - 1)}>-</button>
-                          </div>
-                          <span className="w-full text-center text-gray-200">{quantity[cartItem.itemId]}</span>
-                          <div className="w-12 h-8 bg-gray-200 rounded-md text-center">
-                            <button className="border border-gray-800  w-full h-full text-[1.2rem] " onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] + 1)}>+</button>
-                          </div>
+                        <span className="w-full text-center text-gray-200">{quantity[cartItem.itemId]}</span>
+                        <div className="w-12 h-8 bg-gray-200 rounded-md text-center">
+                          <button className="border border-gray-800 w-full h-full text-[1.2rem]" onClick={() => handleChangeQuantity(cartItem.itemId, quantity[cartItem.itemId] + 1)}>+</button>
                         </div>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
+              })}
             </div>
-          )}
-        </div>
-        
-      </div>
-      {filteredCartItems.length > 0 && ( // Conditionally render checkout button
-          <div className=" bg-gray-100 sticky bottom-0 px-3 py-2 shadow-lg">
-            <a href="/Delivery"><button className=" bg-gray-800  py-2 w-full rounded-md text-gray-100">Checkout (₦ {formattedPrice})</button></a>
           </div>
         )}
-      <Footer />
+      </div>
     </div>
-  );
+    {filteredCartItems.length > 0 && ( // Conditionally render checkout button
+      <div className="bg-gray-100 sticky bottom-0 px-3 py-2 shadow-lg">
+        <button onClick={handleCheckout} className="bg-gray-800 py-2 w-full rounded-md text-gray-100">Checkout (₦ {formattedPrice})</button>
+      </div>
+    )}
+    <Footer />
+  </div>
+);
 };
 
 export default Cart;
