@@ -68,7 +68,7 @@ const Confirm = () => {
         </div>
       </div>
 
-      <div className="pt-20">
+      <div className="pt-20 bg-gray-800">
         <div className="max-w-[700px] m-auto px-3">
           <h2 className="bg-gray-300 py-2 rounded-tl-lg rounded-tr-lg pl-4">Order Summary</h2>
           <ul className="py-3 bg-gray-200 mt-2 px-3 rounded-bl-lg rounded-br-lg">

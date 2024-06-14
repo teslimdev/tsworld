@@ -172,8 +172,8 @@ const Cart = () => {
             </div>
           </div>
         ) : (
-          <div className="place-self-start pt-6 pb-10">
-            <div className="items grid md:grid-cols-2 gap-4 px-3 overflow-auto">
+          <div className="place-self-start pt-6 pb-10 max-w-[1200px] m-auto">
+            <div className="items grid md:grid-cols-2 lg:grid-cols-3  gap-4 px-3 overflow-auto">
               {filteredCartItems.map((cartItem) => {
                 const itemDetails = getItemDetails(cartItem.itemId);
                 return (
@@ -184,7 +184,7 @@ const Cart = () => {
                         state: { cartItem },
                       }}
                     >
-                      <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2 relative">
+                      <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2  relative">
                         <img src={images[itemDetails.imageSrc]} alt="" className="h-[192px] w-fit" />
                         <div className="rounded-tr-lg bg-gray-500 px-3 py-3">
                           <h3 className="text-[.9rem] pb-2">{itemDetails.title}</h3>

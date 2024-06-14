@@ -98,11 +98,11 @@ const Home = () => {
     );
 
     // Redirect to the Description page with itemId
-    navigate(`/description/${item.itemId}`);
+    // navigate(`/description/${item.itemId}`);
   };
 
   return (
-    <div className="bg-gray-300 ">
+    <div className="lg:bg-gray-600 ">
       {!loading && <Header />}{" "}
       {/* Render header only when loading is complete */}
       {loading && (
@@ -154,9 +154,11 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="bg-gray- ">
+        <div className=" max-w-[1000px] bg-gray-300  m-auto">
+           <div className=" ">
+           <div className="bg-gray- ">
          <a href="/Account">   <h2 className="py-3 px-6">Good Deals!!!</h2></a>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1200px]  m-auto bg-gray-300  bg-transparent  px-6 sl:px-0 gap-3 md:gap-4 lg:gap-6  item">
+            <div className="grid md:grid-cols-2  lg:max-w-[900px]  m-auto bg-gray-300  bg-transparent  px-6 sl:px-0 gap-3 md:gap-4 lg:gap-6  item">
               {items.map((item) => (
                 <div key={item.itemId} onClick={() => handleItemClick(item)}>
                   <Link
@@ -188,11 +190,11 @@ const Home = () => {
           </div>
           <div className="py-10 bg-gray-300 sl:bg-transparent ">
             <div className="bg-gray-700 ">
-              <h2 className="px-6 sl:px-0  lg:max-w-[1200px]  m-auto py-2 text-white text-[1.1rem] uppercase">
+              <h2 className="px-6 sl:px-0  lg:max-w-[900px]  m-auto py-2 text-white text-[1.1rem] uppercase">
                 recently viewed
               </h2>
             </div>
-            <div className="px-6 sl:px-0 lg:max-w-[1200px]  m-auto  pt-7">
+            <div className="px-6 sl:px-0 lg:max-w-[900px]  m-auto  pt-7">
               {recentlyClickedItems.length === 0 ? (
                 <p className="text-center text-gray-500 text-lg">No results</p>
               ) : (
@@ -222,7 +224,7 @@ const Home = () => {
                       spaceBetween: 20,
                     },
                     1024: {
-                      slidesPerView: 3,
+                      slidesPerView: 2,
                       spaceBetween: 20,
                     },
                   }}
@@ -242,11 +244,11 @@ const Home = () => {
                           state: { item },
                         }}
                       >
-                        <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2 relative">
+                        <div className="shadow-2xl  h-[12rem] grid grid-cols-2 relative">
                           <img
                             src={images[item.imageSrc]}
                             alt=""
-                            className="h-[192px] w-fit"
+                            className="h-[192px] w-full"
                           />
                           <div className="rounded-e-lg bg-gray-500  px-3 py-3">
                             <h3 className="text-[.9rem] pb-2">{item.title}</h3>
@@ -265,6 +267,8 @@ const Home = () => {
               )}
             </div>
           </div>
+         </div>
+        </div>
         </>
       )}
       {!loading && <Footer />}{" "}

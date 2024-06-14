@@ -56,7 +56,7 @@ const Lithium = () => {
   return (
     <div>
     
-       <div className=" bg-gray-200">
+       <div className=" bg-gray-600">
        <div className="bg-gray-400 fixed w-full z-20">
           <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
             <p className="text-black text-3xl">
@@ -69,7 +69,8 @@ const Lithium = () => {
             {/* This empty div creates space for the center alignment */}
           </div>
         </div>
-      <div className="lithium max-w-[1200px] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-20 pb-8 px-6">
+      <div className="max-w-[1000px] m-auto bg-gray-300">
+        <div className="lithium max-w-[900px] m-auto grid grid-cols-1 md:grid-cols-2  gap-4 pt-20 pb-8 px-6">
         {lithiumItems.map((item, index) => (
         <div onClick={() => handleItemClick(item)}> 
               <Link 
@@ -90,6 +91,7 @@ const Lithium = () => {
           </Link>
         </div>
         ))}
+      </div>
       </div>
     </div>
     <Footer/>

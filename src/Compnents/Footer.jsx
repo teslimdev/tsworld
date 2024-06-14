@@ -42,6 +42,11 @@ const Footer = () => {
                     Contact Us
                   </li>
                 </a>
+                 <a href="/About">
+                  <li className=" flex-auto w-full  md:w-full  hidden lg:flex  px-4 text-[0.8rem]">
+                    About Us
+                  </li>
+                </a>
                 <a href="/Terms">
                   <li className=" flex-auto w-full  md:w-full   px-4 text-[0.8rem]">
                     Terms & Conditions

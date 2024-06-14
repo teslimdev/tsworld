@@ -3,7 +3,8 @@ import Logo from '../../src/Assets/logo3.png'
 const Manage = () => {
   return (
     <div className=' bg-gray-200 h-lvh'>
-      <div className=' text-center pt-20 '>
+    <div className='md:max-w-[500px] m-auto'>
+<div className=' text-center pt-20 '>
      <div className=' flex justify-center'>
          <img src={Logo} alt="" className=' w-28 h-28' />
      </div>
@@ -21,6 +22,8 @@ const Manage = () => {
         <h2>TS-WORLD</h2>
       </div>
       </div>
+    </div>
+      
     </div>
   )
 }

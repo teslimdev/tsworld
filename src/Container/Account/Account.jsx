@@ -29,8 +29,7 @@ useEffect(() => {
 
   return (
     <div className="  bg-gray-200 h-lvh ">
-    <div className="md:max-w-[500px] m-auto">
-       <div>
+     <div>
         <div className=" shadow-lg  fixed w-full z-20">
           <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
             <p className="text-black text-3xl">
@@ -44,6 +43,8 @@ useEffect(() => {
           </div>
         </div>
       </div>
+    <div className="md:max-w-[500px] m-auto">
+      
    <div className="  md:max-w-[700px] m-auto">
       <div className=' text-center pt-20 '>
      <div className=' flex justify-center'>
