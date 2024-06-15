@@ -56,7 +56,7 @@ const Confirm = () => {
 
   return (
     <div>
-      <div className="bg-gray-400 fixed w-full z-20">
+      <div className="bg-gray-200 fixed w-full z-20">
         <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
           <p className="text-black text-3xl">
             <Link to="/cart">
@@ -68,7 +68,7 @@ const Confirm = () => {
         </div>
       </div>
 
-      <div className="pt-20 bg-gray-800">
+      <div className="pt-20 bg-gray-800 min-h-lvh">
         <div className="max-w-[700px] m-auto px-3">
           <h2 className="bg-gray-300 py-2 rounded-tl-lg rounded-tr-lg pl-4">Order Summary</h2>
           <ul className="py-3 bg-gray-200 mt-2 px-3 rounded-bl-lg rounded-br-lg">
@@ -112,7 +112,7 @@ const Confirm = () => {
                 </li>
               )}
               {!hideAddress && (
-                <li className="flex gap-3 py-2 border-b border-gray-400">
+                <li className="flex gap-3 py-2 border-b border-gray-400 ">
                   <p>Address:</p> <p>{formData.detailedAddress}</p>
                 </li>
               )}
@@ -125,7 +125,7 @@ const Confirm = () => {
             </ul>
           </div>
         </div>
-        <div className="bg-gray-100 lg:rounded-md sticky bottom-0 px-3 py-2 shadow-lg">
+        <div className="bg-gray-100 lg:rounded-md sticky bottom-0 px-3 py-2 shadow-lg max-w-[700px] m-auto">
           <button type="submit" className="bg-gray-800 py-2 w-full rounded-md text-gray-100">
             Proceed To Payment
           </button>

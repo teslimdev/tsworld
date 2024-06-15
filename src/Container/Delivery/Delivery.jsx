@@ -315,7 +315,7 @@ const Delivery = () => {
 
 return (
   <div className="lg:bg-gray-800">
-    <div className="bg-gray-400 fixed w-full z-20">
+    <div className="bg-gray-200 fixed w-full z-20">
       <div className="flex items-center justify-between max-w-[1200px] m-auto px-3 py-2">
         <p className="text-black text-3xl">
           <Link to="/Cart">

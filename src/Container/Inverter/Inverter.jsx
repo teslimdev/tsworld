@@ -47,9 +47,10 @@ useEffect(() => {
 
    if (loading) {
     return (
-      <div className="fflex justify-center items-center relative container  bg-gray-300  h-svh">
-        <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
-      </div>
+       <div class="loading-container absolute top-[15rem]">
+    <div class="loading"></div>
+    <div id="loading-text">loading</div>
+</div>
     );
   }
   return (

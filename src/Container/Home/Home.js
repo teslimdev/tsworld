@@ -102,17 +102,19 @@ const Home = () => {
   };
 
   return (
-    <div className="lg:bg-gray-600 ">
+    <div className=" ">
       {!loading && <Header />}{" "}
       {/* Render header only when loading is complete */}
       {loading && (
-        <div className="flex justify-center items-center relative container  bg-gray-300  h-svh">
-          <div className="absolute top-[20rem]  sl:top-[25rem] box border"></div>
-        </div>
+         <div class="loading-container absolute top-[15rem]">
+    <div class="loading"></div>
+    <div id="loading-text">loading</div>
+</div>
       )}
       {!loading && (
         <>
-          <div className="pt-[7.3rem] lg:pt-[4.3rem] w-full  relative   ">
+         <div className="lg:bg-gray-600">
+           <div className="pt-[7.3rem] lg:pt-[4.3rem] w-full  relative   ">
             <div className="bg-gray-700 py-4">
               <div className="max-w-[400px] m-auto">
                 <Swiper
@@ -269,6 +271,7 @@ const Home = () => {
           </div>
          </div>
         </div>
+         </div>
         </>
       )}
       {!loading && <Footer />}{" "}

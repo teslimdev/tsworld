@@ -120,9 +120,10 @@ const Cart = () => {
   if (loading) {
     // Display loading UI
     return (
-      <div className="flex justify-center items-center relative container w-full bg-gray-400 h-screen">
-        <div className="absolute top-[20rem] sl:top-[25rem] box w-full"></div>
-      </div>
+      <div class="loading-container absolute top-[15rem]">
+    <div class="loading"></div>
+    <div id="loading-text">loading</div>
+</div>
     );
   }
 
