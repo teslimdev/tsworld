@@ -114,7 +114,7 @@ const Header = () => {
                       placeholder="search"
                     />
                     <CiSearch className="absolute top-3 text-xl left-3" />
-                    <button className="border border-black hover:bg-black hover:text-white hover:transition duration-200 px-6">
+                    <button className="border border-gray-900 hover:bg-gray-900  text-gray-800 hover:text-gray-200 hover:transition duration-200 px-6">
                       search
                     </button>
                   </form>
