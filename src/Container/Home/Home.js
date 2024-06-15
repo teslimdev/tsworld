@@ -98,7 +98,7 @@ const Home = () => {
     );
 
     // Redirect to the Description page with itemId
-    // navigate(`/description/${item.itemId}`);
+    navigate(`/description/${item.itemId}`);
   };
 
   return (
@@ -164,10 +164,7 @@ const Home = () => {
               {items.map((item) => (
                 <div key={item.itemId} onClick={() => handleItemClick(item)}>
                   <Link
-                    to={{
-                      pathname: `/description/${item.itemId}`,
-                      state: { item },
-                    }}
+                    
                   >
                     <div className="shadow-2xl h-[12rem] grid grid-cols-2 relative">
                       <img
@@ -239,6 +236,7 @@ const Home = () => {
                   className=""
                 >
                   {recentlyClickedItems.map((item) => (
+                    
                     <SwiperSlide key={item.itemId}>
                       <Link
                         to={{
@@ -246,6 +244,7 @@ const Home = () => {
                           state: { item },
                         }}
                       >
+                       
                         <div className="shadow-2xl  h-[12rem] grid grid-cols-2 relative">
                           <img
                             src={images[item.imageSrc]}

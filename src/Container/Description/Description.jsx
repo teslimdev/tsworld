@@ -22,6 +22,7 @@ const images = {
   "power5.png": power5,
 };
 
+
 const Description = () => {
   const [items, setItems] = useState([]);
   const [item, setItem] = useState(null);
@@ -222,7 +223,7 @@ const handleChangeQuantity = (newQuantity) => {
                 </div>
               </div>
             </div>
-            <div className="max-w-[300px] hidden md:block pb-10 relative">
+            <div  className="max-w-[300px] hidden md:block pb-10 relative">
               <Swiper
                 modules={[Pagination, A11y, EffectFade, Autoplay]}
                 autoplay={{
@@ -245,7 +246,7 @@ const handleChangeQuantity = (newQuantity) => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className=" pt-3">
+              <div id="one" className=" pt-3">
                 <div className="swiper-pagination-top flex gap-4 justify-center"></div>
               </div>
             </div>
