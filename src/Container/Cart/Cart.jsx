@@ -185,7 +185,7 @@ const Cart = () => {
                         state: { cartItem },
                       }}
                     >
-                      <div className="shadow-2xl w-fit h-[12rem] grid grid-cols-2  relative">
+                      <div className="shadow-2xl  h-[12rem] grid grid-cols-2  relative">
                         <img src={images[itemDetails.imageSrc]} alt="" className="h-[192px] w-fit" />
                         <div className="rounded-tr-lg bg-gray-500 px-3 py-3">
                           <h3 className="text-[.9rem] pb-2">{itemDetails.title}</h3>
