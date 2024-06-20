@@ -1,11 +1,11 @@
 {
   "Abia": [
-    {"city": "Aba", "price": {"pickup": 1000, "delivery": 1500}},
-    {"city": "Umuahia", "price": {"pickup": 1200, "delivery": 1800}},
-    {"city": "Arochukwu", "price": {"pickup": 1400, "delivery": 2000}},
-    {"city": "Ohafia", "price": {"pickup": 1100, "delivery": 1700}},
-    {"city": "Bende", "price": {"pickup": 1050, "delivery": 1600}},
-    {"city": "Osisioma", "price": {"pickup": 1300, "delivery": 1900}}
+    {"city": "Aba", "price": {"pickup": 1000, "delivery": 1500} , "pickupNote":"Note:hhhh"},
+    {"city": "Umuahia", "price": {"pickup": 1200, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Arochukwu", "price": {"pickup": 1400, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Ohafia", "price": {"pickup": 1100, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Bende", "price": {"pickup": 1050, "delivery": 1600} , "pickupNote":"Note:hhhh"},
+    {"city": "Osisioma", "price": {"pickup": 1300, "delivery": 1900} , "pickupNote":"Note:hhhh"}
   ],
   "Adamawa": [
     {"city": "Yola", "price": {"pickup": 1100, "delivery": 2200}},
@@ -104,7 +104,7 @@
     {"city": "Ijero Ekiti", "price": {"pickup": 1100, "delivery": 2200}}
   ],
   "Enugu": [
-    {"city": "Enugu", "price": {"pickup": 1100, "delivery": 2200}},
+    {"city": "Enugu", "price": {"pickup": 1100, "delivery": 2200} },
     {"city": "Nsukka", "price": {"pickup": 900, "delivery": 1800}},
     {"city": "Agbani", "price": {"pickup": 950, "delivery": 1900}},
     {"city": "Awgu", "price": {"pickup": 1000, "delivery": 2000}},
@@ -192,7 +192,7 @@
     {"city": "Kaiama", "price": {"pickup": 850, "delivery": 1700}}
   ],
  "Lagos": [
-    {"city": "Lagos Island", "price": 2300},
+    {"city": "Lagos Island", "price": 2300 },
     {"city": "Ikeja", "price": 1800},
     {"city": "Victoria Island", "price": 1900},
     {"city": "Lekki", "price": 2100},
