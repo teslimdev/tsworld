@@ -86,7 +86,7 @@ const Header = () => {
                 </div>
                 <div
                   onClick={toggleDropdown}
-                  className={`categories cursor-pointer hidden lg:flex relative ${dropdownOpen ? 'bg-gray-700  w-48 py-2 px-3 rounded-tl-md rounded-tr-md' : ' w-48 bg-gray-500 py-2 px-3 rounded-md'}`}
+                  className={`categories cursor-pointer hidden lg:flex relative ${dropdownOpen ? 'bg-gray-700 text-gray-200  w-48 py-2 px-3 rounded-tl-md rounded-tr-md' : ' w-48 bg-gray-500 py-2 px-3 rounded-md'}`}
                 >
                   <h3 className="flex items-center justify-between w-full gap-1">
                     Categories
@@ -94,7 +94,7 @@ const Header = () => {
                   </h3>
 
                   {dropdownOpen && (
-                    <div className="absolute top-full left-0 mt-2 bg-gray-300 border border-gray-500 shadow-xl rounded-bl-md rounded-br-md w-48 z-20">
+                    <div className="absolute top-full left-0 mt-2 bg-gray-300 border text-gray-700 border-gray-500 shadow-xl rounded-bl-md rounded-br-md w-48 z-20">
                       <ul className="py-2">
                         <a href="/Inverter"><li className="px-4 py-2 hover:bg-gray-100">Inverters</li></a>
                         <a href="/Lithium"><li className="px-4 py-2 hover:bg-gray-100">Lithium Batteries</li></a>

@@ -8,191 +8,191 @@
     {"city": "Osisioma", "price": {"pickup": 1300, "delivery": 1900} , "pickupNote":"Note:hhhh"}
   ],
   "Adamawa": [
-    {"city": "Yola", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Mubi", "price": {"pickup": 1250, "delivery": 2500}},
-    {"city": "Jimeta", "price": {"pickup": 1150, "delivery": 2300}},
-    {"city": "Numan", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Ganye", "price": {"pickup": 1200, "delivery": 2400}},
-    {"city": "Song", "price": {"pickup": 1000, "delivery": 2000}}
+    {"city": "Yola", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hello"},
+    {"city": "Mubi", "price": {"pickup": 1250, "delivery": 2500} , "pickupNote":"Note:hhhh"},
+    {"city": "Jimeta", "price": {"pickup": 1150, "delivery": 2300} , "pickupNote":"Note:hhhh"},
+    {"city": "Numan", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Ganye", "price": {"pickup": 1200, "delivery": 2400} , "pickupNote":"Note:hhhh"},
+    {"city": "Song", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"}
   ],
   "Akwa Ibom": [
-    {"city": "Uyo", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Eket", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Ikot Ekpene", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Oron", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Ikot Abasi", "price": {"pickup": 800, "delivery": 1600}},
-    {"city": "Itu", "price": {"pickup": 1100, "delivery": 2200}}
+    {"city": "Uyo", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Eket", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Ikot Ekpene", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Oron", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Ikot Abasi", "price": {"pickup": 800, "delivery": 1600} , "pickupNote":"Note:hhhh"},
+    {"city": "Itu", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"}
   ],
   "Anambra": [
-    {"city": "Awka", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Onitsha", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Nnewi", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Nkpor", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Obosi", "price": {"pickup": 800, "delivery": 1600}},
-    {"city": "Aguata", "price": {"pickup": 1050, "delivery": 2100}}
+    {"city": "Awka", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Onitsha", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Nnewi", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Nkpor", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Obosi", "price": {"pickup": 800, "delivery": 1600} , "pickupNote":"Note:hhhh"},
+    {"city": "Aguata", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"}
   ],
   "Bauchi": [
-    {"city": "Bauchi", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Azare", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Misau", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Katagum", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Dass", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Tafawa Balewa", "price": {"pickup": 1100, "delivery": 2200}}
+    {"city": "Bauchi", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Azare", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Misau", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Katagum", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Dass", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Tafawa Balewa", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"}
   ],
   "Bayelsa": [
-    {"city": "Yenagoa", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Brass", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Ogbia", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Sagbama", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Ekeremor", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Nembe", "price": {"pickup": 1100, "delivery": 2200}}
+    {"city": "Yenagoa", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Brass", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Ogbia", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Sagbama", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Ekeremor", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Nembe", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"}
   ],
   "Benue": [
-    {"city": "Makurdi", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Gboko", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Otukpo", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Okpoga", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Adikpo", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Ugbokpo", "price": {"pickup": 900, "delivery": 1800}}
+    {"city": "Makurdi", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Gboko", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Otukpo", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Okpoga", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Adikpo", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Ugbokpo", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"}
   ],
   "Borno": [
-    {"city": "Maiduguri", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Jere", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Bama", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Monguno", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Damboa", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Gwoza", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Maiduguri", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Jere", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Bama", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Monguno", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Damboa", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Gwoza", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Cross River": [
-    {"city": "Calabar", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Ogoja", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Ikom", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Obudu", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Bekwarra", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Obanliku", "price": {"pickup": 1100, "delivery": 2200}}
+    {"city": "Calabar", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Ogoja", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Ikom", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Obudu", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Bekwarra", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Obanliku", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"}
   ],
   "Delta": [
-    {"city": "Asaba", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Warri", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Sapele", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Ughelli", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Agbor", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Ozoro", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Asaba", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Warri", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Sapele", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Ughelli", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Agbor", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Ozoro", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Ebonyi": [
-    {"city": "Abakaliki", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Afikpo", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Onueke", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Izzi", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Ohaukwu", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Ikwo", "price": {"pickup": 1100, "delivery": 2200}}
+    {"city": "Abakaliki", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Afikpo", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Onueke", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Izzi", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Ohaukwu", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Ikwo", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"}
   ],
   "Edo": [
-    {"city": "Benin City", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Auchi", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Uromi", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Igueben", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Ekpoma", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Igarra", "price": {"pickup": 950, "delivery": 1900}}
+    {"city": "Benin City", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Auchi", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Uromi", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Igueben", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Ekpoma", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Igarra", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"}
   ],
    "Ekiti": [
-    {"city": "Ado Ekiti", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Ikere Ekiti", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Ikole Ekiti", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Efon Alaye", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Omuo Ekiti", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Ijero Ekiti", "price": {"pickup": 1100, "delivery": 2200}}
+    {"city": "Ado Ekiti", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Ikere Ekiti", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Ikole Ekiti", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Efon Alaye", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Omuo Ekiti", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Ijero Ekiti", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"}
   ],
   "Enugu": [
-    {"city": "Enugu", "price": {"pickup": 1100, "delivery": 2200} },
-    {"city": "Nsukka", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Agbani", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Awgu", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Nkanu", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Udi", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Enugu", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh" },
+    {"city": "Nsukka", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Agbani", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Awgu", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Nkanu", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Udi", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Federal Capital Territory (FCT)": [
-    {"city": "Abuja", "price": {"pickup": 1150, "delivery": 2300}},
-    {"city": "Kuje", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Gwagwalada", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Kwali", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Bwari", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Abaji", "price": {"pickup": 1050, "delivery": 2100}}
+    {"city": "Abuja", "price": {"pickup": 1150, "delivery": 2300} , "pickupNote":"Note:hhhh"},
+    {"city": "Kuje", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Gwagwalada", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Kwali", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Bwari", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Abaji", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"}
   ],
   "Gombe": [
-    {"city": "Gombe", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Bajoga", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Dukku", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Kaltungo", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Nafada", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Billiri", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Gombe", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Bajoga", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Dukku", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Kaltungo", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Nafada", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Billiri", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Imo": [
-    {"city": "Owerri", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Orlu", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Okigwe", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Mbaise", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Oru", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Nkwerre", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Owerri", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Orlu", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Okigwe", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Mbaise", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Oru", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Nkwerre", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Jigawa": [
-    {"city": "Dutse", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Birnin Kudu", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Hadejia", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Gumel", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Kazaure", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Ringim", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Dutse", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Birnin Kudu", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Hadejia", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Gumel", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Kazaure", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Ringim", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Kaduna": [
-    {"city": "Kaduna", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Zaria", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Kafanchan", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Soba", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Makarfi", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Kachia", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Kaduna", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Zaria", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Kafanchan", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Soba", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Makarfi", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Kachia", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Kano": [
-    {"city": "Kano", "price": {"pickup": 1150, "delivery": 2300}},
-    {"city": "Kano Municipal", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Tudun Wada", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Gwale", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Tarauni", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Nassarawa", "price": {"pickup": 1050, "delivery": 2100}}
+    {"city": "Kano", "price": {"pickup": 1150, "delivery": 2300} , "pickupNote":"Note:hhhh"},
+    {"city": "Kano Municipal", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Tudun Wada", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Gwale", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Tarauni", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Nassarawa", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"}
   ],
   "Katsina": [
-    {"city": "Katsina", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Daura", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Funtua", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Malumfashi", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Mani", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Jibia", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Katsina", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Daura", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Funtua", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Malumfashi", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Mani", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Jibia", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Kebbi": [
-    {"city": "Birnin Kebbi", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Yauri", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Argungu", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Zuru", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Dandi", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Koko", "price": {"pickup": 1100, "delivery": 2200}}
+    {"city": "Birnin Kebbi", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Yauri", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Argungu", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Zuru", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Dandi", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Koko", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"}
   ],
   "Kogi": [
-    {"city": "Lokoja", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Okene", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Idah", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Kabba", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Ankpa", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Okehi", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Lokoja", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Okene", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Idah", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Kabba", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Ankpa", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Okehi", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Kwara": [
-    {"city": "Ilorin", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Offa", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Omu Aran", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Jebba", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Lafiagi", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Kaiama", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Ilorin", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Offa", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Omu Aran", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Jebba", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Lafiagi", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Kaiama", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
  "Lagos": [
-    {"city": "Lagos Island", "price": 2300 },
+    {"city": "Lagos Island", "price": 2300},
     {"city": "Ikeja", "price": 1800},
     {"city": "Victoria Island", "price": 1900},
     {"city": "Lekki", "price": 2100},
@@ -201,100 +201,100 @@
   ],
    
   "Nasarawa": [
-    {"city": "Lafia", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Keffi", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Akwanga", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Karu", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Doma", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Nasarawa", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Lafia", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Keffi", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Akwanga", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Karu", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Doma", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Nasarawa", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Niger": [
-    {"city": "Minna", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Bida", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Kontagora", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Suleja", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Mokwa", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Lapai", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Minna", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Bida", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Kontagora", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Suleja", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Mokwa", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Lapai", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Ogun": [
-    {"city": "Abeokuta", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Ijebu Ode", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Sango Ota", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Sagamu", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Ilaro", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Ifo", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Abeokuta", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Ijebu Ode", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Sango Ota", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Sagamu", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Ilaro", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Ifo", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Ondo": [
-    {"city": "Akure", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Ondo City", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Owo", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Ikare", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Okitipupa", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Igbokoda", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Akure", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Ondo City", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Owo", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Ikare", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Okitipupa", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Igbokoda", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Osun": [
-    {"city": "Osogbo", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Ile Ife", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Ilesa", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Ede", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Ikirun", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Iwo", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Osogbo", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Ile Ife", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Ilesa", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Ede", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Ikirun", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Iwo", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Oyo": [
-    {"city": "Ibadan", "price": {"pickup": 1150, "delivery": 2300}},
-    {"city": "Oyo", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Ogbomoso", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Iseyin", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Saki", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Igboho", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Ibadan", "price": {"pickup": 1150, "delivery": 2300} , "pickupNote":"Note:hhhh"},
+    {"city": "Oyo", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Ogbomoso", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Iseyin", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Saki", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Igboho", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Plateau": [
-    {"city": "Jos", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Barkin Ladi", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Pankshin", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Shendam", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Langtang", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Mangu", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Jos", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Barkin Ladi", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Pankshin", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Shendam", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Langtang", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Mangu", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Rivers": [
-    {"city": "Port Harcourt", "price": {"pickup": 1150, "delivery": 2300}},
-    {"city": "Obio Akpor", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Bonny", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Degema", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Opobo", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Ahoada", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Port Harcourt", "price": {"pickup": 1150, "delivery": 2300} , "pickupNote":"Note:hhhh"},
+    {"city": "Obio Akpor", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Bonny", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Degema", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Opobo", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Ahoada", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Sokoto": [
-    {"city": "Sokoto", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Tambuwal", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Bodinga", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Gwadabawa", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Illela", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Wamako", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Sokoto", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Tambuwal", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Bodinga", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Gwadabawa", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Illela", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Wamako", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Taraba": [
-    {"city": "Jalingo", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Wukari", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Takum", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Kumi", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Bali", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Gembu", "price": {"pickup": 850, "delivery": 1700}}
+    {"city": "Jalingo", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Wukari", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Takum", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Kumi", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Bali", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Gembu", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"}
   ],
   "Yobe": [
-    {"city": "Damaturu", "price": {"pickup": 1100, "delivery": 2200}},
-    {"city": "Potiskum", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Nguru", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Gashua", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Bade", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Geidam", "price": {"pickup": 1000, "delivery": 2000}}
+    {"city": "Damaturu", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"},
+    {"city": "Potiskum", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Nguru", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Gashua", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Bade", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Geidam", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"}
   ],
     "Zamfara": [
-    {"city": "Gusau", "price": {"pickup": 950, "delivery": 1900}},
-    {"city": "Kaura Namoda", "price": {"pickup": 1000, "delivery": 2000}},
-    {"city": "Birnin Magaji", "price": {"pickup": 1050, "delivery": 2100}},
-    {"city": "Shinkafi", "price": {"pickup": 850, "delivery": 1700}},
-    {"city": "Talata Mafara", "price": {"pickup": 900, "delivery": 1800}},
-    {"city": "Bungudu", "price": {"pickup": 1100, "delivery": 2200}}
+    {"city": "Gusau", "price": {"pickup": 950, "delivery": 1900} , "pickupNote":"Note:hhhh"},
+    {"city": "Kaura Namoda", "price": {"pickup": 1000, "delivery": 2000} , "pickupNote":"Note:hhhh"},
+    {"city": "Birnin Magaji", "price": {"pickup": 1050, "delivery": 2100} , "pickupNote":"Note:hhhh"},
+    {"city": "Shinkafi", "price": {"pickup": 850, "delivery": 1700} , "pickupNote":"Note:hhhh"},
+    {"city": "Talata Mafara", "price": {"pickup": 900, "delivery": 1800} , "pickupNote":"Note:hhhh"},
+    {"city": "Bungudu", "price": {"pickup": 1100, "delivery": 2200} , "pickupNote":"Note:hhhh"}
   ]
 }
 
