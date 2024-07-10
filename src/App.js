@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, useLocation,} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Lithium from "./Container/Lithium/Lithium";
 import Home from "./Container/Home/Home";
 import Inverter from "./Container/Inverter/Inverter";
@@ -21,8 +21,18 @@ import Cart from "./Container/Cart/Cart";
 import Logo from "./Compnents/Logo";
 import Notification from "./Compnents/Notificatiion";
 import Enquiries from "./Container/Enquiries/Enquiries";
- import {Account} from './Container'
- import { Manage ,PasswordChange ,NumberChange, ChangeNumber,CloseAccount, Orders,Error ,Forgot1 , Forgot2} from "./Compnents";
+import { Account } from "./Container";
+import {
+  Manage,
+  PasswordChange,
+  NumberChange,
+  ChangeNumber,
+  CloseAccount,
+  Orders,
+  Error,
+  Forgot1,
+  Forgot2,
+} from "./Compnents";
 import About from "./Container/About/About";
 import Delivery from "./Container/Delivery/Delivery";
 import Confirm from "./Container/Confirm/Confirm";
@@ -49,9 +59,8 @@ function App() {
 
   useEffect(() => {
     if (showHome) {
-      const hasNotificationBeenShown = sessionStorage.getItem(
-        "notificationShown"
-      );
+      const hasNotificationBeenShown =
+        sessionStorage.getItem("notificationShown");
 
       if (!hasNotificationBeenShown) {
         const notificationTimer = setTimeout(() => {
@@ -93,24 +102,22 @@ function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Signin" element={<Signin />} />
         <Route path="/Cart" element={<Cart />} />
-        <Route path="*" element={ <Error/>} />
+        <Route path="*" element={<Error />} />
         <Route path="/Enquiries" element={<Enquiries />} />
-       <Route path="/Account" element={<Account />} />
+        <Route path="/Account" element={<Account />} />
         <Route path="/Manage" element={<Manage />} />
         <Route path="/PasswordChange" element={<PasswordChange />} />
-          <Route path="/NumberChange" element={<NumberChange />} />
-          <Route path="/ChangeNumber" element={<ChangeNumber/>} />
-           <Route path="/CloseAccount" element={<CloseAccount/>} />
-          <Route path="/Orders" element={<Orders/>} />
-               <Route path="/Forgot1" element={<Forgot1/>} />
-                <Route path="/Forgot2" element={<Forgot2/>} />
-                   <Route path="/About" element={<About/>} />
-                   <Route path="/Delivery" element={<Delivery/>} />
-                   <Route path="/Confirm" element={<Confirm/>} />
+        <Route path="/NumberChange" element={<NumberChange />} />
+        <Route path="/ChangeNumber" element={<ChangeNumber />} />
+        <Route path="/CloseAccount" element={<CloseAccount />} />
+        <Route path="/Orders" element={<Orders />} />
+        <Route path="/Forgot1" element={<Forgot1 />} />
+        <Route path="/Forgot2" element={<Forgot2 />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Delivery" element={<Delivery />} />
+        <Route path="/Confirm" element={<Confirm />} />
       </Routes>
-      {showNotification && (
-        <Notification onClose={handleNotificationClose} />
-      )}
+      {showNotification && <Notification onClose={handleNotificationClose} />}
     </div>
   );
 }

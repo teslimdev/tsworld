@@ -29,7 +29,7 @@ const Confirm = () => {
       // Find the city in the cities data for states other than Lagos
       const cityData = cities[formData.selectedState]?.find((city) => city.city === formData.selectedCity);
       if (cityData) {
-        deliveryFee = cityData.price.delivery * totalWeight;
+        deliveryFee = cityData.price.delivery + 2150;
       }
     }
   } else if (formData.selectedMode === "Pick Up") {
@@ -37,7 +37,7 @@ const Confirm = () => {
       // Find the city in the cities data for states other than Lagos
       const cityData = cities[formData.selectedState]?.find((city) => city.city === formData.selectedCity);
       if (cityData) {
-        deliveryFee = cityData.price.pickup * totalWeight;
+        deliveryFee = cityData.price.pickup ;
       }
     }
   }

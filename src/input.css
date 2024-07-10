@@ -372,7 +372,7 @@ body {
 }
 
 .loading-container:hover .loading {
-    border-color: transparent #E45635 transparent #E45635;
+    border-color: transparent #1f2937 transparent #1f2937;
 }
 
 .loading-container:hover .loading,
